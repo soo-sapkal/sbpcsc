@@ -1,0 +1,6 @@
+export { AdmissionTabs } from "./components/AdmissionTabs"
+export { AdmissionProcess } from "./components/AdmissionProcess"
+export { CutoffList } from "./components/CutoffList"
+export { FeeStructure } from "./components/FeeStructure"
+export { Eligibility } from "./components/Eligibility"
+export { BrochureDownload } from "./components/BrochureDownload"

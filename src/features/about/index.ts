@@ -1,0 +1,7 @@
+export { AboutPCET } from "./components/AboutPCET"
+export { AboutSBPCSC } from "./components/AboutSBPCSC"
+export { PrincipalMessage } from "./components/PrincipalMessage"
+export { CommitteeList } from "./components/CommitteeList"
+export { AdminStaffList } from "./components/AdminStaffList"
+export { InfrastructureShowcase } from "./components/InfrastructureShowcase"
+export { RulesList } from "./components/RulesList"

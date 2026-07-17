@@ -1,0 +1,6 @@
+export { Header } from "./components/Header"
+export { Footer } from "./components/Footer"
+export { TopStrip } from "./components/TopStrip"
+export { SocialIcons } from "./components/SocialIcons"
+export { Spotlight } from "./components/Spotlight"
+export { ScrollToTop } from "./components/ScrollToTop"
