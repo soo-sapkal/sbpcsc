@@ -1,8 +1,9 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import Image from "next/image"
+import { motion } from "framer-motion"
 import { newsItems } from "@/features/home/data/news-items"
+import { cn } from "@/lib/utils"
 
 export function NewsScroll() {
   const ulRef = useRef<HTMLUListElement>(null)
@@ -28,33 +29,48 @@ export function NewsScroll() {
   }, [])
 
   return (
-    <div className="sbpcsc-news-scroll max-h-64 overflow-hidden">
-      <ul ref={ulRef} className="m-0 list-none overflow-hidden p-0" style={{ height: "220px" }}>
+    <div className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-soft">
+      <div className="bg-gradient-to-r from-primary to-primary-dark px-4 py-2.5">
+        <h3 className="flex items-center gap-2 text-sm font-bold text-white">
+          <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse-soft" />
+          Latest Updates
+        </h3>
+      </div>
+      <ul
+        ref={ulRef}
+        className="m-0 list-none overflow-hidden scrollbar-thin"
+        style={{ height: "220px" }}
+        aria-label="Latest news updates"
+      >
         {newsItems.map((item, i) => (
-          <li key={i} className="flex items-start gap-2 border-b border-dashed border-[#38a361] p-[10px]">
-            <span className="shrink-0">
-              <Image
-                src="/images/new.gif"
-                alt="NEW"
-                width={24}
-                height={10}
-                className="inline"
-                unoptimized
-              />
-            </span>
+          <motion.li
+            key={i}
+            initial={{ opacity: 0, x: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.05 }}
+            className="border-b border-dashed border-border/50 last:border-b-0"
+          >
             <a
               href={item.href}
               target={item.target}
               rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-              className={
+              className={cn(
+                "flex items-start gap-3 px-4 py-3 text-sm transition-colors duration-200 hover:bg-muted/50",
                 item.className === "spotlight_red"
-                  ? "font-medium text-red-600 hover:underline"
-                  : "font-medium text-blue-600 hover:underline"
-              }
+                  ? "text-accent"
+                  : "text-primary"
+              )}
             >
-              {item.label}
+              <span className="mt-1.5 shrink-0">
+                <span className={cn(
+                  "inline-block h-2 w-2 rounded-full",
+                  item.className === "spotlight_red" ? "bg-accent" : "bg-primary"
+                )} />
+              </span>
+              <span className="font-medium">{item.label}</span>
             </a>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>

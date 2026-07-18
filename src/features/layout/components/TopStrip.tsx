@@ -1,33 +1,50 @@
-import { Phone, Mail } from "lucide-react"
+"use client"
+
+import { Phone, Mail, ArrowRight } from "lucide-react"
 import { SocialIcons } from "./SocialIcons"
 import { siteConfig } from "@/data/site-config"
 import { EXTERNAL_LINKS } from "@/data/constants"
+import { cn } from "@/lib/utils"
 
 export function TopStrip() {
   return (
-    <div className="bg-[#dfdfdf] text-[#333]">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-          <div className="px-7 flex items-center gap-1 text-sm">
-            <Phone className="h-4 w-4" />
-            <a href="tel:+91-7424080910" className="text-[#333] no-underline hover:underline">
-              {siteConfig.phone}
+    <div className="relative bg-gradient-to-r from-primary-dark via-primary to-primary-dark text-white">
+      <div className="container-wide">
+        <div className="flex flex-col items-center justify-between gap-2 py-1.5 sm:flex-row sm:gap-0">
+          <div className="flex flex-wrap items-center gap-2 text-xs sm:gap-3 sm:text-sm">
+            <a
+              href={`tel:+91-${siteConfig.phone}`}
+              className="inline-flex items-center gap-1 text-white/90 transition-colors hover:text-white"
+              aria-label={`Phone ${siteConfig.phone}`}
+            >
+              <Phone className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+              <span>{siteConfig.phone}</span>
             </a>
-            <span className="mx-1">|</span>
-            <Mail className="h-4 w-4" />
-            <a href="mailto:sbpc.science@gmail.com" className="text-[#333] no-underline hover:underline">
-              <span>{siteConfig.email}</span>
+            <span className="hidden text-white/30 sm:inline">|</span>
+            <a
+              href={`mailto:${siteConfig.email}`}
+              className="inline-flex items-center gap-1 text-white/90 transition-colors hover:text-white"
+              aria-label={`Email ${siteConfig.email}`}
+            >
+              <Mail className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+              <span className="hidden sm:inline">{siteConfig.email}</span>
+              <span className="sm:hidden">Email</span>
             </a>
           </div>
-          <div className="flex items-center gap-2">
-            <SocialIcons variant="top-strip" showLabel />
+          <div className="flex items-center gap-3">
+            <SocialIcons variant="top-strip" />
             <a
               href={EXTERNAL_LINKS.ADMISSION_ENQUIRY}
               target="_blank"
               rel="noopener noreferrer"
-              className="enq-btn inline-block bg-[#146ab5] px-4 py-2 text-sm font-bold text-white no-underline"
+              className={cn(
+                "inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1 text-xs font-semibold text-white no-underline",
+                "transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/25",
+                "animate-pulse-soft sm:text-sm"
+              )}
             >
               Admission Enquiry
+              <ArrowRight className="h-3 w-3" />
             </a>
           </div>
         </div>

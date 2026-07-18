@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/media/video`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.5 },
     { url: `${baseUrl}/reviews`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.6 },
     { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.6 },
+    { url: `${baseUrl}/launch`, lastModified: new Date(), changeFrequency: "yearly" as const, priority: 0.3 },
   ]
 
   const scienceSubjects = [

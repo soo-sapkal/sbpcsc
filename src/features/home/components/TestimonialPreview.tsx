@@ -1,52 +1,100 @@
+"use client"
+
 import Link from "next/link"
+import { motion } from "framer-motion"
+import { Quote, Star, ArrowRight } from "lucide-react"
 import { testimonials } from "@/features/home/data/testimonials"
+import { siteConfig } from "@/data/site-config"
+import { cn } from "@/lib/utils"
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12 },
+  },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" as const },
+  },
+}
 
 export function TestimonialPreview() {
   return (
-    <section className="py-10">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap">
-          <div className="w-full px-4">
-            <h2 className="testm-heading mb-5 text-center text-[28px] font-bold text-[#cf2b1f]">Testimonials</h2>
-          </div>
+    <section className="section-padding bg-gradient-to-b from-background to-muted/20">
+      <div className="container-wide">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-12 text-center"
+        >
+          <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
+            What Our Students Say
+          </h2>
+          <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-primary to-accent" />
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            Hear from our students about their experience at {siteConfig.shortName}
+          </p>
+        </motion.div>
 
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+        >
           {testimonials.map((t, i) => (
-            <div key={i} className="relative mb-4 w-full px-4 sm:w-1/2 md:w-1/3">
-              <div className="flex">
-                <div className="testm-bg-1 w-[12.5%]" />
-                <div className="testm-bg-gray w-[87.5%]">
-                  <div className="mb-3 flex justify-center">
-                    <span className="text-2xl text-gray-400">&#8220;</span>
-                  </div>
-                  <p className="testm-para h-[150px] overflow-auto pr-[5px] text-justify text-[14px] leading-[23px] text-black">
-                    {t.content.split("\n").map((line, j) => (
-                      <span key={j}>
-                        {line}
-                        {j < t.content.split("\n").length - 1 && <br />}
-                      </span>
-                    ))}
-                  </p>
-                  <h5 className="mt-3 text-xs font-semibold text-gray-600">
-                    <strong>{t.author}</strong>
-                  </h5>
+            <motion.div
+              key={i}
+              variants={cardVariants}
+              className={cn(
+                "group relative flex flex-col rounded-2xl border border-border/50 bg-card p-6 shadow-soft",
+                "transition-all duration-300 hover:shadow-card-hover"
+              )}
+            >
+              <div className="mb-4 flex items-center justify-between">
+                <Quote className="h-8 w-8 text-primary/20" />
+                <div className="flex gap-0.5">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                  ))}
                 </div>
               </div>
-              <div className="testm-user-pic">
-                <span className="text-2xl text-gray-600">&#128100;</span>
+              <div className="flex-1">
+                <p className="line-clamp-4 text-sm leading-relaxed text-muted-foreground">
+                  {t.content}
+                </p>
               </div>
-            </div>
+              <div className="mt-4 border-t border-border/50 pt-4">
+                <p className="text-xs font-semibold text-foreground">{t.author}</p>
+              </div>
+            </motion.div>
           ))}
+        </motion.div>
 
-          <div className="w-full px-4 text-center">
-            <Link
-              href="/reviews"
-              className="btn btn-primary inline-block rounded bg-[#337ab7] px-3 py-2 text-[14px] font-normal text-white no-underline hover:bg-[#286090]"
-            >
-              Read More
-            </Link>
-            <p>&nbsp;</p>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, delay: 0.4 }}
+          className="mt-10 text-center"
+        >
+          <Link
+            href="/reviews"
+            className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground no-underline transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/25"
+          >
+            Read All Reviews
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

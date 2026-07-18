@@ -2,17 +2,27 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+interface CardProps extends React.ComponentProps<"div"> {
+  size?: "default" | "sm"
+  glass?: boolean
+  hover?: boolean
+}
+
 function Card({
   className,
   size = "default",
+  glass,
+  hover = true,
   ...props
-}: React.ComponentProps<"div"> & { size?: "default" | "sm" }) {
+}: CardProps) {
   return (
     <div
       data-slot="card"
       data-size={size}
       className={cn(
         "group/card flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl bg-card py-(--card-spacing) text-sm text-card-foreground ring-1 ring-foreground/10 [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl",
+        glass && "glass",
+        hover && "transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover",
         className
       )}
       {...props}

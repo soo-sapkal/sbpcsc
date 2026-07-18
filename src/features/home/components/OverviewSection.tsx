@@ -1,55 +1,117 @@
+"use client"
+
+import { motion } from "framer-motion"
 import { NewsScroll } from "./NewsScroll"
 import { siteConfig } from "@/data/site-config"
 import { EXTERNAL_LINKS } from "@/data/constants"
+import { ArrowRight, GraduationCap, Building2, Newspaper } from "lucide-react"
+import Link from "next/link"
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.15 },
+  }),
+}
 
 export function OverviewSection() {
   return (
-    <section className="section1 py-5">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap">
-          <div className="w-full px-4 md:w-1/3">
-            <h1 className="heading_h1h mb-4 text-[28px] font-bold text-[#cf2b1f]">Overview</h1>
-            <p className="text-justify text-[#333]">
-              <strong>
-                <a href="/about/sbpcsc" className="text-primary hover:underline">
-                  S.B. Patil College of Science and Commerce
-                </a>
-              </strong>
-              &nbsp;(SBPCSC) is a progressive, student-centered, co-educational private college, committed to providing
-              quality education to all its students. It is also listed as one of the best junior colleges in Ravet, Pune.
-              It is run by a lively caring organization called Pimpri Chinchwad Education Trust (PCET), a time-tested
-              brand in education since 1990.
-            </p>
-            <a href="/about/sbpcsc" className="font-bold text-primary hover:underline">
-              Read More
-            </a>
-            <p>&nbsp;</p>
-          </div>
+    <section className="section-padding bg-gradient-to-b from-background to-muted/30">
+      <div className="container-wide">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <motion.div
+            custom={0}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            variants={fadeUp}
+          >
+            <div className="flex h-full flex-col rounded-2xl border border-border/50 bg-card p-6 shadow-soft transition-all duration-300 hover:shadow-card-hover">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-glow">
+                <GraduationCap className="h-6 w-6" />
+              </div>
+              <h2 className="font-heading mb-3 text-xl font-bold text-accent">Overview</h2>
+              <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                <strong className="text-foreground">
+                  <Link href="/about/sbpcsc" className="text-primary hover:underline">
+                    {siteConfig.name}
+                  </Link>
+                </strong>
+                &nbsp;is a progressive, student-centered, co-educational private college, committed to providing
+                quality education to all its students. It is also listed as one of the best junior colleges in Ravet, Pune.
+                It is run by a lively caring organization called Pimpri Chinchwad Education Trust (PCET), a time-tested
+                brand in education since 1990.
+              </p>
+              <Link
+                href="/about/sbpcsc"
+                className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
+              >
+                Read More
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </motion.div>
 
-          <div className="w-full px-4 md:w-1/3">
-            <h2 className="heading_h3h mb-4 text-[28px] font-bold text-[#cf2b1f]">About PCET</h2>
-            <p className="text-justify text-[#333]">
-              <strong>
-                <a href={EXTERNAL_LINKS.PCET} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Pimpri Chinchwad Education Trust (PCET)
-                </a>
-              </strong>
-              &nbsp;was established in 1990 by visionary Late. Shri. Shankarrao B. Patil, Late. Smt. Lilatai Shankarrao
-              Patil, Shri. Dnyaneswar P. Landage, Shri. Vitthal S. Kalbhor, Shri. Shantaram D. Garade, Late. Shri.
-              Bhaijan Kazi with an idea of providing quality education from K.G. to P.G. Its sole mission was aimed at
-              serving society, the industry and all stakeholders through value-inculcating.
-            </p>
-            <a href={EXTERNAL_LINKS.PCET} target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover:underline">
-              Read More
-            </a>
-            <p>&nbsp;</p>
-          </div>
+          <motion.div
+            custom={1}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            variants={fadeUp}
+          >
+            <div className="flex h-full flex-col rounded-2xl border border-border/50 bg-card p-6 shadow-soft transition-all duration-300 hover:shadow-card-hover">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-accent/80 text-white shadow-glow">
+                <Building2 className="h-6 w-6" />
+              </div>
+              <h2 className="font-heading mb-3 text-xl font-bold text-accent">About PCET</h2>
+              <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                <strong className="text-foreground">
+                  <a
+                    href={EXTERNAL_LINKS.PCET}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    Pimpri Chinchwad Education Trust (PCET)
+                  </a>
+                </strong>
+                &nbsp;was established in 1990 by visionary Late. Shri. Shankarrao B. Patil, with an idea of providing
+                quality education from K.G. to P.G. Its sole mission was aimed at serving society through
+                value-inculcating education.
+              </p>
+              <a
+                href={EXTERNAL_LINKS.PCET}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
+              >
+                Read More
+                <ArrowRight className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </motion.div>
 
-          <div className="w-full px-4 md:w-1/3">
-            <h2 className="heading_h3h mb-4 text-[28px] font-bold text-[#cf2b1f]">SBPCSC NEWS</h2>
-            <NewsScroll />
-            <p>&nbsp;</p>
-          </div>
+          <motion.div
+            custom={2}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            variants={fadeUp}
+          >
+            <div className="flex h-full flex-col rounded-2xl border border-border/50 bg-card shadow-soft transition-all duration-300 hover:shadow-card-hover">
+              <div className="flex items-center gap-3 border-b border-border/50 px-6 py-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white">
+                  <Newspaper className="h-5 w-5" />
+                </div>
+                <h2 className="font-heading text-xl font-bold text-accent">SBPCSC NEWS</h2>
+              </div>
+              <div className="flex-1 p-2">
+                <NewsScroll />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

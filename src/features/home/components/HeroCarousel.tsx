@@ -1,74 +1,85 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useRef } from "react"
 import Image from "next/image"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Autoplay, EffectFade, Pagination, Navigation } from "swiper/modules"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { sliderImages } from "@/features/home/data/slider-images"
+import "swiper/css"
+import "swiper/css/effect-fade"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
 
 export function HeroCarousel() {
-  const [current, setCurrent] = useState(0)
-  const length = sliderImages.length
-
-  const next = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % length)
-  }, [length])
-
-  const prev = useCallback(() => {
-    setCurrent((prev) => (prev - 1 + length) % length)
-  }, [length])
-
-  useEffect(() => {
-    const timer = setInterval(next, 4000)
-    return () => clearInterval(timer)
-  }, [next])
+  const prevRef = useRef<HTMLButtonElement>(null)
+  const nextRef = useRef<HTMLButtonElement>(null)
 
   return (
-    <div className="sbpcsc-slider hidden md:block">
-      <div className="carousel-fade">
-        <div className="relative w-full" style={{ aspectRatio: "1920/700" }}>
+    <section className="relative" aria-label="Hero carousel">
+      <div className="relative overflow-hidden">
+        <Swiper
+          modules={[Autoplay, EffectFade, Pagination, Navigation]}
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
+          speed={1000}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          pagination={{
+            clickable: true,
+            renderBullet: (_, className) =>
+              `<span class="${className} !h-2.5 !w-2.5 !rounded-full !bg-white/50 !opacity-70 transition-all duration-300 swiper-pagination-bullet-active:!w-6 swiper-pagination-bullet-active:!rounded-full swiper-pagination-bullet-active:!bg-accent swiper-pagination-bullet-active:!opacity-100"></span>`,
+          }}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
+              swiper.params.navigation.prevEl = prevRef.current
+              swiper.params.navigation.nextEl = nextRef.current
+            }
+          }}
+          loop
+          className="hero-swiper"
+          style={{ aspectRatio: "1920/700" }}
+        >
           {sliderImages.map((img, i) => (
-            <div
-              key={i}
-              className={`item absolute inset-0 transition-opacity duration-700 carousel-fade-item ${i === current ? "active" : ""}`}
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="w-full object-cover"
-                sizes="100vw"
-                preload={i === 0}
-              />
-            </div>
+            <SwiperSlide key={i}>
+              <div className="relative h-full min-h-[300px] w-full sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] xl:min-h-[700px]">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                  priority={i < 2}
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
 
         <button
-          onClick={prev}
-          className="carousel-control left-0 z-[2]"
+          ref={prevRef}
+          className="absolute left-4 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/10 p-2.5 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110 md:flex"
           aria-label="Previous slide"
         >
-          <ChevronLeft className="h-8 w-8 text-white" />
+          <ChevronLeft className="h-5 w-5" />
         </button>
         <button
-          onClick={next}
-          className="carousel-control right-0 z-[2]"
+          ref={nextRef}
+          className="absolute right-4 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/10 p-2.5 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110 md:flex"
           aria-label="Next slide"
         >
-          <ChevronRight className="h-8 w-8 text-white" />
+          <ChevronRight className="h-5 w-5" />
         </button>
-
-        <div className="carousel-indicators">
-          {sliderImages.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`h-[10px] w-[10px] rounded-full border border-white/50 ${i === current ? "bg-white" : "bg-white/40"}`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
-        </div>
       </div>
-    </div>
+    </section>
   )
 }

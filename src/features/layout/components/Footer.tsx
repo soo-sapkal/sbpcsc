@@ -1,8 +1,11 @@
-import { Phone, Mail, MapPin } from "lucide-react"
+"use client"
+
+import { Phone, Mail, MapPin, ExternalLink, ArrowUpRight } from "lucide-react"
 import { SocialIcons } from "./SocialIcons"
 import { siteConfig } from "@/data/site-config"
 import { EXTERNAL_LINKS } from "@/data/constants"
 import Link from "next/link"
+import { cn } from "@/lib/utils"
 
 const importantLinks = [
   { label: "NCERT", href: EXTERNAL_LINKS.NCERT },
@@ -20,81 +23,96 @@ const quickLinks = [
   { label: "Academics", href: "/academics/plan" },
   { label: "Blog", href: "/blog" },
   { label: "Library", href: "/library" },
-  { label: "ERP", href: EXTERNAL_LINKS.ERP_TEACHER },
+  { label: "Student ERP", href: EXTERNAL_LINKS.ERP_STUDENT },
   { label: "Contact Us", href: "/contact" },
 ]
 
 export function Footer() {
   return (
-    <>
-      <footer className="bg-[#0a5faa] pb-10 pt-10 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
-            <div className="mb-10 md:mb-0">
-              <h3 className="mb-5 pb-5 text-[28px] font-bold text-white">GET IN TOUCH</h3>
-              <p className="mb-2">
-                <MapPin className="mr-1 inline-block h-4 w-4" />
-                Opposite of S.B. Patil Public School,
-                <br /> S. No. 110, Gate No.1,
-                <br /> Ravet, Pune - 412101.
-              </p>
-              <p className="mb-2">
-                <Phone className="mr-1 inline-block h-4 w-4" />
-                {siteConfig.phone} / {siteConfig.phoneAlt}
-              </p>
-              <p className="mb-2">
-                <Mail className="mr-1 inline-block h-4 w-4" />
-                <a href={`mailto:${siteConfig.email}`} className="text-white no-underline hover:underline">
-                  {siteConfig.email}
-                </a>
-              </p>
+    <footer>
+      <div className="gradient-primary relative overflow-hidden pb-8 pt-14 text-white">
+        <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] bg-center opacity-5" />
+        <div className="container-wide relative z-10">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+            <div className="space-y-4">
+              <h3 className="font-heading text-lg font-bold text-white">GET IN TOUCH</h3>
+              <div className="h-0.5 w-12 rounded-full bg-accent" />
+              <div className="space-y-3 text-sm leading-relaxed text-white/80">
+                <p className="flex items-start gap-2">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                  <span>{siteConfig.address}</span>
+                </p>
+                <p className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 shrink-0 text-accent" />
+                  <a
+                    href={`tel:+91-${siteConfig.phone}`}
+                    className="text-white/80 transition-colors hover:text-white"
+                  >
+                    {siteConfig.phone} / {siteConfig.phoneAlt}
+                  </a>
+                </p>
+                <p className="flex items-center gap-2">
+                  <Mail className="h-4 w-4 shrink-0 text-accent" />
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="text-white/80 transition-colors hover:text-white"
+                  >
+                    {siteConfig.email}
+                  </a>
+                </p>
+              </div>
               <SocialIcons variant="footer" />
             </div>
 
-            <div className="mb-10 md:mb-0">
-              <h3 className="mb-5 pb-5 text-[28px] font-bold text-white">IMPORTANT LINKS</h3>
-              <ul className="m-0 list-none p-0">
+            <div>
+              <h3 className="font-heading text-lg font-bold text-white">IMPORTANT LINKS</h3>
+              <div className="mt-3 h-0.5 w-12 rounded-full bg-accent" />
+              <ul className="mt-5 space-y-2">
                 {importantLinks.map((link, i) => (
-                  <li key={i} className="border-b border-dotted border-white py-1">
+                  <li key={i}>
                     <a
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white no-underline transition-colors duration-300 hover:text-[#0c1e3d]"
+                      className="group inline-flex items-center gap-1.5 text-sm text-white/70 no-underline transition-all duration-300 hover:text-white"
                     >
-                      {link.label}
+                      <ExternalLink className="h-3 w-3 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
+                      <span>{link.label}</span>
                     </a>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="mb-10 md:mb-0">
-              <h3 className="mb-5 pb-5 text-[28px] font-bold text-white">QUICK LINKS</h3>
-              <ul className="m-0 list-none p-0">
+            <div>
+              <h3 className="font-heading text-lg font-bold text-white">QUICK LINKS</h3>
+              <div className="mt-3 h-0.5 w-12 rounded-full bg-accent" />
+              <ul className="mt-5 space-y-2">
                 {quickLinks.map((link, i) => {
                   const isExternal = link.href.startsWith("http")
                   if (isExternal) {
                     return (
-                      <li key={i} className="border-b border-dotted border-white py-1">
+                      <li key={i}>
                         <a
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-white no-underline transition-colors duration-300 hover:text-[#0c1e3d]"
+                          className="group inline-flex items-center gap-1.5 text-sm text-white/70 no-underline transition-all duration-300 hover:text-white"
                         >
-                          {link.label}
+                          <ArrowUpRight className="h-3 w-3 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
+                          <span>{link.label}</span>
                         </a>
                       </li>
                     )
                   }
                   return (
-                    <li key={i} className="border-b border-dotted border-white py-1">
+                    <li key={i}>
                       <Link
                         href={link.href}
-                        className="text-white no-underline transition-colors duration-300 hover:text-[#0c1e3d]"
+                        className="group inline-flex items-center gap-1.5 text-sm text-white/70 no-underline transition-all duration-300 hover:text-white"
                       >
-                        {link.label}
+                        <ArrowUpRight className="h-3 w-3 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
+                        <span>{link.label}</span>
                       </Link>
                     </li>
                   )
@@ -103,33 +121,36 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-5 pb-5 text-[28px] font-bold text-white">LOCATION</h3>
-              <iframe
-                className="mt-1 w-full rounded-[20px] border-0"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.258871352793!2d73.74075511434064!3d18.65237588733234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ba04003bbb83%3A0x2e3c5fc34bc28590!2sS+B+PATIL+COLLEGE+OF+SCIENCE+AND+COMMERCE!5e0!3m2!1sen!2sin!4v1485500977009"
-                allowFullScreen
-                aria-hidden="false"
-                tabIndex={0}
-                width="100%"
-                height="160px"
-                title="College Location"
-              />
+              <h3 className="font-heading text-lg font-bold text-white">LOCATION</h3>
+              <div className="mt-3 h-0.5 w-12 rounded-full bg-accent" />
+              <div className="mt-5 overflow-hidden rounded-xl ring-1 ring-white/10">
+                <iframe
+                  className="w-full border-0"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.258871352793!2d73.74075511434064!3d18.65237588733234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ba04003bbb83%3A0x2e3c5fc34bc28590!2sS+B+PATIL+COLLEGE+OF+SCIENCE+AND+COMMERCE!5e0!3m2!1sen!2sin!4v1485500977009"
+                  allowFullScreen
+                  aria-hidden="false"
+                  tabIndex={0}
+                  height="180"
+                  title="College Location"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
 
-      <div className="bg-[#011322] px-4 py-[10px] text-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center justify-between sm:flex-row">
-            <span className="text-sm">Copyright &copy; 2026 S.B. Patil College Of Science And Commerce</span>
-            <span className="mt-1 text-sm sm:mt-0 sm:text-right">
+      <div className="bg-primary-dark/90 px-4 py-3 text-white">
+        <div className="container-wide">
+          <div className="flex flex-col items-center justify-between gap-1 text-center text-xs sm:flex-row sm:text-left sm:text-sm">
+            <span>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</span>
+            <span>
               Designed &amp; Developed by{" "}
               <a
                 href="http://pcet.org.in/digital-marketing-team/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-white no-underline"
+                className="font-semibold text-white/80 no-underline transition-colors hover:text-accent"
               >
                 Digital Marketing Team, PCET
               </a>
@@ -137,6 +158,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </>
+    </footer>
   )
 }

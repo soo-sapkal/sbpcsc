@@ -1,8 +1,13 @@
+"use client"
+
 import { socialLinks } from "@/data/social-links"
+import { cn } from "@/lib/utils"
+import { useState } from "react"
 
 interface SocialIconsProps {
   variant: "top-strip" | "footer"
   showLabel?: boolean
+  className?: string
 }
 
 const iconPaths: Record<string, React.ReactNode> = {
@@ -41,35 +46,36 @@ const brandColors: Record<string, string> = {
   youtube: "#F00",
 }
 
-export function SocialIcons({ variant, showLabel }: SocialIconsProps) {
+export function SocialIcons({ variant, showLabel, className }: SocialIconsProps) {
   return (
-    <ul className={`${variant === "top-strip" ? "social-icons" : "social-network social-circle"} flex flex-wrap items-center gap-1 p-0`} style={{ listStyle: "none", margin: 0, paddingLeft: 0 }}>
-      {showLabel && <li className="mr-1 text-sm">Follow Us :</li>}
+    <div
+      className={cn(
+        "flex items-center gap-1.5",
+        variant === "top-strip" && "text-white",
+        className
+      )}
+    >
+      {showLabel && (
+        <span className="mr-1 text-xs text-white/70">Follow Us :</span>
+      )}
       {socialLinks.map((link) => (
-        <li key={link.name} className="inline-flex">
-          <a
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center"
-            title={link.name}
-            style={{
-              width: "29px",
-              height: "29px",
-              borderRadius: "50%",
-              backgroundColor: variant === "footer" ? "#333" : brandColors[link.icon],
-              color: "#fff",
-              fontSize: "15px",
-              textAlign: "center",
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            {iconPaths[link.icon]}
-          </a>
-        </li>
+        <a
+          key={link.name}
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            "inline-flex items-center justify-center rounded-full transition-all duration-300",
+            variant === "top-strip"
+              ? "h-7 w-7 bg-white/15 text-white hover:scale-110 hover:bg-white/30"
+              : "h-8 w-8 bg-white/10 text-white hover:scale-110 hover:bg-white/20"
+          )}
+          title={link.name}
+          aria-label={link.name}
+        >
+          {iconPaths[link.icon]}
+        </a>
       ))}
-    </ul>
+    </div>
   )
 }
