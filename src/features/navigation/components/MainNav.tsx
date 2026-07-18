@@ -128,7 +128,9 @@ function NavDropdownItem({ item, pathname, depth }: { item: NavItem; pathname: s
         <ChevronDown className="h-3 w-3 -rotate-90" />
       </span>
       <ul
-        className="nav-dropdown absolute left-full top-0 z-[99] m-0 list-none border-none bg-[#146ab5] p-0"
+        className={`nav-dropdown absolute left-full top-0 z-[99] m-0 list-none border-none bg-[#146ab5] p-0 ${
+          open ? "nav-dropdown-open" : ""
+        }`}
         style={{
           minWidth: "13.75rem",
           display: open ? "block" : undefined,

@@ -174,11 +174,15 @@
   transform-origin: top;
   opacity: 0;
   transition: all 0.5s ease-out;
+  pointer-events: none;
+  visibility: hidden;
   display: block !important;
 }
 .nav-dropdown-open {
   transform: rotateX(0deg);
   opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 /* Mobile nav hamburger icon */
