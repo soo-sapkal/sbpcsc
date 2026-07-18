@@ -1,6 +1,6 @@
 # MASTER IMPLEMENTATION PLAN
 
-## SBPCSC — Legacy PHP → Next.js 15 Migration
+## SBPCSC — Legacy PHP → Next.js 16 Migration
 
 ---
 
@@ -738,11 +738,11 @@ Create `next.config.js` redirects for all old `.php` URLs to new paths. This ens
 
 | Developer | Modules | Estimated Hours |
 |-----------|---------|----------------|
-| Soham | Layout, Navigation, Home, About, Admissions, Contact, Launch | 200 |
-| Prajwal | Academics (19 subjects), Faculty, Library, PDFs | 240 |
-| Mayur | Gallery, Achievements, Blog, Media, Reviews | 200 |
+| Soham | Header, SEO, Home, Contact, Launch, 3 About, 5 Science, 2 Commerce | ~63 |
+| Prajwal | Footer, Sidebars, Admissions, Blog, Academic Plan, Library, 4 About, 5 Science | ~65 |
+| Mayur | MainNav+MobileNav, Gallery (3), Media (2), Reviews, 7 Commerce | ~66 |
 
-**Phase One Total**: 640 hours (across 3 developers for 5 weeks)
+**Phase One Total**: ~194 hours (across 3 developers for 4-5 weeks)
 
 ### PHASE TWO: Integration Milestones (Week 8)
 
@@ -784,9 +784,9 @@ Create `next.config.js` redirects for all old `.php` URLs to new paths. This ens
 main (production)
   └── develop (integration branch)
        ├── feature/phase-zero
-       ├── feature/developer-a
-       ├── feature/developer-b
-       └── feature/developer-c
+       ├── feature/soham
+       ├── feature/prajwal
+       └── feature/mayur
 ```
 
 ### 8.2 Merge Checkpoints
@@ -794,9 +794,9 @@ main (production)
 | Checkpoint | When | What Merges | Who Handles |
 |------------|------|-------------|-------------|
 | CP0 | End of Phase Zero | `feature/phase-zero → develop` | Architect |
-| CP1 | End of Week 3 | `feature/developer-a → develop` (partial) | Dev A |
-| CP2 | End of Week 5 | `feature/developer-b → develop` (partial) | Dev B |
-| CP3 | End of Week 6 | `feature/developer-c → develop` (partial) | Dev C |
+| CP1 | End of Week 3 | `feature/soham → develop` (partial) | Soham |
+| CP2 | End of Week 5 | `feature/prajwal → develop` (partial) | Prajwal |
+| CP3 | End of Week 6 | `feature/mayur → develop` (partial) | Mayur |
 | CP4 | End of Week 7 | All → develop (complete) | All |
 | CP5 | End of Week 8 | `develop → main` (release) | Architect |
 
