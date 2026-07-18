@@ -37,6 +37,8 @@
   --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
   --radius-sm: calc(var(--radius) * 0.6);
@@ -93,7 +95,7 @@
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
+  --destructive: oklch(0.704 0.191 22.325);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
@@ -119,7 +121,193 @@
   body {
     @apply bg-background text-foreground;
   }
-  html {
-    @apply font-sans;
+}
+
+/* ===== Home Page / Legacy Styles ===== */
+
+/* Blinking animation for Highlights label */
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.animate-blink {
+  animation: blinker 1s step-start infinite;
+}
+
+/* Scroll animation for Spotlight marquee */
+.scrolling-text {
+  overflow: hidden;
+}
+.scrolling-content {
+  display: inline-flex;
+  animation: scroll-left 20s linear infinite;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pulse animation for admission enquiry */
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.animate-pulse-custom {
+  animation: pulse infinite 1s ease-in-out;
+}
+
+/* Nav dropdown rotateX animation */
+.nav-dropdown {
+  transform: rotateX(90deg);
+  transform-origin: top;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+  display: block !important;
+}
+.nav-dropdown-open {
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+/* Mobile nav hamburger icon */
+.button {
+  width: 55px;
+  height: 46px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 12399994;
+}
+.button::after {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  display: block;
+  height: 8px;
+  width: 20px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  content: "";
+}
+.button::before {
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  display: block;
+  height: 2px;
+  width: 20px;
+  background: #fff;
+  content: "";
+}
+.button.menu-opened::after {
+  transition: all 0.3s ease;
+  top: 23px;
+  border: 0;
+  height: 2px;
+  width: 19px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+.button.menu-opened::before {
+  top: 23px;
+  background: #fff;
+  width: 19px;
+  transform: rotate(-45deg);
+}
+
+/* News scroll styles */
+.sbpcsc-news-scroll ul {
+  padding-left: 0;
+  list-style: none;
+}
+.sbpcsc-news-scroll ul li {
+  border-bottom: 1px dashed #38a361;
+  padding: 10px;
+}
+
+/* Icon box styles */
+.icon-box {
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.icon-box h3 {
+  color: #337ab7;
+  border-left: none;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+/* Testimonial styles */
+.testm-bg-1 {
+  background: #146ab5;
+  height: 300px;
+}
+.testm-bg-gray {
+  background: #f5f5f5;
+  height: 300px;
+  padding: 50px 20px 10px 20px;
+  color: #146ab5;
+  margin-bottom: 30px;
+}
+.testm-user-pic {
+  padding: 25px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+
+/* Carousel fade effect */
+.carousel-fade .item {
+  transition-property: opacity;
+  transition-duration: 0.9s;
+  opacity: 0;
+}
+.carousel-fade .item.active {
+  opacity: 1;
+}
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Media queries */
+@media (max-width: 767px) {
+  .testm-bg-1,
+  .testm-bg-2 {
+    height: 55px;
   }
 }

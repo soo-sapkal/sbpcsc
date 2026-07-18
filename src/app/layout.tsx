@@ -1,6 +1,13 @@
 import type { Metadata } from "next"
 import { Inter, Poppins } from "next/font/google"
 import { siteConfig } from "@/data/site-config"
+import { TopStrip } from "@/features/layout"
+import { Header } from "@/features/layout"
+import { MainNav } from "@/features/navigation"
+import { MobileNav } from "@/features/navigation"
+import { Spotlight } from "@/features/layout"
+import { Footer } from "@/features/layout"
+import { ScrollToTop } from "@/features/layout"
 import "./globals.css"
 
 const inter = Inter({
@@ -52,8 +59,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="min-h-screen bg-background font-sans text-foreground antialiased">
+      <body className="min-h-screen bg-background text-foreground antialiased" style={{ fontFamily: "Century Gothic, CenturyGothic, AppleGothic, sans-serif" }}>
+        <TopStrip />
+        <Header />
+        <MainNav />
+        <MobileNav />
+        <Spotlight />
         {children}
+        <Footer />
+        <ScrollToTop />
       </body>
     </html>
   )
