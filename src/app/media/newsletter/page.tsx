@@ -21,7 +21,7 @@ export default function NewsletterPage() {
             <h1 className="text-2xl md:text-3xl font-extrabold text-[#146ab5] tracking-tight">
               Media Coverage & Newsletters
             </h1>
-            <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
+            <p className="text-neutral-700 text-sm md:text-base leading-relaxed">
               Stay updated with our latest media achievements, newspaper publications, and academic announcements covered in major press journals.
             </p>
           </header>

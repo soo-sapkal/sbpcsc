@@ -44,7 +44,7 @@ export default async function ActivitiesYearPage({ params }: PageProps) {
             <h1 className="text-2xl md:text-3xl font-extrabold text-[#146ab5] tracking-tight">
               Activities & Events ({year})
             </h1>
-            <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
+            <p className="text-neutral-700 text-sm md:text-base leading-relaxed">
               Explore various co-curricular activities, cultural fests, days celebrations, and workshops conducted during the academic year {year}.
             </p>
           </header>

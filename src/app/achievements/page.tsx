@@ -21,7 +21,7 @@ export default function AchievementsPage() {
             <h1 className="text-2xl md:text-3xl font-extrabold text-[#146ab5] tracking-tight">
               Student & Faculty Achievements
             </h1>
-            <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
+            <p className="text-neutral-700 text-sm md:text-base leading-relaxed">
               We take pride in our students academic excellence and co-curricular milestones. Explore our achievements, toppers list, and school pride.
             </p>
           </header>

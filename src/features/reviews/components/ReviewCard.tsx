@@ -27,7 +27,7 @@ export function ReviewCard({ review }: ReviewCardProps) {
         </div>
 
         {/* Testimonial Content */}
-        <p className="text-neutral-600 text-sm leading-relaxed mb-6 whitespace-pre-line italic">
+        <p className="text-neutral-700 text-sm leading-relaxed mb-6 whitespace-pre-line italic">
           &ldquo;{review.content}&rdquo;
         </p>
       </div>

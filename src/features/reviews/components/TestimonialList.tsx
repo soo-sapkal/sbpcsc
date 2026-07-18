@@ -39,7 +39,7 @@ export function TestimonialList({ reviews }: TestimonialListProps) {
             className={`rounded-full px-5 py-2 text-sm font-semibold transition-all active:scale-95 ${
               activeFilter === btn.value
                 ? "bg-[#146ab5] text-white shadow-sm"
-                : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+                : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
             }`}
           >
             {btn.label}

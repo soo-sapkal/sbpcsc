@@ -15,7 +15,7 @@ export function GalleryCard({ event, eventIndex, onImageClick }: GalleryCardProp
       <div className="space-y-2 border-l-4 border-[#146ab5] pl-4">
         <h3 className="text-xl font-bold text-neutral-900">{event.title}</h3>
         {event.description && (
-          <p className="text-neutral-600 text-sm leading-relaxed whitespace-pre-line">
+          <p className="text-neutral-700 text-sm leading-relaxed whitespace-pre-line">
             {event.description}
           </p>
         )}

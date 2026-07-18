@@ -30,7 +30,7 @@ export default function ReviewsPage() {
             <h1 className="text-2xl md:text-3xl font-extrabold text-[#146ab5] tracking-tight">
               What Students & Parents Say
             </h1>
-            <p className="text-neutral-600 text-sm md:text-base leading-relaxed max-w-3xl">
+            <p className="text-neutral-700 text-sm md:text-base leading-relaxed max-w-3xl">
               At S.B. Patil College of Science and Commerce, we are committed to providing an enriching academic environment, state-of-the-art infrastructure, and dedicated mentorship. Here is the feedback and success stories shared by our toppers, students, and parents.
             </p>
           </header>

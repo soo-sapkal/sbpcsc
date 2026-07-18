@@ -86,7 +86,7 @@ export function TestimonialCarousel({ reviews }: TestimonialCarouselProps) {
       {/* Navigation Arrows */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 border border-neutral-200 text-neutral-600 shadow-sm transition-all hover:bg-[#146ab5] hover:text-white hover:border-[#146ab5] active:scale-95"
+        className="absolute left-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 border border-neutral-200 text-neutral-700 shadow-sm transition-all hover:bg-[#146ab5] hover:text-white hover:border-[#146ab5] active:scale-95"
         aria-label="Previous testimonial"
       >
         <ChevronLeft className="h-5 w-5" />
@@ -94,7 +94,7 @@ export function TestimonialCarousel({ reviews }: TestimonialCarouselProps) {
 
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 border border-neutral-200 text-neutral-600 shadow-sm transition-all hover:bg-[#146ab5] hover:text-white hover:border-[#146ab5] active:scale-95"
+        className="absolute right-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 border border-neutral-200 text-neutral-700 shadow-sm transition-all hover:bg-[#146ab5] hover:text-white hover:border-[#146ab5] active:scale-95"
         aria-label="Next testimonial"
       >
         <ChevronRight className="h-5 w-5" />

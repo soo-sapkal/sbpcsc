@@ -21,7 +21,7 @@ export default function VideoPage() {
             <h1 className="text-2xl md:text-3xl font-extrabold text-[#146ab5] tracking-tight">
               Campus Videos & Highlights
             </h1>
-            <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
+            <p className="text-neutral-700 text-sm md:text-base leading-relaxed">
               Explore our YouTube video collection showcasing annual gatherings, cultural events, guidance workshops, and campus activities.
             </p>
           </header>
