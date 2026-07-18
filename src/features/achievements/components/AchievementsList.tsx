@@ -13,8 +13,10 @@ export function AchievementsList({ achievements }: AchievementsListProps) {
   const [activeTab, setActiveTab] = useState<"academic" | "co-curricular">("academic");
   const [selectedIdx, setSelectedIdx] = useState<number>(-1);
   const [selectedImgIdx, setSelectedImgIdx] = useState<number>(-1);
+  
+  // Track zoomed table profile images
+  const [selectedTableImage, setSelectedTableImage] = useState<{ src: string; alt: string } | null>(null);
 
-  // Filter achievements by the active category tab
   const filteredAchievements = achievements.filter((item) => item.category === activeTab);
 
   const handleImageClick = (idx: number, imageIndex: number) => {
@@ -31,6 +33,10 @@ export function AchievementsList({ achievements }: AchievementsListProps) {
     setSelectedImgIdx(newIndex);
   };
 
+  const handleTableImageClick = (src: string, alt: string) => {
+    setSelectedTableImage({ src, alt });
+  };
+
   const currentAchievement = selectedIdx !== -1 ? filteredAchievements[selectedIdx] : null;
 
   return (
@@ -41,6 +47,7 @@ export function AchievementsList({ achievements }: AchievementsListProps) {
           onClick={() => {
             setActiveTab("academic");
             handleCloseLightbox();
+            setSelectedTableImage(null);
           }}
           className={`rounded-full px-5 py-2 text-sm font-semibold transition-all active:scale-95 ${
             activeTab === "academic"
@@ -54,6 +61,7 @@ export function AchievementsList({ achievements }: AchievementsListProps) {
           onClick={() => {
             setActiveTab("co-curricular");
             handleCloseLightbox();
+            setSelectedTableImage(null);
           }}
           className={`rounded-full px-5 py-2 text-sm font-semibold transition-all active:scale-95 ${
             activeTab === "co-curricular"
@@ -73,17 +81,28 @@ export function AchievementsList({ achievements }: AchievementsListProps) {
             achievement={achievement}
             idx={idx}
             onImageClick={handleImageClick}
+            onTableImageClick={handleTableImageClick}
           />
         ))}
       </div>
 
-      {/* Lightbox Integration */}
+      {/* Lightbox Integration for standard grids */}
       {currentAchievement && (
         <Lightbox
           images={currentAchievement.images}
           currentIndex={selectedImgIdx}
           onClose={handleCloseLightbox}
           onNavigate={handleNavigateLightbox}
+        />
+      )}
+
+      {/* Lightbox Integration for table images */}
+      {selectedTableImage && (
+        <Lightbox
+          images={[selectedTableImage]}
+          currentIndex={0}
+          onClose={() => setSelectedTableImage(null)}
+          onNavigate={() => {}}
         />
       )}
     </div>

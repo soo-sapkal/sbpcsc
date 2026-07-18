@@ -151,6 +151,54 @@
     "description": "\"Myself Adarsh Sanjay shukla,I have been at [SBPCS] over the past [2YRS science].I have been impressed by the high standard of teaching of teacher. They try that students not only grasp the subject knowledge but also develop a deep understanding which help in my boards and JEE exam.the facilities and resources available at [SBPCS] are well-equipped laboratories, like library, or the activities, everything has contributed to creating a conductive learning environment.\"",
     "images": [
       {
+        "src": "/images/academic-achievements/toppers-students-2024-1.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
+        "src": "/images/academic-achievements/toppers-students-2024-2.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
+        "src": "/images/academic-achievements/toppers-students-2024-3.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
+        "src": "/images/academic-achievements/toppers-students-2024-4.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
+        "src": "/images/academic-achievements/toppers-students-2024-5.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
+        "src": "/images/academic-achievements/toppers-students-2024-6.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
+        "src": "/images/academic-achievements/toppers-students-2024-7.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
+        "src": "/images/academic-achievements/toppers-students-2024-8.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
+        "src": "/images/academic-achievements/toppers-students-2024-9.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
+        "src": "/images/academic-achievements/toppers-students-2024-10.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
+        "src": "/images/academic-achievements/toppers-students-2024-11.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
+        "src": "/images/academic-achievements/toppers-students-2024-12.JPG",
+        "alt": "Academic Achievements, SBPCSC"
+      },
+      {
         "src": "/images/academic-achievements/cet-toppers-result-2024.jpg",
         "alt": "Result, SBPCSC"
       },
@@ -356,13 +404,89 @@
         "src": "/images/academic-achievements/achievments17.jpg",
         "alt": "Toppers of CET 2020, SBPCSC"
       }
-    ]
+    ],
+    "table": {
+      "headers": [],
+      "rows": [
+        [
+          {
+            "text": "",
+            "image": "/images/academic-achievements/akshara.jpg"
+          },
+          {
+            "text": "Akshara Vineeth Edathara"
+          },
+          {
+            "text": "First Rank"
+          }
+        ],
+        [
+          {
+            "text": "",
+            "image": "/images/academic-achievements/mahadik.jpg"
+          },
+          {
+            "text": "Shubham Sanjay Mahadik"
+          },
+          {
+            "text": "Second Rank"
+          }
+        ],
+        [
+          {
+            "text": "",
+            "image": "/images/academic-achievements/rutuja-kul.jpg"
+          },
+          {
+            "text": "Rutuja Santosh Kulkarni"
+          },
+          {
+            "text": "Third Rank"
+          }
+        ],
+        [
+          {
+            "text": "",
+            "image": "/images/academic-achievements/dhawade.jpg"
+          },
+          {
+            "text": "Shruti Dhawade"
+          },
+          {
+            "text": "Fourth Rank"
+          }
+        ]
+      ]
+    }
   },
   {
     "category": "academic",
     "title": "RESULT NEET 2017",
     "description": "",
-    "images": []
+    "images": [],
+    "table": {
+      "headers": [],
+      "rows": [
+        [
+          {
+            "text": "Aakash Bongane",
+            "image": "/images/academic-achievements/akash.jpg"
+          },
+          {
+            "text": "Devika Chandrakant",
+            "image": "/images/academic-achievements/devika.jpg"
+          },
+          {
+            "text": "Nehal Waghchoure",
+            "image": "/images/academic-achievements/nehal.jpg"
+          },
+          {
+            "text": "Snehal Patil",
+            "image": "/images/academic-achievements/snehal.jpg"
+          }
+        ]
+      ]
+    }
   },
   {
     "category": "co-curricular",
@@ -373,7 +497,296 @@
         "src": "/images/co-curricular-activities/zp-sports-competition-winners-2025-26.jpg",
         "alt": "Sports Events Achievements 2025-26"
       }
-    ]
+    ],
+    "table": {
+      "headers": [
+        "Sr.No",
+        "EVENTS",
+        "GOLD",
+        "SILVER",
+        "BRONZE",
+        "TOTAL"
+      ],
+      "rows": [
+        [
+          {
+            "text": "1"
+          },
+          {
+            "text": "RollBall"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "2"
+          },
+          {
+            "text": "Taekwondo"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": "03"
+          }
+        ],
+        [
+          {
+            "text": "3"
+          },
+          {
+            "text": "Weight Lifting"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "02"
+          }
+        ],
+        [
+          {
+            "text": "4"
+          },
+          {
+            "text": "Judo"
+          },
+          {
+            "text": "05"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "07"
+          }
+        ],
+        [
+          {
+            "text": "5"
+          },
+          {
+            "text": "Roller Skating"
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "04"
+          }
+        ],
+        [
+          {
+            "text": "6"
+          },
+          {
+            "text": "Boxing"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "01"
+          }
+        ],
+        [
+          {
+            "text": "7"
+          },
+          {
+            "text": "Wrestling"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "04"
+          }
+        ],
+        [
+          {
+            "text": "8"
+          },
+          {
+            "text": "Athletics"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": "04"
+          }
+        ],
+        [
+          {
+            "text": "9"
+          },
+          {
+            "text": "Swimming"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          }
+        ],
+        [
+          {
+            "text": "10"
+          },
+          {
+            "text": "Kabbadi"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "01"
+          }
+        ],
+        [
+          {
+            "text": "11"
+          },
+          {
+            "text": "Kick Boxing"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "01"
+          }
+        ],
+        [
+          {
+            "text": "12"
+          },
+          {
+            "text": "Volley Ball"
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "13"
+          },
+          {
+            "text": "DodgeBall"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "TOTAL"
+          },
+          {
+            "text": "22"
+          },
+          {
+            "text": "20"
+          },
+          {
+            "text": "22"
+          },
+          {
+            "text": "64"
+          }
+        ]
+      ]
+    }
   },
   {
     "category": "co-curricular",
@@ -384,19 +797,614 @@
         "src": "/images/co-curricular-activities/zp-sports-competition-winners-felicitation.JPG",
         "alt": "Sports Events Achievements 2024-25"
       }
-    ]
+    ],
+    "table": {
+      "headers": [
+        "Sr.No",
+        "EVENTS",
+        "GOLD",
+        "SILVER",
+        "BRONZE",
+        "TOTAL"
+      ],
+      "rows": [
+        [
+          {
+            "text": "1"
+          },
+          {
+            "text": "Archery(I R)"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "01"
+          }
+        ],
+        [
+          {
+            "text": "2"
+          },
+          {
+            "text": "Judo"
+          },
+          {
+            "text": "05"
+          },
+          {
+            "text": "03"
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": "10"
+          }
+        ],
+        [
+          {
+            "text": "3"
+          },
+          {
+            "text": "Weight Lifting"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "01"
+          }
+        ],
+        [
+          {
+            "text": "4"
+          },
+          {
+            "text": "Boxing"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "02"
+          }
+        ],
+        [
+          {
+            "text": "5"
+          },
+          {
+            "text": "Wrestling"
+          },
+          {
+            "text": "03"
+          },
+          {
+            "text": "04"
+          },
+          {
+            "text": "03"
+          },
+          {
+            "text": "10"
+          }
+        ],
+        [
+          {
+            "text": "6"
+          },
+          {
+            "text": "Athletics"
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "05"
+          },
+          {
+            "text": "08"
+          }
+        ],
+        [
+          {
+            "text": "7"
+          },
+          {
+            "text": "Cricket"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "8"
+          },
+          {
+            "text": "Kabbadi"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "9"
+          },
+          {
+            "text": "Kho Kho"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "10"
+          },
+          {
+            "text": "Dodge Ball"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "TOTAL"
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": "21"
+          },
+          {
+            "text": "47"
+          },
+          {
+            "text": "80"
+          }
+        ]
+      ]
+    }
   },
   {
     "category": "co-curricular",
     "title": "Sports Achievements 2023-24",
     "description": "",
-    "images": []
+    "images": [],
+    "table": {
+      "headers": [
+        "Sr.No",
+        "EVENTS",
+        "GOLD",
+        "SILVER",
+        "BRONZE",
+        "TOTAL"
+      ],
+      "rows": [
+        [
+          {
+            "text": "1"
+          },
+          {
+            "text": "Archery(I R)"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": "02"
+          }
+        ],
+        [
+          {
+            "text": "2"
+          },
+          {
+            "text": "Cycling"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          }
+        ],
+        [
+          {
+            "text": "3"
+          },
+          {
+            "text": "Judo"
+          },
+          {
+            "text": "3"
+          },
+          {
+            "text": "2"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": "06"
+          }
+        ],
+        [
+          {
+            "text": "4"
+          },
+          {
+            "text": "Weight Lifting"
+          },
+          {
+            "text": "2"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "03"
+          }
+        ],
+        [
+          {
+            "text": "5"
+          },
+          {
+            "text": "Roller Skating"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          }
+        ],
+        [
+          {
+            "text": "6"
+          },
+          {
+            "text": "Fencing"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "01"
+          }
+        ],
+        [
+          {
+            "text": "7"
+          },
+          {
+            "text": "Boxing"
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "03"
+          }
+        ],
+        [
+          {
+            "text": "8"
+          },
+          {
+            "text": "Wrestling"
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": "03"
+          },
+          {
+            "text": "07"
+          }
+        ],
+        [
+          {
+            "text": "9"
+          },
+          {
+            "text": "Tug of War"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "10"
+          },
+          {
+            "text": "Athletics"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "09"
+          },
+          {
+            "text": "10"
+          }
+        ],
+        [
+          {
+            "text": "11"
+          },
+          {
+            "text": "Football"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "16"
+          },
+          {
+            "text": "16"
+          }
+        ],
+        [
+          {
+            "text": "12"
+          },
+          {
+            "text": "Cricket"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "13"
+          },
+          {
+            "text": "Speedball"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "14"
+          },
+          {
+            "text": "Kabbadi"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "15"
+          },
+          {
+            "text": "Kho Kho"
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "16"
+          },
+          {
+            "text": "Aatya Patya"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "TOTAL"
+          },
+          {
+            "text": "24"
+          },
+          {
+            "text": "54"
+          },
+          {
+            "text": "44"
+          },
+          {
+            "text": "122"
+          }
+        ]
+      ]
+    }
   },
   {
     "category": "co-curricular",
     "title": "Competition: Inter-College Competition",
     "description": "Host Institution: Indira College of Art, Commerce, and Science, Pune\n\t\t\t\t\t\t\t\t- Prize: First Place, Trophy, and ₹10,000 Cash Prize",
-    "images": []
+    "images": [
+      {
+        "src": "/images/gallery/activities/2024-25/certification-inter-college-competition-04.JPG",
+        "alt": "Poster Making Competition"
+      },
+      {
+        "src": "/images/gallery/activities/2024-25/certification-inter-college-competition-02.JPG",
+        "alt": "Poster Making Competition"
+      },
+      {
+        "src": "/images/gallery/activities/2024-25/certification-inter-college-competition-03.JPG",
+        "alt": "Poster Making Competition"
+      },
+      {
+        "src": "/images/gallery/activities/2024-25/certification-inter-college-competition-01.JPG",
+        "alt": "Poster Making Competition"
+      }
+    ]
   },
   {
     "category": "co-curricular",
@@ -621,7 +1629,316 @@
         "src": "/images/co-curricular-activities/sports-achievement-2020-7.JPG",
         "alt": "Co Curricular Activities, SBPCSC"
       }
-    ]
+    ],
+    "table": {
+      "headers": [
+        "Sr.No",
+        "EVENTS",
+        "GOLD",
+        "SILVER",
+        "BRONZE",
+        "TOTAL"
+      ],
+      "rows": [
+        [
+          {
+            "text": "1"
+          },
+          {
+            "text": "Chess"
+          },
+          {
+            "text": "2"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": "05"
+          }
+        ],
+        [
+          {
+            "text": "2"
+          },
+          {
+            "text": "Karate"
+          },
+          {
+            "text": "5"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "06"
+          }
+        ],
+        [
+          {
+            "text": "3"
+          },
+          {
+            "text": "Kick Boxing"
+          },
+          {
+            "text": "3"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "03"
+          }
+        ],
+        [
+          {
+            "text": "4"
+          },
+          {
+            "text": "Weight Lifting"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          }
+        ],
+        [
+          {
+            "text": "5"
+          },
+          {
+            "text": "Fencing"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": "2"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "04"
+          }
+        ],
+        [
+          {
+            "text": "6"
+          },
+          {
+            "text": "Boxing"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "03"
+          }
+        ],
+        [
+          {
+            "text": "7"
+          },
+          {
+            "text": "Wrestling"
+          },
+          {
+            "text": "02"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "03"
+          },
+          {
+            "text": "05"
+          }
+        ],
+        [
+          {
+            "text": "8"
+          },
+          {
+            "text": "Badminton"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "04"
+          },
+          {
+            "text": "03"
+          },
+          {
+            "text": "07"
+          }
+        ],
+        [
+          {
+            "text": "9"
+          },
+          {
+            "text": "Speed Ball"
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": "01"
+          },
+          {
+            "text": "25"
+          }
+        ],
+        [
+          {
+            "text": "10"
+          },
+          {
+            "text": "Athelitics"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "07"
+          },
+          {
+            "text": "03"
+          },
+          {
+            "text": "10"
+          }
+        ],
+        [
+          {
+            "text": "11"
+          },
+          {
+            "text": "Football"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "16"
+          },
+          {
+            "text": "16"
+          }
+        ],
+        [
+          {
+            "text": "12"
+          },
+          {
+            "text": "Cricket"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "01"
+          }
+        ],
+        [
+          {
+            "text": "13"
+          },
+          {
+            "text": "Handball"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "10"
+          },
+          {
+            "text": "10"
+          }
+        ],
+        [
+          {
+            "text": "14"
+          },
+          {
+            "text": "Kabbadi"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "12"
+          }
+        ],
+        [
+          {
+            "text": "TOTAL"
+          },
+          {
+            "text": "27"
+          },
+          {
+            "text": "41"
+          },
+          {
+            "text": "40"
+          },
+          {
+            "text": "108"
+          }
+        ]
+      ]
+    }
   },
   {
     "category": "co-curricular",
@@ -768,11 +2085,91 @@
         "src": "/images/co-curricular-activities/achive-2.jpg",
         "alt": "Co Curricular Activities, SBPCSC"
       }
-    ]
+    ],
+    "table": {
+      "headers": [
+        "Name of the Student",
+        "Class",
+        "Name of event",
+        "Rank"
+      ],
+      "rows": [
+        [
+          {
+            "text": "Pruthaviraj Patil"
+          },
+          {
+            "text": "XI"
+          },
+          {
+            "text": "Lawn Tennis"
+          },
+          {
+            "text": "First"
+          }
+        ],
+        [
+          {
+            "text": "Ramananad Gawade"
+          },
+          {
+            "text": "XII"
+          },
+          {
+            "text": "Atheletics -200 meter"
+          },
+          {
+            "text": "First"
+          }
+        ],
+        [
+          {
+            "text": "Ramananad Gawade"
+          },
+          {
+            "text": "XII"
+          },
+          {
+            "text": "Atheletics -100 meter"
+          },
+          {
+            "text": "Second"
+          }
+        ],
+        [
+          {
+            "text": "Ms. Komal Chaudhari"
+          },
+          {
+            "text": "XI"
+          },
+          {
+            "text": "Karate"
+          },
+          {
+            "text": "Second"
+          }
+        ],
+        [
+          {
+            "text": "Vikrant Kulkarni"
+          },
+          {
+            "text": "XI"
+          },
+          {
+            "text": "Karate"
+          },
+          {
+            "text": "Third"
+          }
+        ]
+      ]
+    }
   },
   {
     "category": "academic",
-    "title": "Achievement",
+    "title": "Achievements Highlight",
     "description": "",
     "images": [
       {
@@ -782,576 +2179,6 @@
       {
         "src": "/images/academic-achievements/mht-cet-pcm-2023.jpg",
         "alt": "MHT-CET (PCM), SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "academic",
-    "title": "HSC Result 2023",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/academic-achievements/toppers-science-23.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/toppers-commerce-23.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "academic",
-    "title": "Felicitation of students who passed MH-CET 2022 with high score by Honorable Trustees.",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/academic-achievements/SBPCSC-MHCET-RESULT-2022-1.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-MHCET-RESULT-2022-2.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-MHCET-RESULT-2022-3.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-MHCET-RESULT-2022-4.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-MHCET-RESULT-2022-5.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-MHCET-RESULT-2022-6.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/siddharth-wakchoure.jpg",
-        "alt": "Siddharth Wakchoure, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "academic",
-    "title": "HSC RESULT 2022",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/academic-achievements/hsc-science-topper-2021-22.jpg",
-        "alt": "HSC RESULT 2022, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/hsc-commerce-topper-2021-22.jpg",
-        "alt": "HSC RESULT 2022, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "academic",
-    "title": "HSC RESULT 2021",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/academic-achievements/HSC-Results-2021-SBPCSC.jpg",
-        "alt": "HSC RESULT 2021, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "academic",
-    "title": "Felicitation of toppers students of both Science and Commerce by Honorable Trustees.",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/academic-achievements/SBPCSC-HSC-RESULT-2021-1.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-HSC-RESULT-2021-2.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-HSC-RESULT-2021-3.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-HSC-RESULT-2021-4.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-HSC-RESULT-2021-5.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-HSC-RESULT-2021-6.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-HSC-RESULT-2021-7.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-HSC-RESULT-2021-8.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-HSC-RESULT-2021-9.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/SBPCSC-HSC-RESULT-2021-10.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/gargee-dashputre-1.jpg",
-        "alt": "Gargee Dashputre Qualified JEE Mains Exam, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "academic",
-    "title": "Toppers of CET 2020",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/academic-achievements/toppers-of-cet-2020-1.jpg",
-        "alt": "Toppers of CET 2020, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/achi-1-2019.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/achi-2-2019.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/achi-3-2019.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/achi-4-2019.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      },
-      {
-        "src": "/images/academic-achievements/achi-5-2019.jpg",
-        "alt": "Academic Achievements, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "academic",
-    "title": "HSC SCIENCE 2018 RANKERS",
-    "description": "",
-    "images": []
-  },
-  {
-    "category": "academic",
-    "title": "HSC BOARD 2018 RESULT",
-    "description": "Scoring 100% Result in Science HSC BOARD 2018",
-    "images": [
-      {
-        "src": "/images/academic-achievements/result18Img.jpg",
-        "alt": "Toppers of CET 2020, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "academic",
-    "title": "HSC BOARD 2017 RESULT",
-    "description": "Scoring 100% Result in Science HSC BOARD 2017",
-    "images": [
-      {
-        "src": "/images/academic-achievements/achievments17.jpg",
-        "alt": "Toppers of CET 2020, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "academic",
-    "title": "RESULT NEET 2017",
-    "description": "",
-    "images": []
-  },
-  {
-    "category": "co-curricular",
-    "title": "Sports Achievements 2023-24",
-    "description": "",
-    "images": []
-  },
-  {
-    "category": "co-curricular",
-    "title": "Archery and Cycling both with GOLD Medal",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/archery-and-cycling-g1.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/yogesh/archery-and-cycling-g2.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Rajan Mahajan secured GOLD Medal in Roller Skating in Zilla Parishad Level",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/rajan-mahajan.jpg",
-        "alt": "Rajan Mahajan secured GOLD Medal in Roller Skating in Zilla Parishad Level"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Secured Bronze Medal 100 X 4 Relay in Zilla Parishad",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/medal-relay.jpg",
-        "alt": "Secured Bronze Medal 100 X 4 Relay in Zilla Parishad"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Yash Sachin Gosavi secured GOLD Medal in Weight Lifting 90kg under 19yrs at Zilla Parishad",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/yash-sachin-gosavi.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/yogesh/yash-sachin-gosavi-2.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "SILVER Medal in Football under 19 in Zilla Parishad",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/medal in-football.jpg",
-        "alt": "SILVER Medal in Football under 19 in Zilla Parishad"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "SILVER Medal in AAtyaPatya in Zilla Parishad",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/medal-in-aatyapatya.jpg",
-        "alt": "SILVER Medal in AAtyaPatya in Zilla Parishad"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "2nd  Prize in TugofWar at Symbi Utsav",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/tugofwar-at-symbi.jpg",
-        "alt": "2nd  Prize in TugofWar at Symbi Utsav"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Securing Gold and Silver Medal in Wrestling at Zilla Parishad",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/gold-and-silver-medal-in-wrestling.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/yogesh/gold-and-silver-medal-in-wrestling-2.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/yogesh/gold-and-silver-medal-in-wrestling-3.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Secured GOLD Medal in Boxing under 17 & 19yrs at Zilla Parishad",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/boxing-gold-medal.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/yogesh/boxing-gold-medal-2.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Securing Gold and Silver Medal in Judo at Zilla Parishad",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/medal in-judo-1.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/yogesh/medal in-judo-2.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Secured 1st Prize in KHO KHO",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/prize-in-kho-kho.jpg",
-        "alt": "Secured 1st Prize in KHO KHO"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Sport’s Teacher Achievement",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/yogesh/sport’s-teacher-achievement-1.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/yogesh/sport’s-teacher-achievement-2.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/yogesh/sport’s-teacher-achievement-3.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "12th Commerce students Mast.Rajan Mahajan secured Gold Medal in State level Cycling Road Race  organised in Ahmednagar and All the best for his National Competition .",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/co-curricular-activities/cycling-road-race-01.jpg",
-        "alt": "12th Commerce students Mast.Rajan Mahajan secured Gold Medal in State level Cycling Road Race  organised in Ahmednagar and All the best for his National Competition ."
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "12th Science student Mast.Yash Nanaware won 1st prize in Kickboxing Championship at National Level held in Chandigarh in Nov 2022",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/co-curricular-activities/yash-nanaware-won-1st-prize-kickboxing.jpg",
-        "alt": "12th Science student Mast.Yash Nanaware won 1st prize in Kickboxing Championship at National Level held in Chandigarh in Nov 2022"
-      },
-      {
-        "src": "/images/co-curricular-activities/certificate-210907.JPG",
-        "alt": "12th Science student Mast.Yash Nanaware won 1st prize in Kickboxing Championship at National Level held in Chandigarh in Nov 2022"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Sports Achievement in A.Y. 2019-20",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/co-curricular-activities/sports-achievement-2020-1.JPG",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/sports-achievement-2020-2.JPG",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/sports-achievement-2020-3.JPG",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/sports-achievement-2020-4.JPG",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/sports-achievement-2020-5.JPG",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/sports-achievement-2020-6.JPG",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/sports-achievement-2020-7.JPG",
-        "alt": "Co Curricular Activities, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "GUNWANT KRIDA SHIKSHAK PURSKAR 2019-2020 to Mr.Pradeep Kasar",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/co-curricular-activities/sports-achievement-2020-8.JPG",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/sports-achievement-2020-9.JPG",
-        "alt": "Co Curricular Activities, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Sport Achievement for Academic 2019-20 at District Level, Zone level, State Level",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/co-curricular-activities/achievement-1.jpeg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/achievement-2.jpeg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/distric-olympic-compition.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/activity1.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/activity2.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/activity3.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/activity4.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/activity5.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/activity6.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Won 2nd Prize in Mine Act at Morya Youth Festival 2019 Chinchwad Pune.",
-    "description": "",
-    "images": []
-  },
-  {
-    "category": "co-curricular",
-    "title": "Won 3rd prize in Short Film at Morya Youth Festival 2019 Chinchwad Pune.",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/co-curricular-activities/achievements-morya-youth-festival-2019.jpg",
-        "alt": "one of the best science college in pune which promote excellence in education"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Sports News Article",
-    "description": "",
-    "images": [
-      {
-        "src": "/images/co-curricular-activities/sportsArticle.jpg",
-        "alt": "one of the best science college in pune which promote excellence in education"
-      },
-      {
-        "src": "/images/co-curricular-activities/sportsAchievement1.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/sportsAchievement2.jpeg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/achievement1.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/achievement3.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/achievement2.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/achievement4.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Students of 11th IIT Won 2nd Runner in Aditya Birla Memorial Interschool Business Quiz conducted by B.K Birla Centre for Education Pune.",
-    "description": "Miss. Muskan Shikalgar \n\t\t\t\t\t\t\t\tMiss. Meghana Joshi \n\t\t\t\t\t\t\t\tMr. Yashwardhan Dixit",
-    "images": [
-      {
-        "src": "/images/co-curricular-activities/aditya-birla-memorial-interschool-business-quiz.jpg",
-        "alt": "one of the best science college in pune which promote excellence in education"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "SPORTS 2017",
-    "description": "YASH WALEHKAR won GOLD MEDAL in Kickboxing Championship conducted by Pune Zilla Parishad, September 2017",
-    "images": [
-      {
-        "src": "/images/co-curricular-activities/gold-medal.jpg",
-        "alt": "one of the best science college in pune which promote excellence in education"
-      }
-    ]
-  },
-  {
-    "category": "co-curricular",
-    "title": "Our S.",
-    "description": "Our S.B.Patil College of Science & Commerce shows remarkable performances in District level Sports Competitions conducted by Pimpri Chinchwad Co-operation in association with Zilha Krida Adhikari Karyalaya Pune &Krida Seva Sanchnalaya Maharashtra Rajya. The Details are as follows.",
-    "images": [
-      {
-        "src": "/images/co-curricular-activities/achive-1.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
-      },
-      {
-        "src": "/images/co-curricular-activities/achive-2.jpg",
-        "alt": "Co Curricular Activities, SBPCSC"
       }
     ]
   }
