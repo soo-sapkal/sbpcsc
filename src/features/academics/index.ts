@@ -1,10 +1,4 @@
-export { AcademicPlan } from "./components/AcademicPlan"
-export { SubjectTabs } from "./components/SubjectTabs"
-export { SubjectAbout } from "./components/SubjectAbout"
-export { FacultyList } from "./components/FacultyList"
-export { SyllabusTab } from "./components/SyllabusTab"
-export { QuestionPapersTab } from "./components/QuestionPapersTab"
-export { DownloadsTab } from "./components/DownloadsTab"
-export { TeachingPlanTab } from "./components/TeachingPlanTab"
-export { SubjectCard } from "./components/SubjectCard"
-export { StreamSelector } from "./components/StreamSelector"
+export * from "./data/academics-data";
+export * from "./components/SubjectAbout";
+export * from "./components/FacultyList";
+export * from "./components/SubjectTabs";
