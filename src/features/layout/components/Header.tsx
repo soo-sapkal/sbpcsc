@@ -19,13 +19,13 @@ export function Header() {
           </Link>
         </div>
         <div className="w-full text-center md:w-[75%]">
-          <div className="text-[#3b5998] text-lg font-bold md:text-[21px] tracking-wide">
+          <div className="text-[#3b5998] text-lg font-bold md:text-[1.313rem] tracking-wide">
             Pimpri Chinchwad Education Trust&apos;s
           </div>
-          <div className="text-[#cf2b1f] text-2xl font-bold md:text-[30px] uppercase tracking-wide py-1">
+          <div className="text-[#cf2b1f] text-2xl font-bold md:text-3xl uppercase tracking-wide py-1">
             S. B. PATIL COLLEGE OF SCIENCE AND COMMERCE
           </div>
-          <div className="text-[#333] text-xs md:text-[15px]">
+          <div className="text-[#333] text-xs md:text-[0.938rem]">
             <strong>INDEX NO :- {siteConfig.indexNo} | U-DISE NO :- {siteConfig.udiseNo}</strong>
           </div>
         </div>

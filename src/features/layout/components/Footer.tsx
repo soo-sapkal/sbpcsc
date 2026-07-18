@@ -31,7 +31,7 @@ export function Footer() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
             <div className="mb-10 md:mb-0">
-              <h3 className="mb-5 pb-5 text-[28px] font-bold text-white">GET IN TOUCH</h3>
+              <h3 className="mb-5 pb-5 text-[1.75rem] font-bold text-white">GET IN TOUCH</h3>
               <p className="mb-2">
                 <MapPin className="mr-1 inline-block h-4 w-4" />
                 Opposite of S.B. Patil Public School,
@@ -52,7 +52,7 @@ export function Footer() {
             </div>
 
             <div className="mb-10 md:mb-0">
-              <h3 className="mb-5 pb-5 text-[28px] font-bold text-white">IMPORTANT LINKS</h3>
+              <h3 className="mb-5 pb-5 text-[1.75rem] font-bold text-white">IMPORTANT LINKS</h3>
               <ul className="m-0 list-none p-0">
                 {importantLinks.map((link, i) => (
                   <li key={i} className="border-b border-dotted border-white py-1">
@@ -70,7 +70,7 @@ export function Footer() {
             </div>
 
             <div className="mb-10 md:mb-0">
-              <h3 className="mb-5 pb-5 text-[28px] font-bold text-white">QUICK LINKS</h3>
+              <h3 className="mb-5 pb-5 text-[1.75rem] font-bold text-white">QUICK LINKS</h3>
               <ul className="m-0 list-none p-0">
                 {quickLinks.map((link, i) => {
                   const isExternal = link.href.startsWith("http")
@@ -103,15 +103,15 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-5 pb-5 text-[28px] font-bold text-white">LOCATION</h3>
+              <h3 className="mb-5 pb-5 text-[1.75rem] font-bold text-white">LOCATION</h3>
               <iframe
-                className="mt-1 w-full rounded-[20px] border-0"
+                className="mt-1 w-full rounded-[1.25rem] border-0"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.258871352793!2d73.74075511434064!3d18.65237588733234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ba04003bbb83%3A0x2e3c5fc34bc28590!2sS+B+PATIL+COLLEGE+OF+SCIENCE+AND+COMMERCE!5e0!3m2!1sen!2sin!4v1485500977009"
                 allowFullScreen
                 aria-hidden="false"
                 tabIndex={0}
                 width="100%"
-                height="160px"
+                height="160"
                 title="College Location"
               />
             </div>
@@ -119,7 +119,7 @@ export function Footer() {
         </div>
       </footer>
 
-      <div className="bg-[#011322] px-4 py-[10px] text-white">
+      <div className="bg-[#011322] px-4 py-2.5 text-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <span className="text-sm">Copyright &copy; 2026 S.B. Patil College Of Science And Commerce</span>

@@ -183,8 +183,8 @@
 
 /* Mobile nav hamburger icon */
 .button {
-  width: 55px;
-  height: 46px;
+  width: 3.438rem;
+  height: 2.875rem;
   position: absolute;
   right: 0;
   top: 0;
@@ -193,11 +193,11 @@
 }
 .button::after {
   position: absolute;
-  top: 22px;
-  right: 20px;
+  top: 1.375rem;
+  right: 1.25rem;
   display: block;
-  height: 8px;
-  width: 20px;
+  height: 0.5rem;
+  width: 1.25rem;
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
   content: "";
@@ -205,27 +205,27 @@
 .button::before {
   transition: all 0.3s ease;
   position: absolute;
-  top: 16px;
-  right: 20px;
+  top: 1rem;
+  right: 1.25rem;
   display: block;
   height: 2px;
-  width: 20px;
+  width: 1.25rem;
   background: #fff;
   content: "";
 }
 .button.menu-opened::after {
   transition: all 0.3s ease;
-  top: 23px;
+  top: 1.438rem;
   border: 0;
   height: 2px;
-  width: 19px;
+  width: 1.188rem;
   background: #fff;
   transform: rotate(45deg);
 }
 .button.menu-opened::before {
-  top: 23px;
+  top: 1.438rem;
   background: #fff;
-  width: 19px;
+  width: 1.188rem;
   transform: rotate(-45deg);
 }
 
@@ -236,38 +236,36 @@
 }
 .sbpcsc-news-scroll ul li {
   border-bottom: 1px dashed #38a361;
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 /* Icon box styles */
 .icon-box {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   text-align: center;
-  margin-bottom: 5px;
-  margin-top: 10px;
+  margin-bottom: 0.313rem;
+  margin-top: 0.625rem;
 }
 .icon-box h3 {
   color: #337ab7;
   border-left: none;
-  font-size: 17px;
-  margin-top: 10px;
+  font-size: 1.063rem;
+  margin-top: 0.625rem;
 }
 
 /* Testimonial styles */
 .testm-bg-1 {
   background: #146ab5;
-  height: 300px;
 }
 .testm-bg-gray {
   background: #f5f5f5;
-  height: 300px;
-  padding: 50px 20px 10px 20px;
+  padding: 3.125rem 1.25rem 0.625rem 1.25rem;
   color: #146ab5;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 .testm-user-pic {
-  padding: 25px;
+  padding: 1.563rem;
   border-radius: 50%;
   background: #f5f5f5;
   position: absolute;
@@ -291,14 +289,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   color: #fff;
   text-align: center;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   transition: background 0.3s;
+  border: none;
 }
 .carousel-control:hover {
   background: rgba(0, 0, 0, 0.5);
@@ -308,6 +307,6 @@
 @media (max-width: 767px) {
   .testm-bg-1,
   .testm-bg-2 {
-    height: 55px;
+    height: 3.438rem;
   }
 }

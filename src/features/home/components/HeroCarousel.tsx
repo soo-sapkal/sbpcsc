@@ -43,18 +43,10 @@ export function HeroCarousel() {
           ))}
         </div>
 
-        <button
-          onClick={prev}
-          className="carousel-control left-0 z-[2]"
-          aria-label="Previous slide"
-        >
+        <button onClick={prev} className="carousel-control left-0 z-[2]" aria-label="Previous slide">
           <ChevronLeft className="h-8 w-8 text-white" />
         </button>
-        <button
-          onClick={next}
-          className="carousel-control right-0 z-[2]"
-          aria-label="Next slide"
-        >
+        <button onClick={next} className="carousel-control right-0 z-[2]" aria-label="Next slide">
           <ChevronRight className="h-8 w-8 text-white" />
         </button>
 
@@ -63,7 +55,7 @@ export function HeroCarousel() {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`h-[10px] w-[10px] rounded-full border border-white/50 ${i === current ? "bg-white" : "bg-white/40"}`}
+              className={`h-2.5 w-2.5 rounded-full border border-white/50 ${i === current ? "bg-white" : "bg-white/40"}`}
               aria-label={`Go to slide ${i + 1}`}
             />
           ))}

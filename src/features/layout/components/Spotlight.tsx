@@ -6,12 +6,12 @@ export function Spotlight() {
       <div className="container-fluid">
         <div className="flex">
           <div className="w-1/6 p-0 md:w-[8.33%]">
-            <div className="px-4 py-[5px] text-[15px] font-bold uppercase tracking-wide text-[#0f2747]">
+            <div className="px-4 py-1 text-[0.938rem] font-bold uppercase tracking-wide text-[#0f2747]">
               <span className="animate-blink">Highlights:</span>
             </div>
           </div>
           <div className="w-5/6 overflow-hidden md:w-[91.67%]">
-            <div className="scrolling-text flex items-center py-[5px]">
+            <div className="scrolling-text flex items-center py-1">
               <div className="scrolling-content flex whitespace-nowrap">
                 <a
                   href="/images/brain-waves-2025-highlight.jpg"

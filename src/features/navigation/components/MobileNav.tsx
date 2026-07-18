@@ -37,7 +37,7 @@ function MobileNavItem({
         <Comp
           href={item.href}
           onClick={onLinkClick}
-          className={`block w-full px-4 py-3 text-[15px] font-bold uppercase text-white no-underline ${
+          className={`block w-full px-4 py-3 text-[0.938rem] font-bold uppercase text-white no-underline ${
             active ? "bg-[#cf2b1f]" : ""
           }`}
           {...extraProps}
@@ -54,7 +54,7 @@ function MobileNavItem({
     <li className="border-t border-[#999]">
       <button
         onClick={() => setOpen(!open)}
-        className={`flex w-full items-center justify-between px-4 py-3 text-[15px] font-bold uppercase text-white ${
+        className={`flex w-full items-center justify-between px-4 py-3 text-[0.938rem] font-bold uppercase text-white ${
           active ? "bg-[#cf2b1f]" : ""
         }`}
       >
@@ -81,13 +81,11 @@ export function MobileNav() {
   return (
     <div className="menu-strip bg-[#146ab5] lg:hidden">
       <div className="container mx-auto px-4">
-        <div className="relative min-h-[46px]">
-          <div className="px-4 py-[23px] text-xs font-bold text-[#ddd]" id="head-mobile" />
+        <div className="relative min-h-[2.875rem]">
+          <div className="px-4 py-[1.438rem] text-xs font-bold text-[#ddd]" id="head-mobile" />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`button absolute right-0 top-0 z-[9999] h-[46px] w-[55px] cursor-pointer ${
-              menuOpen ? "menu-opened" : ""
-            }`}
+            className={`button absolute right-0 top-0 z-[9999] cursor-pointer`}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           />
           {menuOpen && (

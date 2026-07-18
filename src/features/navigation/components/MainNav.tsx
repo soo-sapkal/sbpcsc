@@ -40,7 +40,7 @@ function NavLink({ item, pathname, depth = 0 }: { item: NavItem; pathname: strin
       <li className="relative">
         <Comp
           href={item.href}
-          className={`block px-3 py-[18px] text-[15px] font-bold uppercase tracking-wide text-white no-underline transition-colors duration-300 ${
+          className={`block px-3 py-[1.125rem] text-[0.938rem] font-bold uppercase tracking-wide text-white no-underline transition-colors duration-300 ${
             active ? "bg-[#cf2b1f]" : "hover:bg-[#cf2b1f]"
           }`}
           {...extraProps}
@@ -56,7 +56,7 @@ function NavLink({ item, pathname, depth = 0 }: { item: NavItem; pathname: strin
   return (
     <li ref={ref} className="relative">
       <span
-        className={`flex cursor-pointer items-center gap-1 px-3 py-[18px] text-[15px] font-bold uppercase tracking-wide text-white no-underline transition-colors duration-300 ${
+        className={`flex cursor-pointer items-center gap-1 px-3 py-[1.125rem] text-[0.938rem] font-bold uppercase tracking-wide text-white no-underline transition-colors duration-300 ${
           active ? "bg-[#cf2b1f]" : "hover:bg-[#cf2b1f]"
         }`}
       >
@@ -68,7 +68,7 @@ function NavLink({ item, pathname, depth = 0 }: { item: NavItem; pathname: strin
           open ? "nav-dropdown-open" : ""
         }`}
         style={{
-          minWidth: "220px",
+          minWidth: "13.75rem",
           display: open ? "block" : undefined,
         }}
       >
@@ -108,7 +108,7 @@ function NavDropdownItem({ item, pathname, depth }: { item: NavItem; pathname: s
       <li>
         <Comp
           href={item.href}
-          className={`block w-[220px] border-b border-white/15 px-4 py-[11px] text-[15px] font-bold uppercase text-white no-underline transition-colors duration-300 hover:bg-[#cf2b1f] ${
+          className={`block w-[13.75rem] border-b border-white/15 px-4 py-[0.688rem] text-[0.938rem] font-bold uppercase text-white no-underline transition-colors duration-300 hover:bg-[#cf2b1f] ${
             active ? "bg-[#cf2b1f]" : ""
           }`}
           {...extraProps}
@@ -123,14 +123,14 @@ function NavDropdownItem({ item, pathname, depth }: { item: NavItem; pathname: s
 
   return (
     <li ref={ref} className="relative">
-      <span className="flex w-[220px] cursor-pointer items-center justify-between border-b border-white/15 px-4 py-[11px] text-[15px] font-bold uppercase text-white no-underline transition-colors duration-300 hover:bg-[#cf2b1f]">
+      <span className="flex w-[13.75rem] cursor-pointer items-center justify-between border-b border-white/15 px-4 py-[0.688rem] text-[0.938rem] font-bold uppercase text-white no-underline transition-colors duration-300 hover:bg-[#cf2b1f]">
         {item.label}
         <ChevronDown className="h-3 w-3 -rotate-90" />
       </span>
       <ul
         className="nav-dropdown absolute left-full top-0 z-[99] m-0 list-none border-none bg-[#146ab5] p-0"
         style={{
-          minWidth: "220px",
+          minWidth: "13.75rem",
           display: open ? "block" : undefined,
         }}
       >

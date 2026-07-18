@@ -8,7 +8,7 @@ export function TopStrip() {
     <div className="bg-[#dfdfdf] text-[#333]">
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-          <div className="px-7 flex items-center gap-1 text-sm">
+          <div className="flex items-center gap-1 py-1.5 text-sm">
             <Phone className="h-4 w-4" />
             <a href="tel:+91-7424080910" className="text-[#333] no-underline hover:underline">
               {siteConfig.phone}

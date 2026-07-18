@@ -10,7 +10,7 @@ export function IconBoxGrid() {
           {iconBoxes.map((box, i) => {
             const isExternal = box.href.startsWith("mailto:") || box.href.startsWith("tel:")
             const content = (
-              <div className="icon-box mt-[10px] mb-[5px] rounded-[10px] bg-white p-[15px] text-center">
+              <div className="icon-box mt-2.5 mb-1 rounded-[0.625rem] bg-white p-4 text-center">
                 <Image
                   src={box.icon}
                   alt={box.title}
@@ -19,11 +19,11 @@ export function IconBoxGrid() {
                   className="mx-auto"
                   unoptimized
                 />
-                <h3 className="mt-[10px] text-[17px] font-semibold text-[#337ab7]">{box.title}</h3>
+                <h3 className="mt-2.5 text-[1.063rem] font-semibold text-[#337ab7]">{box.title}</h3>
               </div>
             )
 
-            const wrapperClass = "w-1/2 px-[15px] sm:w-1/3 md:w-1/6"
+            const wrapperClass = "w-1/2 px-4 sm:w-1/3 md:w-1/6"
 
             if (isExternal) {
               return (

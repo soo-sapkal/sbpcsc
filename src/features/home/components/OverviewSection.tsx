@@ -1,5 +1,4 @@
 import { NewsScroll } from "./NewsScroll"
-import { siteConfig } from "@/data/site-config"
 import { EXTERNAL_LINKS } from "@/data/constants"
 
 export function OverviewSection() {
@@ -8,7 +7,7 @@ export function OverviewSection() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="w-full px-4 md:w-1/3">
-            <h1 className="heading_h1h mb-4 text-[28px] font-bold text-[#cf2b1f]">Overview</h1>
+            <h1 className="heading_h1h mb-4 text-[1.75rem] font-bold text-[#cf2b1f]">Overview</h1>
             <p className="text-justify text-[#333]">
               <strong>
                 <a href="/about/sbpcsc" className="text-primary hover:underline">
@@ -27,7 +26,7 @@ export function OverviewSection() {
           </div>
 
           <div className="w-full px-4 md:w-1/3">
-            <h2 className="heading_h3h mb-4 text-[28px] font-bold text-[#cf2b1f]">About PCET</h2>
+            <h2 className="heading_h3h mb-4 text-[1.75rem] font-bold text-[#cf2b1f]">About PCET</h2>
             <p className="text-justify text-[#333]">
               <strong>
                 <a href={EXTERNAL_LINKS.PCET} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
@@ -46,7 +45,7 @@ export function OverviewSection() {
           </div>
 
           <div className="w-full px-4 md:w-1/3">
-            <h2 className="heading_h3h mb-4 text-[28px] font-bold text-[#cf2b1f]">SBPCSC NEWS</h2>
+            <h2 className="heading_h3h mb-4 text-[1.75rem] font-bold text-[#cf2b1f]">SBPCSC NEWS</h2>
             <NewsScroll />
             <p>&nbsp;</p>
           </div>

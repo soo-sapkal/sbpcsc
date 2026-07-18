@@ -29,9 +29,9 @@ export function NewsScroll() {
 
   return (
     <div className="sbpcsc-news-scroll max-h-64 overflow-hidden">
-      <ul ref={ulRef} className="m-0 list-none overflow-hidden p-0" style={{ height: "220px" }}>
+      <ul ref={ulRef} className="m-0 list-none overflow-hidden p-0" style={{ height: "13.75rem" }}>
         {newsItems.map((item, i) => (
-          <li key={i} className="flex items-start gap-2 border-b border-dashed border-[#38a361] p-[10px]">
+          <li key={i} className="flex items-start gap-2 border-b border-dashed border-[#38a361] p-2.5">
             <span className="shrink-0">
               <Image
                 src="/images/new.gif"
