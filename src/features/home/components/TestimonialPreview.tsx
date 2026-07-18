@@ -11,7 +11,7 @@ export function TestimonialPreview() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="flex h-full flex-col rounded-xl border bg-white p-6 shadow-sm"
+              className="flex flex-col rounded-xl border bg-white p-6 shadow-sm"
             >
               <div className="mb-4 flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -22,7 +22,7 @@ export function TestimonialPreview() {
                   <p className="text-xs text-primary">{t.role}</p>
                 </div>
               </div>
-              <div className="grow text-justify text-sm leading-relaxed text-gray-600">
+              <div className="max-h-[10rem] overflow-y-auto text-justify text-sm leading-relaxed text-gray-600">
                 {t.content.split("\n").map((line, j) => (
                   <span key={j}>
                     {line}
