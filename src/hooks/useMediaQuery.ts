@@ -7,10 +7,18 @@ export function useMediaQuery(query: string): boolean {
 
   useEffect(() => {
     const media = window.matchMedia(query)
-    setMatches(media.matches)
     const listener = (event: MediaQueryListEvent) => setMatches(event.matches)
     media.addEventListener("change", listener)
-    return () => media.removeEventListener("change", listener)
+    
+    // Avoid calling setState synchronously during render/effect hook execution
+    const timeout = setTimeout(() => {
+      setMatches(media.matches)
+    }, 0)
+
+    return () => {
+      clearTimeout(timeout)
+      media.removeEventListener("change", listener)
+    }
   }, [query])
 
   return matches
