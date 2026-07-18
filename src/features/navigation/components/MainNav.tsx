@@ -150,7 +150,7 @@ export function MainNav() {
       <div className="container mx-auto px-4">
         <div className="mbl_nopadd">
           <nav id="cssmenu">
-            <ul className="m-0 flex list-none p-0">
+            <ul className="m-0 flex list-none justify-center p-0">
               {mainNav.map((item, i) => (
                 <NavLink key={i} item={item} pathname={pathname} />
               ))}
