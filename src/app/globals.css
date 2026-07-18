@@ -254,25 +254,6 @@
   margin-top: 0.625rem;
 }
 
-/* Testimonial styles */
-.testm-bg-1 {
-  background: #146ab5;
-}
-.testm-bg-gray {
-  background: #f5f5f5;
-  padding: 3.125rem 1.25rem 0.625rem 1.25rem;
-  color: #146ab5;
-  margin-bottom: 1.875rem;
-}
-.testm-user-pic {
-  padding: 1.563rem;
-  border-radius: 50%;
-  background: #f5f5f5;
-  position: absolute;
-  top: 5%;
-  left: 10%;
-}
-
 /* Carousel fade effect */
 .carousel-fade .item {
   transition-property: opacity;
@@ -303,10 +284,4 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* Media queries */
-@media (max-width: 767px) {
-  .testm-bg-1,
-  .testm-bg-2 {
-    height: 3.438rem;
-  }
-}
+
