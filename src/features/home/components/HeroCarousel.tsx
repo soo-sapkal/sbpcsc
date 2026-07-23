@@ -24,7 +24,7 @@ export function HeroCarousel() {
 
   return (
     <div className="sbpcsc-slider hidden md:block">
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto max-w-8xl px-4">
         <div className="relative">
           <a className="carousel-control -left-5 z-[2]" role="button" onClick={prev}>
             <ChevronLeft className="h-6 w-6" />
