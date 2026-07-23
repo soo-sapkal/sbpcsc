@@ -24,7 +24,7 @@ export function HeroCarousel() {
 
   return (
     <div className="sbpcsc-slider hidden md:block">
-      <div className="carousel-fade">
+      <div className="carousel-fade relative">
         <div className="relative w-full" style={{ aspectRatio: "7/2" }}>
           {sliderImages.map((img, i) => (
             <div
@@ -44,10 +44,10 @@ export function HeroCarousel() {
         </div>
 
         <button onClick={prev} className="carousel-control left-0 z-[2]" aria-label="Previous slide">
-          <ChevronLeft className="h-8 w-8 text-white" />
+          <ChevronLeft className="h-5 w-5 text-white" />
         </button>
         <button onClick={next} className="carousel-control right-0 z-[2]" aria-label="Next slide">
-          <ChevronRight className="h-8 w-8 text-white" />
+          <ChevronRight className="h-5 w-5 text-white" />
         </button>
 
         <div className="carousel-indicators">
