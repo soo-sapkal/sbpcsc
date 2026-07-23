@@ -24,42 +24,44 @@ export function HeroCarousel() {
 
   return (
     <div className="sbpcsc-slider hidden md:block">
-      <div className="carousel-fade relative">
-        <div className="relative w-full" style={{ aspectRatio: "7/2" }}>
-          {sliderImages.map((img, i) => (
-            <div
-              key={i}
-              className={`item absolute inset-0 transition-opacity duration-[0.9s] carousel-fade-item ${i === current ? "active" : ""}`}
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="w-full object-cover"
-                sizes="100vw"
-                preload={i === 0}
-              />
-            </div>
-          ))}
-        </div>
-
-        <button onClick={prev} className="carousel-control left-0 z-[2]" aria-label="Previous slide">
-          <ChevronLeft className="h-5 w-5 text-white" />
-        </button>
-        <button onClick={next} className="carousel-control right-0 z-[2]" aria-label="Next slide">
-          <ChevronRight className="h-5 w-5 text-white" />
-        </button>
-
-        <div className="carousel-indicators">
+      <div className="carousel slide carousel-fade" data-interval="4000">
+        <ol className="carousel-indicators">
           {sliderImages.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`h-2.5 w-2.5 rounded-full border border-white/50 ${i === current ? "bg-white" : "bg-white/40"}`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
+            <li key={i} data-target="#carousel-example-generic" data-slide-to={i} className={i === current ? "active" : ""} />
           ))}
+        </ol>
+
+        <div className="carousel-inner relative w-full overflow-hidden" role="listbox">
+          <div className="relative w-full" style={{ aspectRatio: "7/2" }}>
+            {sliderImages.map((img, i) => (
+              <div
+                key={i}
+                className={`item absolute inset-0 ${i === current ? "active" : ""}`}
+              >
+                <center>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="w-full"
+                    sizes="100vw"
+                    preload={i === 0}
+                  />
+                </center>
+                <div className="carousel-caption" />
+              </div>
+            ))}
+          </div>
         </div>
+
+        <a className="left carousel-control" role="button" onClick={prev}>
+          <ChevronLeft className="h-5 w-5" />
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="right carousel-control" role="button" onClick={next}>
+          <ChevronRight className="h-5 w-5" />
+          <span className="sr-only">Next</span>
+        </a>
       </div>
     </div>
   )

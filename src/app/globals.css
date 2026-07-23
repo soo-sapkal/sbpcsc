@@ -254,17 +254,42 @@
   margin-top: 0.625rem;
 }
 
-/* Carousel fade effect */
+/* Carousel styles */
 .carousel-indicators {
   display: none;
 }
-.carousel-fade .item {
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner img {
+  width: 100%;
+}
+.carousel-fade .carousel-inner .item {
   transition-property: opacity;
   transition-duration: 0.9s;
   opacity: 0;
 }
-.carousel-fade .item.active {
+.carousel-fade .carousel-inner .item.active {
   opacity: 1;
+}
+.sbpcsc-slider a {
+  color: #fff !important;
+}
+.carousel-caption {
+  right: 0%;
+  left: 0%;
+  padding-bottom: 0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+  color: #fff;
+  text-align: center;
+  padding-top: 0px;
+  text-shadow: none;
+  background-color: #000000d6;
+  opacity: 0.7;
 }
 .carousel-control {
   position: absolute;
@@ -283,6 +308,13 @@
   transition: background 0.3s;
   border: none;
   outline: none;
+}
+.carousel-control.left {
+  left: 0;
+}
+.carousel-control.right {
+  right: 0;
+  left: auto;
 }
 .carousel-control:hover {
   background: rgba(0, 0, 0, 0.5);
