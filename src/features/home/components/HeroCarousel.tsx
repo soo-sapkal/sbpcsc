@@ -25,7 +25,7 @@ export function HeroCarousel() {
   return (
     <div className="sbpcsc-slider hidden md:block">
       <div className="carousel-fade">
-        <div className="relative w-full" style={{ aspectRatio: "1920/700" }}>
+        <div className="relative w-full" style={{ aspectRatio: "7/2" }}>
           {sliderImages.map((img, i) => (
             <div
               key={i}
