@@ -129,15 +129,18 @@ export default function PcetPage() {
       </h2>
       <p className="mb-6 text-justify">Institutions falling under the canopy of the PCET are stated as under:</p>
 
-      <div className="space-y-8">
+      <div className="space-y-0">
         {institutes.map((inst, i) => (
           <div key={i}>
-            <h3 className="mb-2 bg-[#146ab5] px-3 py-1.5 text-lg font-bold text-white">{inst.title}</h3>
-            <div className="mb-2 flex items-start gap-4">
-              <Image src={inst.logo} alt={inst.title} width={120} height={60} className="shrink-0" unoptimized />
+            <div className="clear-both">&nbsp;</div>
+            <p className="institutes-title m-0 mb-1 bg-[#146ab5] px-2.5 py-0.5 text-[1.063rem] font-bold text-white">
+              {inst.title}
+            </p>
+            <div className="left-img-new float-left mr-2.5 mt-1.5 h-auto w-auto">
+              <Image src={inst.logo} alt={inst.title} width={120} height={60} className="block max-w-full border-0 pr-2.5 align-middle" unoptimized />
             </div>
             <p className="mb-2 text-justify">{inst.desc}</p>
-            <p className="text-justify">
+            <p className="mb-4 text-justify">
               For more information visit:{" "}
               <a href={inst.url} target="_blank" rel="noopener noreferrer" className="text-[#337ab7] hover:underline">
                 {inst.url}
