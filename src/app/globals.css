@@ -255,6 +255,9 @@
 }
 
 /* Carousel fade effect */
+.carousel-indicators {
+  display: none;
+}
 .carousel-fade .item {
   transition-property: opacity;
   transition-duration: 0.9s;

@@ -29,7 +29,7 @@ export function HeroCarousel() {
           {sliderImages.map((img, i) => (
             <div
               key={i}
-              className={`item absolute inset-0 transition-opacity duration-700 carousel-fade-item ${i === current ? "active" : ""}`}
+              className={`item absolute inset-0 transition-opacity duration-[0.9s] carousel-fade-item ${i === current ? "active" : ""}`}
             >
               <Image
                 src={img.src}
