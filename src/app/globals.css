@@ -279,6 +279,7 @@
   border-radius: 50%;
   transition: background 0.3s;
   border: none;
+  outline: none;
 }
 .carousel-control:hover {
   background: rgba(0, 0, 0, 0.5);
