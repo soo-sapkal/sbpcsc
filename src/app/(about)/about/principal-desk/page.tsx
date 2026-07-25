@@ -17,7 +17,7 @@ export default function PrincipalDeskPage() {
         alt="SBPCSC is the top junior college in pune comes under the PCET Trust"
         width={1400}
         height={400}
-        className="mb-6 w-full"
+        className="mb-6 max-w-xl mx-auto w-full"
         unoptimized
       />
       <p className="mb-1 text-justify font-bold">From the Principal's Desk</p>

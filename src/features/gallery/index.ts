@@ -1,5 +1,6 @@
 export { GalleryGrid } from "./components/GalleryGrid"
 export { GalleryYearNav } from "./components/GalleryYearNav"
 export { Lightbox } from "./components/Lightbox"
+export { EventModal } from "./components/EventModal"
 export { GalleryCard } from "./components/GalleryCard"
 export { GuestLectureCard } from "./components/GuestLectureCard"

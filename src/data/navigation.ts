@@ -1,3 +1,8 @@
+import { activitiesGallery, guestLecturesGallery } from "@/features/gallery/data/gallery-data"
+
+const defaultActivitiesYear = activitiesGallery[0]?.year || "2026-27"
+const defaultGuestLecturesYear = guestLecturesGallery[0]?.year || "2025-26"
+
 export interface NavItem {
   label: string;
   href?: string;
@@ -68,8 +73,8 @@ export const mainNav: NavItem[] = [
       {
         label: "Gallery",
         children: [
-          { label: "Activities", href: "/gallery/activities/2025-26" },
-          { label: "Guest Lectures", href: "/gallery/guest-lectures/2025-26" },
+          { label: "Activities", href: `/gallery/activities/${defaultActivitiesYear}` },
+          { label: "Guest Lectures", href: `/gallery/guest-lectures/${defaultGuestLecturesYear}` },
         ],
       },
       { label: "Achievements", href: "/achievements" },

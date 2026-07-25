@@ -3,11 +3,13 @@
 import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { sliderImages } from "@/features/home/data/slider-images"
+import type { SliderImage } from "@/features/home/data/slider-images"
+import { sliderImages as defaultImages } from "@/features/home/data/slider-images"
 
-export function HeroCarousel() {
+export function HeroCarousel({ images }: { images?: SliderImage[] }) {
+  const imgs = images ?? defaultImages
   const [current, setCurrent] = useState(0)
-  const length = sliderImages.length
+  const length = imgs.length
 
   const next = useCallback(() => {
     setCurrent((prev) => (prev + 1) % length)
@@ -32,14 +34,14 @@ export function HeroCarousel() {
           </a>
 
           <ol className="carousel-indicators">
-            {sliderImages.map((_, i) => (
+            {imgs.map((_, i) => (
               <li key={i} data-target="#carousel-example-generic" data-slide-to={i} className={i === current ? "active" : ""} />
             ))}
           </ol>
 
           <div className="carousel-inner" role="listbox">
             <div className="relative w-full" style={{ aspectRatio: "7/2" }}>
-              {sliderImages.map((img, i) => (
+              {imgs.map((img, i) => (
                 <div
                   key={i}
                   className={`item absolute inset-0 ${i === current ? "active" : ""}`}

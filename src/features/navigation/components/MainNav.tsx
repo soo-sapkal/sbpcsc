@@ -121,14 +121,29 @@ function NavDropdownItem({ item, pathname, depth }: { item: NavItem; pathname: s
 
   if (!hasChildren) return null
 
+  const linkClasses = `flex w-[13.75rem] items-center justify-between border-b border-white/15 px-4 py-[0.688rem] text-[0.938rem] font-bold uppercase text-white no-underline transition-colors duration-300 hover:bg-[#cf2b1f] ${
+    active ? "bg-[#cf2b1f]" : ""
+  }`
+
+  const toggleContent = item.href ? (
+    <Link href={item.href} className={linkClasses}>
+      {item.label}
+      <ChevronDown className="h-3 w-3 -rotate-90" />
+    </Link>
+  ) : (
+    <span className={`${linkClasses} cursor-pointer`}>
+      {item.label}
+      <ChevronDown className="h-3 w-3 -rotate-90" />
+    </span>
+  )
+
   return (
     <li ref={ref} className="relative">
-      <span className="flex w-[13.75rem] cursor-pointer items-center justify-between border-b border-white/15 px-4 py-[0.688rem] text-[0.938rem] font-bold uppercase text-white no-underline transition-colors duration-300 hover:bg-[#cf2b1f]">
-        {item.label}
-        <ChevronDown className="h-3 w-3 -rotate-90" />
-      </span>
+      {toggleContent}
       <ul
-        className="nav-dropdown absolute left-full top-0 z-[99] m-0 list-none border-none bg-[#146ab5] p-0"
+        className={`nav-dropdown absolute left-full top-0 z-[99] m-0 list-none border-none bg-[#146ab5] p-0 ${
+          open ? "nav-dropdown-open" : ""
+        }`}
         style={{
           minWidth: "13.75rem",
           display: open ? "block" : undefined,

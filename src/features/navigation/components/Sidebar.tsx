@@ -49,31 +49,31 @@ export function Sidebar({ section }: SidebarProps) {
               <div key={idx} className="flex flex-col">
                 <button
                   onClick={() => toggleExpand(link.label)}
-                  className={`flex w-full items-center justify-between px-5 py-3.5 text-sm font-semibold text-neutral-700 transition-colors hover:bg-neutral-50 ${
+                  className={`flex w-full items-center justify-between border-l-4 border-[#cf2b1f]/20 px-5 py-3.5 text-sm font-semibold text-neutral-700 transition-colors hover:bg-neutral-50 ${
                     link.children?.some((child) => child.href === pathname)
-                      ? "text-[#146ab5]"
+                      ? "text-[#cf2b1f]"
                       : ""
                   }`}
                 >
                   <span>{link.label}</span>
                   <ChevronDown
                     className={`h-4 w-4 text-neutral-400 transition-transform duration-200 ${
-                      isExpanded ? "rotate-180 text-[#146ab5]" : ""
+                      isExpanded ? "rotate-180 text-[#cf2b1f]" : ""
                     }`}
                   />
                 </button>
                 {isExpanded && (
-                  <div className="bg-neutral-50/50 pb-2 pl-4 flex flex-col divide-y divide-transparent">
+                  <div className="mx-3 mb-2 rounded-lg bg-red-50/60 p-2 shadow-inner flex flex-col gap-0.5">
                     {link.children!.map((child, cIdx) => {
                       const isChildActive = pathname === child.href;
                       return (
                         <Link
                           key={cIdx}
                           href={child.href}
-                          className={`block py-2.5 px-5 text-xs font-medium transition-colors border-l-2 ${
+                          className={`block rounded-md px-3 py-2 text-xs font-medium transition-colors ${
                             isChildActive
-                              ? "text-[#146ab5] border-[#146ab5] font-bold"
-                              : "text-neutral-500 hover:text-[#146ab5] border-transparent"
+                              ? "bg-[#cf2b1f] text-white"
+                              : "text-neutral-600 hover:bg-[#cf2b1f]/10 hover:text-[#cf2b1f]"
                           }`}
                         >
                           {child.label}

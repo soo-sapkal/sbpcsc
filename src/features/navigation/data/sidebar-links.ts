@@ -1,4 +1,8 @@
 import type { SidebarSection } from "@/types/navigation"
+import { activitiesGallery, guestLecturesGallery } from "@/features/gallery/data/gallery-data"
+
+const defaultActivitiesYear = activitiesGallery[0]?.year || "2026-27"
+const defaultGuestLecturesYear = guestLecturesGallery[0]?.year || "2025-26"
 
 export const aboutSidebar: SidebarSection = {
   title: "About Us",
@@ -45,7 +49,7 @@ export const academicsSidebar: SidebarSection = {
     },
     {
       label: "Commerce",
-      href: "#",
+      href: "/academics/commerce",
       children: [
         { label: "Marathi", href: "/academics/commerce/marathi" },
         { label: "English", href: "/academics/commerce/english" },
@@ -68,8 +72,8 @@ export const studentCornerSidebar: SidebarSection = {
       label: "Gallery",
       href: "#",
       children: [
-        { label: "Activities", href: "/gallery/activities/2025-26" },
-        { label: "Guest Lectures", href: "/gallery/guest-lectures/2025-26" },
+        { label: "Activities", href: `/gallery/activities/${defaultActivitiesYear}` },
+        { label: "Guest Lectures", href: `/gallery/guest-lectures/${defaultGuestLecturesYear}` },
       ],
     },
     { label: "Achievements", href: "/achievements" },

@@ -8,6 +8,7 @@ export interface GalleryEvent {
   name: string
   anchorId: string
   images: GalleryImage[]
+  description?: string
   type: "activities" | "guest-lecture"
 }
 

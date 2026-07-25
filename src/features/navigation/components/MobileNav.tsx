@@ -50,18 +50,26 @@ function MobileNavItem({
 
   if (!hasChildren) return null
 
+  const linkClasses = `flex w-full items-center justify-between px-4 py-3 text-[0.938rem] font-bold uppercase text-white ${
+    active ? "bg-[#cf2b1f]" : ""
+  }`
+
+  const content = item.href ? (
+    <Link href={item.href} onClick={onLinkClick} className={`${linkClasses} no-underline`}>
+      {item.label}
+      {hasChildren && <ChevronDown className="h-4 w-4" />}
+    </Link>
+  ) : (
+    <button onClick={() => setOpen(!open)} className={linkClasses}>
+      {item.label}
+      <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
+    </button>
+  )
+
   return (
     <li className="border-t border-[#999]">
-      <button
-        onClick={() => setOpen(!open)}
-        className={`flex w-full items-center justify-between px-4 py-3 text-[0.938rem] font-bold uppercase text-white ${
-          active ? "bg-[#cf2b1f]" : ""
-        }`}
-      >
-        {item.label}
-        <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
-      </button>
-      {open && (
+      {content}
+      {(item.href || open) && (
         <ul className="m-0 list-none bg-[#333] p-0">
           {item.children!.map((child, i) => (
             <MobileNavItem key={i} item={child} pathname={pathname} onLinkClick={onLinkClick} depth={depth + 1} />

@@ -1,8 +1,5 @@
 import { Metadata } from "next";
-import { ContentWithSidebar } from "@/components/layouts/ContentWithSidebar";
 import { PageBanner } from "@/components/sections/PageBanner";
-import { Sidebar } from "@/features/navigation";
-import { studentCornerSidebar } from "@/features/navigation/data/sidebar-links";
 import { TestimonialCarousel, TestimonialList, reviewsData } from "@/features/reviews";
 
 export const metadata: Metadata = {
@@ -23,9 +20,8 @@ export default function ReviewsPage() {
     <>
       <PageBanner title="Testimonials" />
       
-      <ContentWithSidebar sidebar={<Sidebar section={studentCornerSidebar} />}>
+      <div className="container mx-auto px-4 py-8">
         <div className="space-y-12">
-          {/* Header section with H1 */}
           <header className="space-y-4">
             <h1 className="text-2xl md:text-3xl font-extrabold text-[#146ab5] tracking-tight">
               What Students & Parents Say
@@ -35,7 +31,6 @@ export default function ReviewsPage() {
             </p>
           </header>
 
-          {/* Testimonial Highlights Carousel */}
           <section className="space-y-4">
             <h2 className="text-lg font-bold text-neutral-800 uppercase tracking-wider border-l-4 border-[#cf2b1f] pl-3">
               Featured Topper Reviews
@@ -43,7 +38,6 @@ export default function ReviewsPage() {
             <TestimonialCarousel reviews={reviewsData} />
           </section>
 
-          {/* All Testimonials Filter Grid */}
           <section className="space-y-6 pt-4">
             <h2 className="text-lg font-bold text-neutral-800 uppercase tracking-wider border-l-4 border-[#146ab5] pl-3">
               All Testimonials & Feedback
@@ -51,7 +45,7 @@ export default function ReviewsPage() {
             <TestimonialList reviews={reviewsData} />
           </section>
         </div>
-      </ContentWithSidebar>
+      </div>
     </>
   );
 }

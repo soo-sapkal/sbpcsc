@@ -1,0 +1,15 @@
+export const videoIds: string[] = [
+  "uBVA3cw6TeA",
+  "JnvBqqxuByU",
+  "LJZDJ_7j9Ww",
+  "bMX-ery9MT0",
+  "Qzyhv9E6olQ",
+  "_hvsWfG5JRc",
+  "yd4PBV7o68w",
+  "6LXQrvA9fMg",
+  "cxFUOZkDhe0",
+  "xZQZbuaBdF0",
+  "HKdHipcA2oQ",
+  "usZeIibHtz4",
+  "H8wtNutop_U",
+]
