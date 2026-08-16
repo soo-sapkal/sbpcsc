@@ -3,12 +3,12 @@ import { EXTERNAL_LINKS } from "@/data/constants"
 
 export function OverviewSection() {
   return (
-    <section className="section1 py-5">
+    <section className="py-5">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="w-full px-4 md:w-1/3">
-            <h1 className="heading_h1h mb-4 text-[1.75rem] font-bold text-[#cf2b1f]">Overview</h1>
-            <p className="text-justify text-[#333]">
+            <h1 className="mb-4 text-[1.75rem] font-bold text-accent">Overview</h1>
+            <p className="text-justify text-muted-foreground">
               <strong>
                 <a href="/about/sbpcsc" className="text-primary hover:underline">
                   S.B. Patil College of Science and Commerce
@@ -26,8 +26,8 @@ export function OverviewSection() {
           </div>
 
           <div className="w-full px-4 md:w-1/3">
-            <h2 className="heading_h3h mb-4 text-[1.75rem] font-bold text-[#cf2b1f]">About PCET</h2>
-            <p className="text-justify text-[#333]">
+            <h2 className="mb-4 text-[1.75rem] font-bold text-accent">About PCET</h2>
+            <p className="text-justify text-muted-foreground">
               <strong>
                 <a href={EXTERNAL_LINKS.PCET} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   Pimpri Chinchwad Education Trust (PCET)
@@ -45,7 +45,7 @@ export function OverviewSection() {
           </div>
 
           <div className="w-full px-4 md:w-1/3">
-            <h2 className="heading_h3h mb-4 text-[1.75rem] font-bold text-[#cf2b1f]">SBPCSC NEWS</h2>
+            <h2 className="mb-4 text-[1.75rem] font-bold text-accent">SBPCSC NEWS</h2>
             <NewsScroll />
             <p>&nbsp;</p>
           </div>

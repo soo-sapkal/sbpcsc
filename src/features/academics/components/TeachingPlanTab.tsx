@@ -7,7 +7,7 @@ interface TeachingPlanTabProps {
 
 export function TeachingPlanTab({ syllabusPdfs }: TeachingPlanTabProps) {
   if (!syllabusPdfs || syllabusPdfs.length === 0) {
-    return <p className="text-gray-500 italic">No teaching plans available.</p>
+    return <p className="text-muted-foreground italic">No teaching plans available.</p>
   }
 
   return (
@@ -18,7 +18,7 @@ export function TeachingPlanTab({ syllabusPdfs }: TeachingPlanTabProps) {
             <a
               href={pdf.href}
               target="_blank"
-              className="block rounded border border-[#ddd] p-1 transition-shadow hover:shadow-lg"
+              className="block rounded-lg border border-border bg-surface p-2 shadow-card transition-shadow hover:shadow-card-hover"
             >
               <Image
                 src="/images/pdficon.png"
@@ -28,7 +28,7 @@ export function TeachingPlanTab({ syllabusPdfs }: TeachingPlanTabProps) {
                 className="mx-auto"
                 unoptimized
               />
-              <span className="mt-2 block">{pdf.label}</span>
+              <span className="mt-2 block font-semibold text-brand">{pdf.label}</span>
             </a>
           </p>
         </div>

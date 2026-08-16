@@ -27,7 +27,7 @@ const quickLinks = [
 export function Footer() {
   return (
     <>
-      <footer className="bg-[#0a5faa] pb-10 pt-10 text-white">
+      <footer className="bg-brand-dark pb-10 pt-10 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
             <div className="mb-10 md:mb-0">
@@ -60,7 +60,7 @@ export function Footer() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white no-underline transition-colors duration-300 hover:text-[#0c1e3d]"
+                      className="text-white no-underline transition-colors duration-300 hover:text-slate-200"
                     >
                       {link.label}
                     </a>
@@ -81,7 +81,7 @@ export function Footer() {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-white no-underline transition-colors duration-300 hover:text-[#0c1e3d]"
+                          className="text-white no-underline transition-colors duration-300 hover:text-slate-200"
                         >
                           {link.label}
                         </a>
@@ -92,7 +92,7 @@ export function Footer() {
                     <li key={i} className="border-b border-dotted border-white py-1">
                       <Link
                         href={link.href}
-                        className="text-white no-underline transition-colors duration-300 hover:text-[#0c1e3d]"
+                        className="text-white no-underline transition-colors duration-300 hover:text-slate-200"
                       >
                         {link.label}
                       </Link>
@@ -119,7 +119,7 @@ export function Footer() {
         </div>
       </footer>
 
-      <div className="bg-[#011322] px-4 py-2.5 text-white">
+      <div className="bg-slate-950 px-4 py-2.5 text-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <span className="text-sm">Copyright &copy; 2026 S.B. Patil College Of Science And Commerce</span>

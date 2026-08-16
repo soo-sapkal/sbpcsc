@@ -75,7 +75,7 @@ export function SubjectTabs({ subject }: SubjectTabsProps) {
   }
 
   return (
-    <div className="nav-tab-section">
+    <div>
       <NavPills tabs={tabs} />
     </div>
   )

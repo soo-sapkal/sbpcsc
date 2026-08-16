@@ -40,93 +40,93 @@ export default function LibraryPage() {
     <>
       <Breadcrumb />
       <PageBanner />
-      <div className="page_details">
+      <div>
         <div className="container mx-auto px-4 py-8">
           <PageHeading title="Library" />
 
-          <h2 className="mb-4 text-xl font-bold text-[#146ab5]">Library Collection in AY 2024-25</h2>
+          <h2 className="mb-4 text-xl font-bold text-brand">Library Collection in AY 2024-25</h2>
 
           <div className="mb-8 overflow-x-auto">
-            <table className="w-full border border-gray-300 text-sm">
+            <table className="w-full border border-border text-sm">
               <thead>
-                <tr className="bg-gray-100 font-semibold">
-                  <th rowSpan={2} className="border border-gray-300 p-2 text-center align-middle">
+                <tr className="bg-muted font-semibold">
+                  <th rowSpan={2} className="border border-border p-2 text-center align-middle">
                     SR. NO.
                   </th>
-                  <th colSpan={2} className="border border-gray-300 p-2 text-center">
+                  <th colSpan={2} className="border border-border p-2 text-center">
                     TEXT BOOK
                   </th>
-                  <th colSpan={6} className="border border-gray-300 p-2 text-center">
+                  <th colSpan={6} className="border border-border p-2 text-center">
                     REFERENCE BOOK
                   </th>
-                  <th colSpan={3} className="border border-gray-300 p-2 text-center">
+                  <th colSpan={3} className="border border-border p-2 text-center">
                     STORY BOOKS
                   </th>
-                  <th rowSpan={2} className="border border-gray-300 p-2 text-center align-middle">
+                  <th rowSpan={2} className="border border-border p-2 text-center align-middle">
                     TOTAL BOOKS
                   </th>
                 </tr>
-                <tr className="bg-gray-50 font-semibold">
-                  <th className="border border-gray-300 p-2 text-center">STATE BOARD</th>
-                  <th className="border border-gray-300 p-2 text-center">NCERT</th>
-                  <th className="border border-gray-300 p-2 text-center">REF</th>
-                  <th className="border border-gray-300 p-2 text-center">JEE</th>
-                  <th className="border border-gray-300 p-2 text-center">NEET</th>
-                  <th className="border border-gray-300 p-2 text-center">CET</th>
-                  <th className="border border-gray-300 p-2 text-center">NATA</th>
-                  <th className="border border-gray-300 p-2 text-center">NDA / NA</th>
-                  <th className="border border-gray-300 p-2 text-center">ENGLISH</th>
-                  <th className="border border-gray-300 p-2 text-center">MARATHI</th>
-                  <th className="border border-gray-300 p-2 text-center">HINDI</th>
+                <tr className="bg-muted/50 font-semibold">
+                  <th className="border border-border p-2 text-center">STATE BOARD</th>
+                  <th className="border border-border p-2 text-center">NCERT</th>
+                  <th className="border border-border p-2 text-center">REF</th>
+                  <th className="border border-border p-2 text-center">JEE</th>
+                  <th className="border border-border p-2 text-center">NEET</th>
+                  <th className="border border-border p-2 text-center">CET</th>
+                  <th className="border border-border p-2 text-center">NATA</th>
+                  <th className="border border-border p-2 text-center">NDA / NA</th>
+                  <th className="border border-border p-2 text-center">ENGLISH</th>
+                  <th className="border border-border p-2 text-center">MARATHI</th>
+                  <th className="border border-border p-2 text-center">HINDI</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="text-center">
-                  <td className="border border-gray-300 p-2 font-semibold">1</td>
-                  <td className="border border-gray-300 p-2">836</td>
-                  <td className="border border-gray-300 p-2">268</td>
-                  <td className="border border-gray-300 p-2">793</td>
-                  <td className="border border-gray-300 p-2">132</td>
-                  <td className="border border-gray-300 p-2">78</td>
-                  <td className="border border-gray-300 p-2">60</td>
-                  <td className="border border-gray-300 p-2">18</td>
-                  <td className="border border-gray-300 p-2">14</td>
-                  <td className="border border-gray-300 p-2">532</td>
-                  <td className="border border-gray-300 p-2">742</td>
-                  <td className="border border-gray-300 p-2">26</td>
-                  <td className="border border-gray-300 p-2 font-semibold">1857</td>
+                  <td className="border border-border p-2 font-semibold">1</td>
+                  <td className="border border-border p-2">836</td>
+                  <td className="border border-border p-2">268</td>
+                  <td className="border border-border p-2">793</td>
+                  <td className="border border-border p-2">132</td>
+                  <td className="border border-border p-2">78</td>
+                  <td className="border border-border p-2">60</td>
+                  <td className="border border-border p-2">18</td>
+                  <td className="border border-border p-2">14</td>
+                  <td className="border border-border p-2">532</td>
+                  <td className="border border-border p-2">742</td>
+                  <td className="border border-border p-2">26</td>
+                  <td className="border border-border p-2 font-semibold">1857</td>
                 </tr>
                 <tr className="text-center">
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2 font-semibold" colSpan={2}>
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2 font-semibold" colSpan={2}>
                     MOTIVATIONAL BOOKS
                   </td>
-                  <td className="border border-gray-300 p-2 font-semibold" colSpan={2}>
+                  <td className="border border-border p-2 font-semibold" colSpan={2}>
                     AUTO-BIOGRAPHY
                   </td>
                 </tr>
                 <tr className="text-center">
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2" />
-                  <td className="border border-gray-300 p-2 text-left" colSpan={2}>
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2" />
+                  <td className="border border-border p-2 text-left" colSpan={2}>
                     ENGLISH- 10<br />MARATHI- 4
                   </td>
-                  <td className="border border-gray-300 p-2 text-left" colSpan={2}>
+                  <td className="border border-border p-2 text-left" colSpan={2}>
                     ENGLISH- 14<br />MARATHI- 5
                   </td>
                 </tr>
@@ -134,7 +134,7 @@ export default function LibraryPage() {
             </table>
           </div>
 
-          <h2 className="mb-4 text-xl font-bold text-[#146ab5]">Books Cover Photos</h2>
+          <h2 className="mb-4 text-xl font-bold text-brand">Books Cover Photos</h2>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {bookCoverImages.map((filename, i) => (
@@ -144,7 +144,7 @@ export default function LibraryPage() {
                   alt="Libary Books, SBPCSC"
                   width={400}
                   height={350}
-                  className="border border-gray-300 object-cover"
+                  className="border border-border object-cover"
                   unoptimized
                 />
               </div>

@@ -47,7 +47,7 @@ export default function RulesPage() {
           <li>Simple Mobile phones WITHOUT CAMERA are allowed with the students in the campus.</li>
           <li>
             <strong>
-              <a href="/about/committee" className="text-[#337ab7] hover:underline">
+              <a href="/about/committee" className="text-brand hover:underline">
                 Ragging is strictly prohibited
               </a>
             </strong>{" "}

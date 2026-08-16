@@ -21,14 +21,14 @@ export default function ContactPage() {
     <>
       <Breadcrumb />
       <PageBanner />
-      <div className="page_details">
+      <div>
         <div className="container mx-auto px-4 py-8">
           <PageHeading title="Contact Us" />
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <h2 className="mb-3 text-xl font-bold text-[#146ab5]">Address :</h2>
-              <address className="mb-6 not-italic text-gray-700">
+              <h2 className="mb-3 text-xl font-bold text-brand">Address :</h2>
+              <address className="mb-6 not-italic text-muted-foreground">
                 S.B. Patil College of Science And Commerce,
                 <br />
                 Opposite of S.B. Patil Public School,
@@ -41,17 +41,17 @@ export default function ContactPage() {
                 <strong>Mobile No:</strong> 9665333344 / 9767199039
                 <br />
                 <strong>Email:</strong>{" "}
-                <a href="mailto:sbpc.science@gmail.com" className="text-[#146ab5] hover:underline">
+                <a href="mailto:sbpc.science@gmail.com" className="text-brand hover:underline">
                   sbpc.science@gmail.com
                 </a>
               </address>
 
-              <h2 className="mb-3 text-xl font-bold text-[#146ab5]">Contact Form :</h2>
+              <h2 className="mb-3 text-xl font-bold text-brand">Contact Form :</h2>
               <ContactForm />
             </div>
 
             <div>
-              <h2 className="mb-3 text-xl font-bold text-[#146ab5]">Location :</h2>
+              <h2 className="mb-3 text-xl font-bold text-brand">Location :</h2>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.258871352793!2d73.74075511434064!3d18.65237588733234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ba04003bbb83%3A0x2e3c5fc34bc28590!2sS+B+PATIL+COLLEGE+OF+SCIENCE+AND+COMMERCE!5e0!3m2!1sen!2sin!4v1485500977009"
                 width="100%"

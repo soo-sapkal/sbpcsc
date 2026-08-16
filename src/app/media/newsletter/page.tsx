@@ -5,67 +5,8 @@ import Image from "next/image"
 
 import { PageHeading } from "@/components/sections/PageHeading"
 import { NavPills } from "@/components/sections/NavPills"
+import { Lightbox } from "@/components/sections/Lightbox"
 import { newsletterYears, type NewsletterItem } from "@/features/media/data/newsletter-data"
-
-function NewsletterLightbox({
-  images,
-  index,
-  onClose,
-}: {
-  images: { src: string; alt: string }[]
-  index: number
-  onClose: () => void
-}) {
-  const [current, setCurrent] = useState(index)
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80" onClick={onClose}>
-      <button
-        onClick={onClose}
-        className="absolute right-4 top-4 z-10 text-3xl text-white hover:text-gray-300"
-      >
-        &times;
-      </button>
-      {images.length > 1 && (
-        <>
-          <button
-            onClick={(e) => {
-              e.stopPropagation()
-              setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1))
-            }}
-            className="absolute left-4 z-10 text-4xl text-white hover:text-gray-300"
-          >
-            &#8249;
-          </button>
-          <button
-            onClick={(e) => {
-              e.stopPropagation()
-              setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1))
-            }}
-            className="absolute right-4 z-10 text-4xl text-white hover:text-gray-300"
-          >
-            &#8250;
-          </button>
-        </>
-      )}
-      <div onClick={(e) => e.stopPropagation()} className="max-h-[90vh] max-w-4xl p-4">
-        <Image
-          src={images[current].src}
-          alt={images[current].alt}
-          width={800}
-          height={600}
-          className="h-auto max-h-[85vh] w-auto rounded-lg object-contain"
-          unoptimized
-        />
-        {images.length > 1 && (
-          <p className="mt-2 text-center text-sm text-white">
-            {current + 1} / {images.length}
-          </p>
-        )}
-      </div>
-    </div>
-  )
-}
 
 function GridGroup({ items }: { items: NewsletterItem[] }) {
   const [lightbox, setLightbox] = useState<{
@@ -103,9 +44,9 @@ function GridGroup({ items }: { items: NewsletterItem[] }) {
         )}
       </div>
       {lightbox && (
-        <NewsletterLightbox
+        <Lightbox
           images={lightbox.images}
-          index={lightbox.index}
+          initialIndex={lightbox.index}
           onClose={() => setLightbox(null)}
         />
       )}
@@ -138,12 +79,12 @@ function TwoColGroup({ items }: { items: NewsletterItem[] }) {
 function YearContent({ year }: { year: (typeof newsletterYears)[number] }) {
   return (
     <>
-      <h2 className="mb-4 text-xl font-bold text-[#146ab5]">{year.heading}</h2>
+      <h2 className="mb-4 text-xl font-bold text-brand">{year.heading}</h2>
       {year.items.map((item, i) => {
         switch (item.type) {
           case "description":
             return (
-              <p key={i} className="mb-3 text-sm text-gray-700">
+              <p key={i} className="mb-3 text-sm text-muted-foreground">
                 {item.text}
               </p>
             )
@@ -160,21 +101,21 @@ function YearContent({ year }: { year: (typeof newsletterYears)[number] }) {
                     unoptimized
                   />
                 </div>
-                {i < year.items.length - 1 && <hr className="mb-4 border-gray-300" />}
+                {i < year.items.length - 1 && <hr className="mb-4 border-border" />}
               </div>
             )
           case "two-col":
             return (
               <div key={i}>
                 <TwoColGroup items={item.items || []} />
-                {i < year.items.length - 1 && <hr className="mb-4 border-gray-300" />}
+                {i < year.items.length - 1 && <hr className="mb-4 border-border" />}
               </div>
             )
           case "grid":
             return (
               <div key={i}>
                 <GridGroup items={item.items || []} />
-                {i < year.items.length - 1 && <hr className="mb-4 border-gray-300" />}
+                {i < year.items.length - 1 && <hr className="mb-4 border-border" />}
               </div>
             )
           default:

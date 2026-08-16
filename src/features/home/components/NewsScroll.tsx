@@ -48,8 +48,8 @@ export function NewsScroll() {
               rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
               className={
                 item.className === "spotlight_red"
-                  ? "font-medium text-red-600 hover:underline"
-                  : "font-medium text-blue-600 hover:underline"
+                  ? "font-medium text-accent hover:underline"
+                  : "font-medium text-brand hover:underline"
               }
             >
               {item.label}

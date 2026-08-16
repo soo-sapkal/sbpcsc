@@ -33,12 +33,12 @@ function MobileNavItem({
     const extraProps = isExternal ? { target: "_blank", rel: "noopener noreferrer" as const } : {}
 
     return (
-      <li className="border-t border-[#999]">
+      <li className="border-t border-neutral-500/50">
         <Comp
           href={item.href}
           onClick={onLinkClick}
           className={`block w-full px-4 py-3 text-[0.938rem] font-bold uppercase text-white no-underline ${
-            active ? "bg-[#cf2b1f]" : ""
+            active ? "bg-accent" : ""
           }`}
           {...extraProps}
         >
@@ -51,7 +51,7 @@ function MobileNavItem({
   if (!hasChildren) return null
 
   const linkClasses = `flex w-full items-center justify-between px-4 py-3 text-[0.938rem] font-bold uppercase text-white ${
-    active ? "bg-[#cf2b1f]" : ""
+    active ? "bg-accent" : ""
   }`
 
   const content = item.href ? (
@@ -67,10 +67,10 @@ function MobileNavItem({
   )
 
   return (
-    <li className="border-t border-[#999]">
+    <li className="border-t border-neutral-500/50">
       {content}
       {(item.href || open) && (
-        <ul className="m-0 list-none bg-[#333] p-0">
+        <ul className="m-0 list-none bg-brand-dark p-0">
           {item.children!.map((child, i) => (
             <MobileNavItem key={i} item={child} pathname={pathname} onLinkClick={onLinkClick} depth={depth + 1} />
           ))}
@@ -87,17 +87,17 @@ export function MobileNav() {
   const closeMenu = () => setMenuOpen(false)
 
   return (
-    <div className="menu-strip bg-[#146ab5] lg:hidden">
+    <div className="menu-strip bg-brand lg:hidden">
       <div className="container mx-auto px-4">
         <div className="relative min-h-[2.875rem]">
-          <div className="px-4 py-[1.438rem] text-xs font-bold text-[#ddd]" id="head-mobile" />
+          <div className="px-4 py-[1.438rem] text-xs font-bold text-muted-foreground" id="head-mobile" />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className={`button absolute right-0 top-0 z-[9999] cursor-pointer`}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           />
           {menuOpen && (
-            <ul className="m-0 w-full list-none border-none bg-[#146ab5] p-0">
+            <ul className="m-0 w-full list-none border-none bg-brand p-0">
               {mainNav.map((item, i) => (
                 <MobileNavItem key={i} item={item} pathname={pathname} onLinkClick={closeMenu} />
               ))}

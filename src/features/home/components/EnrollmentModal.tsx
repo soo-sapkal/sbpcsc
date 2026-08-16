@@ -1,11 +1,12 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { X } from "lucide-react"
 
 export function EnrollmentModal() {
   const [open, setOpen] = useState(false)
+  const closeRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const shown = sessionStorage.getItem("enrollment-modal-shown")
@@ -18,15 +19,38 @@ export function EnrollmentModal() {
     return () => clearTimeout(timer)
   }, [])
 
+  useEffect(() => {
+    if (!open) return
+    closeRef.current?.focus()
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = "hidden"
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false)
+    }
+    window.addEventListener("keydown", onKeyDown)
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener("keydown", onKeyDown)
+    }
+  }, [open])
+
   if (!open) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-      <div className="relative mx-4 w-full max-w-md rounded-lg bg-white shadow-xl">
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="enrollment-modal-title"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+    >
+      <div className="relative w-full max-w-md rounded-lg bg-surface shadow-card">
         <button
+          ref={closeRef}
           onClick={() => setOpen(false)}
-          className="absolute right-2 top-2 z-10 rounded-full p-1 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-          aria-label="Close"
+          className="absolute right-2 top-2 z-10 rounded-full p-1 text-muted-foreground hover:bg-muted hover:text-foreground"
+          aria-label="Close enquiry modal"
         >
           <X className="h-5 w-5" />
         </button>

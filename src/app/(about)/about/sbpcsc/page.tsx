@@ -18,17 +18,17 @@ export default function SbpcscPage() {
         <strong>Pimpri Chinchwad Education Trust (PCET)</strong>, a time-tested brand in education since{" "}
         <strong>1990</strong>.
       </p>
-      <h2 className="mb-2 mt-8 text-2xl font-bold text-[#cf2b1f]">Vision</h2>
+      <h2 className="mb-2 mt-8 text-2xl font-bold text-accent">Vision</h2>
       <p className="mb-4 text-justify">
         To inculcate strong self esteem and moral values in a child with skills necessary to excel in every walk.
       </p>
-      <h2 className="mb-2 mt-8 text-2xl font-bold text-[#cf2b1f]">Mission</h2>
+      <h2 className="mb-2 mt-8 text-2xl font-bold text-accent">Mission</h2>
       <p className="mb-4 text-justify">
         We strive to provide world class academic and cultural foundation to every child to realize his/her greatest
         potentials emphasizing Social, Emotional, Physical and Spiritual Development, making a child extrovert to meet
         challenges of life with a positive attitude and great confidence.
       </p>
-      <h2 className="mb-2 mt-8 text-2xl font-bold text-[#cf2b1f]">Quality Policy</h2>
+      <h2 className="mb-2 mt-8 text-2xl font-bold text-accent">Quality Policy</h2>
       <p className="mb-4 text-justify">
         We at Pimpri Chinchwad Education Trust (PCET), are engaged in development, establishment &amp; sustenance of
         educational institutes.

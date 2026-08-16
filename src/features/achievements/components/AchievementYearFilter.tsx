@@ -19,8 +19,8 @@ export function AchievementYearFilter({
         onClick={() => onYearChange(null)}
         className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
           activeYear === null
-            ? "bg-[#146ab5] text-white"
-            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+            ? "bg-brand text-white"
+            : "bg-muted text-muted-foreground hover:bg-accent/10 hover:text-accent"
         }`}
       >
         All
@@ -31,8 +31,8 @@ export function AchievementYearFilter({
           onClick={() => onYearChange(year)}
           className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
             activeYear === year
-              ? "bg-[#146ab5] text-white"
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              ? "bg-brand text-white"
+              : "bg-muted text-muted-foreground hover:bg-accent/10 hover:text-accent"
           }`}
         >
           {year}

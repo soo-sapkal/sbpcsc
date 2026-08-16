@@ -10,10 +10,10 @@ function PdfThumb({ href, label }: { href: string; label: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col items-center gap-2 rounded border border-[#ddd] bg-[#fff] p-4 text-center no-underline transition-shadow hover:shadow-md"
+      className="flex flex-col items-center gap-2 rounded border border-border bg-surface p-4 text-center no-underline transition-shadow hover:shadow-md"
     >
       <Image src="/images/pdficon.png" alt="PDF" width={100} height={100} className="h-auto w-[100px]" />
-      <span className="text-sm font-medium text-[#333]">{label}</span>
+      <span className="text-sm font-medium text-foreground">{label}</span>
     </a>
   )
 }
@@ -45,7 +45,7 @@ export function AdmissionTabs() {
       label: "Intake & Eligibility",
       content: (
         <div>
-          <h2 className="mb-3 text-lg font-semibold text-[#146ab5]">Intake</h2>
+          <h2 className="mb-3 text-lg font-semibold text-brand">Intake</h2>
           <ul className="list-disc pl-6">
             <li>Science : 360</li>
             <li>Commerce : 120</li>
@@ -66,11 +66,11 @@ export function AdmissionTabs() {
           </div>
           <p className="mb-2">
             Fill it and submit to{" "}
-            <a href="mailto:sbpc.science@gmail.com" className="text-[#146ab5] underline">
+            <a href="mailto:sbpc.science@gmail.com" className="text-brand underline">
               sbpc.science@gmail.com
             </a>
             ,{" "}
-            <a href="mailto:adi.upasani@yahoo.com" className="text-[#146ab5] underline">
+            <a href="mailto:adi.upasani@yahoo.com" className="text-brand underline">
               adi.upasani@yahoo.com
             </a>
           </p>
@@ -106,122 +106,122 @@ export function AdmissionTabs() {
       label: "Fee Structure",
       content: (
         <div>
-          <h2 className="mb-3 text-lg font-semibold text-[#146ab5]">Fee Structure (2026-27) - SCIENCE</h2>
+          <h2 className="mb-3 text-lg font-semibold text-brand">Fee Structure (2026-27) - SCIENCE</h2>
           <div className="mb-8 overflow-x-auto">
-            <table className="w-full border-collapse border border-[#ddd] text-left text-sm">
+            <table className="w-full border-collapse border border-border text-left text-sm">
               <thead>
-                <tr className="bg-[#146ab5] text-white">
-                  <th className="border border-[#ddd] p-2">Stream</th>
-                  <th className="border border-[#ddd] p-2">Tuition Fee</th>
-                  <th className="border border-[#ddd] p-2">Admin Charges</th>
-                  <th className="border border-[#ddd] p-2">Total Fee</th>
+                <tr className="bg-brand text-white">
+                  <th className="border border-border p-2">Stream</th>
+                  <th className="border border-border p-2">Tuition Fee</th>
+                  <th className="border border-border p-2">Admin Charges</th>
+                  <th className="border border-border p-2">Total Fee</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Board with Marathi/Hindi</td>
-                  <td className="border border-[#ddd] p-2">31,600</td>
-                  <td className="border border-[#ddd] p-2">500</td>
-                  <td className="border border-[#ddd] p-2">32,100</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Board with Marathi/Hindi</td>
+                  <td className="border border-border p-2">31,600</td>
+                  <td className="border border-border p-2">500</td>
+                  <td className="border border-border p-2">32,100</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Board with IT</td>
-                  <td className="border border-[#ddd] p-2">36,600</td>
-                  <td className="border border-[#ddd] p-2">500</td>
-                  <td className="border border-[#ddd] p-2">37,100</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Board with IT</td>
+                  <td className="border border-border p-2">36,600</td>
+                  <td className="border border-border p-2">500</td>
+                  <td className="border border-border p-2">37,100</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Board with CS</td>
-                  <td className="border border-[#ddd] p-2">56,600</td>
-                  <td className="border border-[#ddd] p-2">500</td>
-                  <td className="border border-[#ddd] p-2">57,100</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Board with CS</td>
+                  <td className="border border-border p-2">56,600</td>
+                  <td className="border border-border p-2">500</td>
+                  <td className="border border-border p-2">57,100</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Uniform fees (2 Sets Dress material)</td>
-                  <td className="border border-[#ddd] p-2">1,500</td>
-                  <td className="border border-[#ddd] p-2">-</td>
-                  <td className="border border-[#ddd] p-2">1,500</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Uniform fees (2 Sets Dress material)</td>
+                  <td className="border border-border p-2">1,500</td>
+                  <td className="border border-border p-2">-</td>
+                  <td className="border border-border p-2">1,500</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Admission Form Fees</td>
-                  <td className="border border-[#ddd] p-2">500</td>
-                  <td className="border border-[#ddd] p-2">-</td>
-                  <td className="border border-[#ddd] p-2">500</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Admission Form Fees</td>
+                  <td className="border border-border p-2">500</td>
+                  <td className="border border-border p-2">-</td>
+                  <td className="border border-border p-2">500</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Eligibility (CBSC,ICSE,Other than Maharashtra State Board)</td>
-                  <td className="border border-[#ddd] p-2">700</td>
-                  <td className="border border-[#ddd] p-2">-</td>
-                  <td className="border border-[#ddd] p-2">700</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Eligibility (CBSC,ICSE,Other than Maharashtra State Board)</td>
+                  <td className="border border-border p-2">700</td>
+                  <td className="border border-border p-2">-</td>
+                  <td className="border border-border p-2">700</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Hostel Fees</td>
-                  <td className="border border-[#ddd] p-2">75,000</td>
-                  <td className="border border-[#ddd] p-2">-</td>
-                  <td className="border border-[#ddd] p-2">75,000</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Hostel Fees</td>
+                  <td className="border border-border p-2">75,000</td>
+                  <td className="border border-border p-2">-</td>
+                  <td className="border border-border p-2">75,000</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Mess Fees</td>
-                  <td className="border border-[#ddd] p-2">50,000</td>
-                  <td className="border border-[#ddd] p-2">-</td>
-                  <td className="border border-[#ddd] p-2">50,000</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Mess Fees</td>
+                  <td className="border border-border p-2">50,000</td>
+                  <td className="border border-border p-2">-</td>
+                  <td className="border border-border p-2">50,000</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <h2 className="mb-3 text-lg font-semibold text-[#146ab5]">Fee Structure (2026-27) - COMMERCE</h2>
+          <h2 className="mb-3 text-lg font-semibold text-brand">Fee Structure (2026-27) - COMMERCE</h2>
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-[#ddd] text-left text-sm">
+            <table className="w-full border-collapse border border-border text-left text-sm">
               <thead>
-                <tr className="bg-[#146ab5] text-white">
-                  <th className="border border-[#ddd] p-2">Stream</th>
-                  <th className="border border-[#ddd] p-2">Tuition Fee</th>
-                  <th className="border border-[#ddd] p-2">Admin Charges</th>
-                  <th className="border border-[#ddd] p-2">Total Fee</th>
+                <tr className="bg-brand text-white">
+                  <th className="border border-border p-2">Stream</th>
+                  <th className="border border-border p-2">Tuition Fee</th>
+                  <th className="border border-border p-2">Admin Charges</th>
+                  <th className="border border-border p-2">Total Fee</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Board with Marathi/Hindi</td>
-                  <td className="border border-[#ddd] p-2">25,000</td>
-                  <td className="border border-[#ddd] p-2">500</td>
-                  <td className="border border-[#ddd] p-2">25,500</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Board with Marathi/Hindi</td>
+                  <td className="border border-border p-2">25,000</td>
+                  <td className="border border-border p-2">500</td>
+                  <td className="border border-border p-2">25,500</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Board with IT</td>
-                  <td className="border border-[#ddd] p-2">30,000</td>
-                  <td className="border border-[#ddd] p-2">500</td>
-                  <td className="border border-[#ddd] p-2">30,500</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Board with IT</td>
+                  <td className="border border-border p-2">30,000</td>
+                  <td className="border border-border p-2">500</td>
+                  <td className="border border-border p-2">30,500</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Uniform fees (2 Sets Dress material)</td>
-                  <td className="border border-[#ddd] p-2">1,500</td>
-                  <td className="border border-[#ddd] p-2">-</td>
-                  <td className="border border-[#ddd] p-2">1,500</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Uniform fees (2 Sets Dress material)</td>
+                  <td className="border border-border p-2">1,500</td>
+                  <td className="border border-border p-2">-</td>
+                  <td className="border border-border p-2">1,500</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Admission Form Fees</td>
-                  <td className="border border-[#ddd] p-2">500</td>
-                  <td className="border border-[#ddd] p-2">-</td>
-                  <td className="border border-[#ddd] p-2">500</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Admission Form Fees</td>
+                  <td className="border border-border p-2">500</td>
+                  <td className="border border-border p-2">-</td>
+                  <td className="border border-border p-2">500</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Eligibility (CBSC,ICSE,Other than Maharashtra State Board)</td>
-                  <td className="border border-[#ddd] p-2">700</td>
-                  <td className="border border-[#ddd] p-2">-</td>
-                  <td className="border border-[#ddd] p-2">700</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Eligibility (CBSC,ICSE,Other than Maharashtra State Board)</td>
+                  <td className="border border-border p-2">700</td>
+                  <td className="border border-border p-2">-</td>
+                  <td className="border border-border p-2">700</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Hostel Fees</td>
-                  <td className="border border-[#ddd] p-2">75,000</td>
-                  <td className="border border-[#ddd] p-2">-</td>
-                  <td className="border border-[#ddd] p-2">75,000</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Hostel Fees</td>
+                  <td className="border border-border p-2">75,000</td>
+                  <td className="border border-border p-2">-</td>
+                  <td className="border border-border p-2">75,000</td>
                 </tr>
-                <tr className="even:bg-gray-50">
-                  <td className="border border-[#ddd] p-2">Mess Fees</td>
-                  <td className="border border-[#ddd] p-2">50,000</td>
-                  <td className="border border-[#ddd] p-2">-</td>
-                  <td className="border border-[#ddd] p-2">50,000</td>
+                <tr className="even:bg-muted/50">
+                  <td className="border border-border p-2">Mess Fees</td>
+                  <td className="border border-border p-2">50,000</td>
+                  <td className="border border-border p-2">-</td>
+                  <td className="border border-border p-2">50,000</td>
                 </tr>
               </tbody>
             </table>
@@ -258,7 +258,7 @@ export function AdmissionTabs() {
   ]
 
   return (
-    <div className="nav-tab-section">
+    <div>
       <NavPills tabs={tabs} />
     </div>
   )

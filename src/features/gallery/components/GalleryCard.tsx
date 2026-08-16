@@ -48,14 +48,14 @@ export function GalleryCard({
       onMouseLeave={() => setPaused(false)}
     >
       <div className="p-4 pb-0">
-        <h3 className="text-lg font-semibold text-[#146ab5]">{event.name}</h3>
+        <h3 className="text-lg font-semibold text-brand">{event.name}</h3>
         {event.description && (
-          <p ref={descRef} className="mt-1 truncate text-sm text-gray-600">{event.description}</p>
+          <p ref={descRef} className="mt-1 truncate text-sm text-muted-foreground">{event.description}</p>
         )}
         {showReadMore && (
           <button
             onClick={() => onReadMore?.(event)}
-            className="mt-1.5 text-xs font-semibold uppercase tracking-wide text-[#cf2b1f] hover:underline"
+            className="mt-1.5 text-xs font-semibold uppercase tracking-wide text-accent hover:underline"
           >
             Read More &raquo;
           </button>

@@ -2,11 +2,11 @@
 
 export function Spotlight() {
   return (
-    <div className="bg-[#F9F9F9]">
+    <div className="border-b border-border bg-section">
       <div className="container-fluid">
         <div className="flex">
           <div className="w-1/6 p-0 md:w-[8.33%]">
-            <div className="px-4 py-1 text-[0.938rem] font-bold uppercase tracking-wide text-[#0f2747]">
+            <div className="px-4 py-1 text-[0.938rem] font-bold uppercase tracking-wide text-brand">
               <span className="animate-blink">Highlights:</span>
             </div>
           </div>
@@ -26,7 +26,7 @@ export function Spotlight() {
                   href="/pdf/pcet-brochure-2026.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mx-5 font-bold text-[#333] no-underline hover:underline"
+                  className="mx-5 font-bold text-foreground no-underline hover:underline"
                 >
                   PCET Brochure
                 </a>
@@ -35,7 +35,7 @@ export function Spotlight() {
                   href="https://pcu.edu.in/pcu-brochures.php"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mx-5 font-bold text-[#333] no-underline hover:underline"
+                  className="mx-5 font-bold text-foreground no-underline hover:underline"
                 >
                   PCU Brochure
                 </a>

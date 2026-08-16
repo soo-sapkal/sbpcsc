@@ -20,7 +20,8 @@ export default function VideoPage() {
             width="100%"
             className="aspect-video rounded-lg"
             src={`https://www.youtube.com/embed/${id}`}
-            title="SBPCSC Video"
+            title={`SBPCSC Video ${i + 1}`}
+            loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen

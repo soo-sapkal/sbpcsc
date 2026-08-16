@@ -1,8 +1,9 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { Quote, X } from "lucide-react"
 import { HeroCarousel } from "@/features/home/components/HeroCarousel"
 import { commerceSliderImages } from "@/features/home/data/commerce-slider-images"
 
@@ -50,19 +51,24 @@ export default function CommerceLandingPage() {
     return () => clearTimeout(timer)
   }, [])
 
+  const closeDialog = () => {
+    const el = document.getElementById("enquiryModal") as HTMLDialogElement
+    el?.close()
+  }
+
   return (
     <>
       <HeroCarousel images={commerceSliderImages} />
 
       {/* Overview / About PCET / News */}
-      <section className="section1 bg-white py-10">
+      <section className="bg-surface py-10">
         <div className="mx-auto max-w-8xl px-4">
           <div className="flex flex-wrap">
             <div className="mb-8 w-full px-3 md:w-1/3">
-              <h1 className="mb-4 text-2xl font-bold text-[#333]">Overview</h1>
+              <h1 className="mb-4 text-2xl font-bold text-foreground">Overview</h1>
               <p className="text-justify">
                 <strong>
-                  <a href="http://www.sbpatilcollege.com/" target="_blank" className="text-[#337ab7] hover:underline">
+                  <a href="http://www.sbpatilcollege.com/" target="_blank" className="text-brand hover:underline">
                     S.B. Patil College of Science and Commerce
                   </a>
                 </strong>{" "}
@@ -71,16 +77,16 @@ export default function CommerceLandingPage() {
                 Pune. It is run by a lively caring organization called Pimpri Chinchwad Education Trust (PCET), a
                 time-tested brand in education since 1990.
               </p>
-              <Link href="/about/sbpcsc" className="font-bold text-[#337ab7] hover:underline">
+              <Link href="/about/sbpcsc" className="font-bold text-brand hover:underline">
                 Read More
               </Link>
             </div>
 
             <div className="mb-8 w-full px-3 md:w-1/3">
-              <h2 className="mb-4 text-xl font-bold text-[#333]">About PCET</h2>
+              <h2 className="mb-4 text-xl font-bold text-foreground">About PCET</h2>
               <p className="text-justify">
                 <strong>
-                  <a href="https://www.pcet.org.in/" target="_blank" className="text-[#337ab7] hover:underline">
+                  <a href="https://www.pcet.org.in/" target="_blank" className="text-brand hover:underline">
                     Pimpri Chinchwad Education Trust (PCET)
                   </a>
                 </strong>{" "}
@@ -89,13 +95,13 @@ export default function CommerceLandingPage() {
                 Bhaijan Kazi with an idea of providing quality education from K.G. to P.G. Its sole mission was aimed at
                 serving society, the industry and all stakeholders through value-inculcating,
               </p>
-              <a href="http://pcet.org.in/" target="_blank" className="font-bold text-[#337ab7] hover:underline">
+              <a href="http://pcet.org.in/" target="_blank" className="font-bold text-brand hover:underline">
                 Read More
               </a>
             </div>
 
             <div className="mb-8 w-full px-3 md:w-1/3">
-              <h2 className="mb-4 text-xl font-bold text-[#333]">SBPCSC NEWS</h2>
+              <h2 className="mb-4 text-xl font-bold text-foreground">SBPCSC NEWS</h2>
               <div className="max-h-64 overflow-hidden">
                 <div className="animate-scroll-up">
                   <ul className="list-none space-y-3 p-0">
@@ -122,7 +128,7 @@ export default function CommerceLandingPage() {
                           href={item.href}
                           target={item.href.startsWith("http") ? "_blank" : undefined}
                           rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                          className="text-[#cf2b1f] hover:underline"
+                          className="text-accent hover:underline"
                         >
                           {item.label}
                         </a>
@@ -137,15 +143,15 @@ export default function CommerceLandingPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-gray-50 py-10">
+      <section className="bg-muted/50 py-10">
         <div className="mx-auto max-w-8xl px-4">
-          <h2 className="mb-8 text-center text-2xl font-bold text-[#333]">Testimonials</h2>
+          <h2 className="mb-8 text-center text-2xl font-bold text-foreground">Testimonials</h2>
           <div className="flex flex-wrap">
             {testimonials.map((t, i) => (
               <div key={i} className="mb-6 w-full px-3 md:w-1/3">
-                <div className="h-full rounded bg-white p-6 shadow-sm">
-                  <div className="mb-4 text-center text-2xl text-[#cf2b1f]">
-                    <i className="fa fa-quote-left" />
+                <div className="h-full rounded bg-surface p-6 shadow-sm">
+                  <div className="mb-4 flex justify-center text-accent">
+                    <Quote className="h-7 w-7" aria-hidden="true" />
                   </div>
                   <p className="mb-4 text-justify text-sm leading-relaxed whitespace-pre-line">{t.text}</p>
                   <h5 className="text-center font-bold">
@@ -156,7 +162,7 @@ export default function CommerceLandingPage() {
             ))}
           </div>
           <div className="mt-4 text-center">
-            <Link href="/reviews" className="inline-block rounded bg-[#337ab7] px-3 py-2 text-white hover:bg-[#286090]">
+            <Link href="/reviews" className="inline-block rounded bg-brand px-3 py-2 text-white hover:bg-accent/90">
               Read More
             </Link>
           </div>
@@ -164,14 +170,14 @@ export default function CommerceLandingPage() {
       </section>
 
       {/* Icon Boxes */}
-      <section className="bg-white py-10">
+      <section className="bg-surface py-10">
         <div className="mx-auto max-w-8xl px-4">
           <div className="flex flex-wrap justify-center">
             {iconBoxes.map((box) => (
               <div key={box.label} className="mb-4 w-1/2 px-2 sm:w-1/3 md:w-1/6">
                 <a
                   href={box.href}
-                  className="block rounded-lg bg-gray-50 p-4 text-center transition-shadow hover:shadow-md"
+                  className="block rounded-lg bg-muted/50 p-4 text-center transition-shadow hover:shadow-md"
                 >
                   <Image
                     src={box.icon}
@@ -192,24 +198,27 @@ export default function CommerceLandingPage() {
       {/* Enquiry Modal */}
       <dialog
         id="enquiryModal"
-        className="w-[90%] max-w-md rounded-lg border-0 p-0 shadow-xl backdrop:bg-black/50"
+        aria-label="Enquiries 2026-27"
+        className="w-[90%] max-w-md rounded-xl bg-surface p-0 shadow-xl backdrop:bg-black/50 backdrop:backdrop-blur-sm"
+        onCancel={closeDialog}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) closeDialog()
+        }}
       >
         <div className="relative">
           <button
-            onClick={() => {
-              const el = document.getElementById("enquiryModal") as HTMLDialogElement
-              el?.close()
-            }}
-            className="absolute right-2 top-2 z-10 cursor-pointer border-0 bg-transparent text-2xl text-gray-600 hover:text-gray-900"
+            onClick={closeDialog}
+            aria-label="Close"
+            className="absolute right-2 top-2 z-10 cursor-pointer rounded-full border-0 bg-black/40 p-1.5 text-white transition-colors hover:bg-black/60"
           >
-            &times;
+            <X className="h-5 w-5" aria-hidden="true" />
           </button>
           <Image
             src="/images/enquiry-sbpcsc-2026-27.jpg"
             alt="Enquiries 2026-27"
             width={500}
             height={600}
-            className="h-auto w-full"
+            className="h-auto w-full rounded-t-xl"
             unoptimized
           />
         </div>

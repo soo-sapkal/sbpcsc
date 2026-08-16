@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <PageHeading title="Blog" className="text-[#cf2b1f]" />
+      <PageHeading title="Blog" className="text-accent" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {blogPosts.map((post, i) => (
           <BlogCard key={i} post={post} />

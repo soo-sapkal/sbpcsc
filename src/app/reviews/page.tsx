@@ -23,23 +23,23 @@ export default function ReviewsPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="space-y-12">
           <header className="space-y-4">
-            <h1 className="text-2xl md:text-3xl font-extrabold text-[#146ab5] tracking-tight">
+            <h1 className="text-2xl md:text-3xl font-extrabold text-brand tracking-tight">
               What Students & Parents Say
             </h1>
-            <p className="text-neutral-600 text-sm md:text-base leading-relaxed max-w-3xl">
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-3xl">
               At S.B. Patil College of Science and Commerce, we are committed to providing an enriching academic environment, state-of-the-art infrastructure, and dedicated mentorship. Here is the feedback and success stories shared by our toppers, students, and parents.
             </p>
           </header>
 
           <section className="space-y-4">
-            <h2 className="text-lg font-bold text-neutral-800 uppercase tracking-wider border-l-4 border-[#cf2b1f] pl-3">
+            <h2 className="text-lg font-bold text-foreground uppercase tracking-wider border-l-4 border-accent pl-3">
               Featured Topper Reviews
             </h2>
             <TestimonialCarousel reviews={reviewsData} />
           </section>
 
           <section className="space-y-6 pt-4">
-            <h2 className="text-lg font-bold text-neutral-800 uppercase tracking-wider border-l-4 border-[#146ab5] pl-3">
+            <h2 className="text-lg font-bold text-foreground uppercase tracking-wider border-l-4 border-brand pl-3">
               All Testimonials & Feedback
             </h2>
             <TestimonialList reviews={reviewsData} />

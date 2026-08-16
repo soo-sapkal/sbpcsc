@@ -10,11 +10,11 @@ interface FacultyListProps {
 
 function FacultyCard({ member, stream }: { member: FacultyMember; stream: string }) {
   return (
-    <>
-      <div className="panel-title">
-        <h4><strong>{member.name}</strong></h4>
+    <div className="overflow-hidden rounded-lg border border-border bg-surface shadow-card">
+      <div className="border-b border-border bg-brand px-4 py-2.5">
+        <h4 className="text-white"><strong>{member.name}</strong></h4>
       </div>
-      <div className="panel-body">
+      <div className="p-4">
         <div className="flex flex-wrap">
           <div className="w-full px-3 sm:w-1/3 md:w-1/4">
             <figure>
@@ -31,11 +31,11 @@ function FacultyCard({ member, stream }: { member: FacultyMember; stream: string
           <div className="w-full px-3 sm:w-2/3 md:w-3/4">
             <table className="w-full border-collapse">
               <tbody>
-                <tr className="border-b border-gray-200">
+                <tr className="border-b border-border">
                   <td className="w-1/5 py-2 pr-4 font-bold">Name</td>
                   <td className="py-2">
                     {member.pdf ? (
-                      <a href={member.pdf} target="_blank" className="text-[#337ab7] hover:underline">
+                      <a href={member.pdf} target="_blank" className="text-brand hover:underline">
                         <strong>{member.name}</strong>
                       </a>
                     ) : (
@@ -44,36 +44,36 @@ function FacultyCard({ member, stream }: { member: FacultyMember; stream: string
                   </td>
                 </tr>
                 {member.qualification && (
-                  <tr className="border-b border-gray-200">
+                  <tr className="border-b border-border">
                     <td className="w-1/5 py-2 pr-4 font-bold">Qualification</td>
                     <td className="py-2">{member.qualification}</td>
                   </tr>
                 )}
-                <tr className="border-b border-gray-200">
+                <tr className="border-b border-border">
                   <td className="w-1/5 py-2 pr-4 font-bold">Experience</td>
                   <td className="py-2">{member.experience}</td>
                 </tr>
                 {member.email && (
-                  <tr className="border-b border-gray-200">
+                  <tr className="border-b border-border">
                     <td className="w-1/5 py-2 pr-4 font-bold">Email</td>
                     <td className="py-2">{member.email}</td>
                   </tr>
                 )}
                 {member.youtube && (
-                  <tr className="border-b border-gray-200">
+                  <tr className="border-b border-border">
                     <td className="w-1/5 py-2 pr-4 font-bold">YouTube Channel</td>
                     <td className="py-2">
-                      <a href={member.youtube} target="_blank" className="text-[#337ab7] hover:underline">
+                      <a href={member.youtube} target="_blank" className="text-brand hover:underline">
                         {member.youtube}
                       </a>
                     </td>
                   </tr>
                 )}
                 {member.blog && (
-                  <tr className="border-b border-gray-200">
+                  <tr className="border-b border-border">
                     <td className="w-1/5 py-2 pr-4 font-bold">Blog</td>
                     <td className="py-2">
-                      <a href={member.blog} target="_blank" className="text-[#337ab7] hover:underline">
+                      <a href={member.blog} target="_blank" className="text-brand hover:underline">
                         {member.blog}
                       </a>
                     </td>
@@ -84,7 +84,7 @@ function FacultyCard({ member, stream }: { member: FacultyMember; stream: string
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

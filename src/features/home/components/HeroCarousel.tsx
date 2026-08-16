@@ -6,10 +6,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import type { SliderImage } from "@/features/home/data/slider-images"
 import { sliderImages as defaultImages } from "@/features/home/data/slider-images"
 
-export function HeroCarousel({ images }: { images?: SliderImage[] }) {
-  const imgs = images ?? defaultImages
+function useCarousel(length: number) {
   const [current, setCurrent] = useState(0)
-  const length = imgs.length
 
   const next = useCallback(() => {
     setCurrent((prev) => (prev + 1) % length)
@@ -20,55 +18,111 @@ export function HeroCarousel({ images }: { images?: SliderImage[] }) {
   }, [length])
 
   useEffect(() => {
+    if (length === 0) return
     const timer = setInterval(next, 4000)
     return () => clearInterval(timer)
-  }, [next])
+  }, [next, length])
 
+  return { current, next, prev, setCurrent }
+}
+
+function CarouselSlides({ images, current }: { images: SliderImage[]; current: number }) {
   return (
-    <div className="sbpcsc-slider hidden md:block">
-      <div className="mx-auto max-w-8xl px-4">
-        <div className="carousel slide carousel-fade relative overflow-hidden rounded-2xl shadow-2xl" data-interval="4000">
-          <a className="carousel-control left-0 z-[4]" role="button" onClick={prev}>
-            <ChevronLeft className="h-6 w-6" />
-            <span className="sr-only">Previous</span>
-          </a>
-
-          <ol className="carousel-indicators">
-            {imgs.map((_, i) => (
-              <li key={i} data-target="#carousel-example-generic" data-slide-to={i} className={i === current ? "active" : ""} />
-            ))}
-          </ol>
-
-          <div className="carousel-inner" role="listbox">
-            <div className="relative w-full" style={{ aspectRatio: "7/2" }}>
-              {imgs.map((img, i) => (
-                <div
-                  key={i}
-                  className={`item absolute inset-0 ${i === current ? "active" : ""}`}
-                >
-                  <center>
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      className="w-full"
-                      sizes="100vw"
-                      preload={i === 0}
-                    />
-                  </center>
-                  <div className="carousel-caption" />
-                </div>
-              ))}
-              <div className="pointer-events-none absolute inset-0 z-[3] bg-gradient-to-t from-black/40 via-transparent to-black/10" />
-            </div>
+    <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl">
+      <div className="relative aspect-[7/2] w-full">
+        {images.map((img, i) => (
+          <div key={i} className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "pointer-events-none opacity-0"}`}>
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              priority={i === 0}
+              sizes="100vw"
+              className="object-cover"
+            />
           </div>
-
-          <a className="carousel-control right-0 z-[4]" role="button" onClick={next}>
-            <ChevronRight className="h-6 w-6" />
-            <span className="sr-only">Next</span>
-          </a>
-        </div>
+        ))}
+        <div className="pointer-events-none absolute inset-0 z-[3] bg-gradient-to-t from-black/40 via-transparent to-black/10" />
       </div>
     </div>
+  )
+}
+
+function CarouselControls({
+  onPrev,
+  onNext,
+  onSelect,
+  count,
+  current,
+}: {
+  onPrev: () => void
+  onNext: () => void
+  onSelect: (i: number) => void
+  count: number
+  current: number
+}) {
+  return (
+    <>
+      <button
+        type="button"
+        onClick={onPrev}
+        aria-label="Previous slide"
+        className="absolute left-3 top-1/2 z-[4] flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-white shadow-md transition hover:bg-black/60"
+      >
+        <ChevronLeft className="h-6 w-6" />
+      </button>
+      <button
+        type="button"
+        onClick={onNext}
+        aria-label="Next slide"
+        className="absolute right-3 top-1/2 z-[4] flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-white shadow-md transition hover:bg-black/60"
+      >
+        <ChevronRight className="h-6 w-6" />
+      </button>
+      <div className="absolute bottom-3 left-1/2 z-[4] flex -translate-x-1/2 gap-2">
+        {Array.from({ length: count }, (_, i) => (
+          <button
+            key={i}
+            type="button"
+            onClick={() => onSelect(i)}
+            aria-label={`Go to slide ${i + 1}`}
+            aria-current={i === current ? "true" : undefined}
+            className={`h-2.5 rounded-full transition-all ${
+              i === current ? "w-6 bg-white" : "w-2.5 bg-white/50 hover:bg-white/80"
+            }`}
+          />
+        ))}
+      </div>
+    </>
+  )
+}
+
+export function HeroCarousel({ images }: { images?: SliderImage[] }) {
+  const imgs = images ?? defaultImages
+  const { current, next, prev, setCurrent } = useCarousel(imgs.length)
+
+  if (imgs.length === 0) return null
+
+  return (
+    <>
+      {/* Desktop */}
+      <div className="hidden md:block">
+        <div className="mx-auto max-w-8xl px-4">
+          <div className="relative">
+            <CarouselSlides images={imgs} current={current} />
+            <CarouselControls onPrev={prev} onNext={next} onSelect={setCurrent} count={imgs.length} current={current} />
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile fallback */}
+      <div className="md:hidden">
+        <div className="max-w-full overflow-hidden">
+          <div className="relative aspect-[16/9] w-full">
+            <Image src={imgs[current].src} alt={imgs[current].alt} fill priority sizes="100vw" className="object-cover" />
+          </div>
+        </div>
+      </div>
+    </>
   )
 }

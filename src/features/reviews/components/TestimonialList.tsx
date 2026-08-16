@@ -38,8 +38,8 @@ export function TestimonialList({ reviews }: TestimonialListProps) {
             onClick={() => setActiveFilter(btn.value)}
             className={`rounded-full px-5 py-2 text-sm font-semibold transition-all active:scale-95 ${
               activeFilter === btn.value
-                ? "bg-[#146ab5] text-white shadow-sm"
-                : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+                ? "bg-brand text-white shadow-sm"
+                : "bg-muted text-muted-foreground hover:bg-accent/10 hover:text-accent"
             }`}
           >
             {btn.label}
@@ -55,7 +55,7 @@ export function TestimonialList({ reviews }: TestimonialListProps) {
           ))}
         </div>
       ) : (
-        <div className="text-center py-12 text-neutral-500">
+        <div className="text-center py-12 text-muted-foreground">
           No reviews found in this category.
         </div>
       )}

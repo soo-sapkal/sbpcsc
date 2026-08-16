@@ -40,7 +40,7 @@ export function BlogModal({ post, onClose }: BlogModalProps) {
       onClick={onClose}
     >
       <div
-        className="relative mx-4 w-full max-w-3xl overflow-hidden rounded-xl bg-white shadow-2xl"
+        className="relative mx-4 w-full max-w-3xl overflow-hidden rounded-xl bg-surface shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {post.image && (
@@ -67,7 +67,7 @@ export function BlogModal({ post, onClose }: BlogModalProps) {
 
         <div className="px-8 pb-8 pt-6">
           <div className="flex items-start justify-between gap-4">
-            <h2 className="text-3xl font-bold leading-tight text-[#cf2b1f]">
+            <h2 className="text-3xl font-bold leading-tight text-accent">
               {post.title}
             </h2>
             {lang && (
@@ -78,16 +78,16 @@ export function BlogModal({ post, onClose }: BlogModalProps) {
           </div>
 
           {post.author && (
-            <p className="mt-2 text-base text-gray-500 italic">— {post.author}</p>
+            <p className="mt-2 text-base text-muted-foreground italic">— {post.author}</p>
           )}
 
-          <hr className="my-6 border-gray-200" />
+          <hr className="my-6 border-border" />
 
           <div className="space-y-5">
             {[...post.content, ...(post.readMore || [])].map((p, i) => (
               <p
                 key={i}
-                className="text-base leading-8 text-gray-800 text-justify"
+                className="text-base leading-8 text-foreground text-justify"
                 dangerouslySetInnerHTML={{ __html: p }}
               />
             ))}

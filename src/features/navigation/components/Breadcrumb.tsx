@@ -61,23 +61,23 @@ export function Breadcrumb() {
   })
 
   return (
-    <div className="bg-[#f5f5f5]">
+    <div className="border-b border-border bg-muted">
       <div className="container mx-auto px-4">
         <nav aria-label="breadcrumb">
           <ol className="m-0 flex items-center gap-1.5 py-2 text-sm">
             <li>
-              <Link href="/" className="flex items-center gap-1 text-[#444] no-underline hover:text-[#146ab5]">
+              <Link href="/" className="flex items-center gap-1 text-muted-foreground no-underline hover:text-brand">
                 <Home className="h-3.5 w-3.5" />
                 <span>Home</span>
               </Link>
             </li>
             {items.map((item) => (
               <li key={item.href} className="flex items-center gap-1.5">
-                <span className="text-neutral-400">/</span>
+                <span className="text-muted-foreground">/</span>
                 {item.isLast ? (
-                  <span className="text-[#146ab5] font-semibold">{item.label}</span>
+                  <span className="text-brand font-semibold">{item.label}</span>
                 ) : (
-                  <Link href={item.href} className="text-[#444] no-underline hover:text-[#146ab5]">
+                  <Link href={item.href} className="text-muted-foreground no-underline hover:text-brand">
                     {item.label}
                   </Link>
                 )}

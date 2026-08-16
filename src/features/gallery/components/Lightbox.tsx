@@ -58,7 +58,7 @@ export function Lightbox({
           e.stopPropagation()
           onClose()
         }}
-        className="absolute right-4 top-4 z-10 p-3 text-3xl text-white hover:text-gray-300"
+        className="absolute right-4 top-4 z-10 p-3 text-3xl text-white/90 hover:text-white"
         aria-label="Close"
       >
         &times;
@@ -69,7 +69,7 @@ export function Lightbox({
           e.stopPropagation()
           goPrev()
         }}
-        className="absolute left-4 top-1/2 z-10 -translate-y-1/2 p-3 text-4xl text-white hover:text-gray-300"
+        className="absolute left-4 top-1/2 z-10 -translate-y-1/2 p-3 text-4xl text-white/90 hover:text-white"
         aria-label="Previous"
       >
         &#8249;
@@ -80,7 +80,7 @@ export function Lightbox({
           e.stopPropagation()
           goNext()
         }}
-        className="absolute right-4 top-1/2 z-10 -translate-y-1/2 p-3 text-4xl text-white hover:text-gray-300"
+        className="absolute right-4 top-1/2 z-10 -translate-y-1/2 p-3 text-4xl text-white/90 hover:text-white"
         aria-label="Next"
       >
         &#8250;

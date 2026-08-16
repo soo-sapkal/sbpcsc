@@ -15,7 +15,7 @@ export default function InfrastructurePage() {
       id: "admin",
       label: "Admin",
       content: (
-        <div className="gallery_grid">
+        <div>
           <a href="/images/facilities/infra-admin-new.webp" target="_blank">
             <Image
               src="/images/facilities/infra-admin-new.webp"
@@ -35,7 +35,7 @@ export default function InfrastructurePage() {
       content: (
         <>
           <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="gallery_grid">
+            <div>
               <a href="/images/facilities/sbpcsc-library-1.webp" target="_blank">
                 <Image
                   src="/images/facilities/sbpcsc-library-1.webp"
@@ -47,7 +47,7 @@ export default function InfrastructurePage() {
                 />
               </a>
             </div>
-            <div className="gallery_grid">
+            <div>
               <a href="/images/facilities/sbpcsc-library-2.webp" target="_blank">
                 <Image
                   src="/images/facilities/sbpcsc-library-2.webp"
@@ -74,7 +74,7 @@ export default function InfrastructurePage() {
       label: "Reading Hall",
       content: (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div className="gallery_grid">
+          <div>
             <a href="/images/facilities/reading-hall-1.webp" target="_blank">
               <Image
                 src="/images/facilities/reading-hall-1.webp"
@@ -86,7 +86,7 @@ export default function InfrastructurePage() {
               />
             </a>
           </div>
-          <div className="gallery_grid">
+          <div>
             <a href="/images/facilities/reading-hall-2.webp" target="_blank">
               <Image
                 src="/images/facilities/reading-hall-2.webp"
@@ -107,7 +107,7 @@ export default function InfrastructurePage() {
       content: (
         <>
           <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="gallery_grid">
+            <div>
               <a href="/images/facilities/boys-hostel.webp" target="_blank">
                 <Image
                   src="/images/facilities/boys-hostel.webp"
@@ -119,7 +119,7 @@ export default function InfrastructurePage() {
                 />
               </a>
             </div>
-            <div className="gallery_grid">
+            <div>
               <a href="/images/facilities/boys-hostel-1.webp" target="_blank">
                 <Image
                   src="/images/facilities/boys-hostel-1.webp"
@@ -133,7 +133,7 @@ export default function InfrastructurePage() {
             </div>
           </div>
           <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="gallery_grid">
+            <div>
               <a href="/images/facilities/girl-hostel.webp" target="_blank">
                 <Image
                   src="/images/facilities/girl-hostel.webp"
@@ -145,7 +145,7 @@ export default function InfrastructurePage() {
                 />
               </a>
             </div>
-            <div className="gallery_grid">
+            <div>
               <a href="/images/facilities/girl-hostel-1.webp" target="_blank">
                 <Image
                   src="/images/facilities/girl-hostel-1.webp"
@@ -181,7 +181,7 @@ export default function InfrastructurePage() {
       content: (
         <>
           <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="gallery_grid">
+            <div>
               <a href="/images/facilities/classroom-1.webp" target="_blank">
                 <Image
                   src="/images/facilities/classroom-1.webp"
@@ -193,7 +193,7 @@ export default function InfrastructurePage() {
                 />
               </a>
             </div>
-            <div className="gallery_grid">
+            <div>
               <a href="/images/facilities/classroom-2.webp" target="_blank">
                 <Image
                   src="/images/facilities/classroom-2.webp"

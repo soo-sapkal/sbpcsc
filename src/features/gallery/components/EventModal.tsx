@@ -38,10 +38,10 @@ export function EventModal({ event, onClose, onImageClick }: EventModalProps) {
       >
         <div className="p-6 pb-0">
           <div className="flex items-start justify-between gap-4">
-            <h2 className="text-2xl font-bold text-[#146ab5]">{event.name}</h2>
+            <h2 className="text-2xl font-bold text-brand">{event.name}</h2>
             <button
               onClick={onClose}
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gray-100 text-gray-500 transition-colors hover:bg-gray-200 hover:text-gray-700"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-accent/10 hover:text-accent"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M18 6 6 18M6 6l12 12" />
@@ -50,7 +50,7 @@ export function EventModal({ event, onClose, onImageClick }: EventModalProps) {
           </div>
 
           {event.description && (
-            <p className="mt-3 text-sm leading-relaxed text-gray-700">
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               {event.description}
             </p>
           )}

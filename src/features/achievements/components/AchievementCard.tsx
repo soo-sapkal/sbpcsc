@@ -2,27 +2,22 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { Lightbox } from "@/components/sections/Lightbox"
 import type { AchievementImage, AchievementSection } from "@/features/achievements/data/achievements-data"
 
 export function AchievementCard({ section }: { section: AchievementSection }) {
-  const [lightboxOpen, setLightboxOpen] = useState(false)
-  const [lightboxImages, setLightboxImages] = useState<AchievementImage[]>([])
-  const [lightboxIndex, setLightboxIndex] = useState(0)
+  const [lightbox, setLightbox] = useState<{ images: AchievementImage[]; index: number } | null>(null)
 
   const openLightbox = (images: AchievementImage[], index: number) => {
-    setLightboxImages(images)
-    setLightboxIndex(index)
-    setLightboxOpen(true)
+    setLightbox({ images, index })
   }
 
-  const closeLightbox = () => setLightboxOpen(false)
-
   return (
-    <div className="border-b border-gray-200 pb-6 mb-6">
-      <h3 className="text-lg font-semibold text-[#146ab5] mb-2">{section.title}</h3>
+    <div className="mb-6 border-b border-neutral-200 pb-6">
+      <h3 className="mb-2 text-lg font-semibold text-brand">{section.title}</h3>
 
       {section.description && (
-        <p className="text-sm text-gray-700 mb-3 whitespace-pre-line">{section.description}</p>
+        <p className="text-sm text-muted-foreground mb-3 whitespace-pre-line">{section.description}</p>
       )}
 
       {section.videos && section.videos.length > 0 && (
@@ -56,16 +51,16 @@ export function AchievementCard({ section }: { section: AchievementSection }) {
       )}
 
       {section.tableRows && !section.horizontalLayout && (
-        <div className="overflow-x-auto mb-4">
-          <table className="w-full border border-gray-300">
+        <div className="mb-4 overflow-x-auto">
+          <table className="w-full border-collapse border border-border">
             <tbody>
               {section.tableRows.map((row, i) => (
-                <tr key={i} className="border-b border-gray-300">
-                  <td className="p-2 w-16">
-                    <Image src={row.image} alt={row.name} width={0} height={0} sizes="80px" className="w-full h-auto rounded" unoptimized />
+                <tr key={i} className="border-b border-border">
+                  <td className="w-16 p-2">
+                    <Image src={row.image} alt={row.name} width={0} height={0} sizes="80px" className="h-auto w-full rounded" unoptimized />
                   </td>
                   <td className="p-2 font-medium">{row.name}</td>
-                  <td className="p-2 text-gray-600">{row.detail}</td>
+                  <td className="p-2 text-muted-foreground">{row.detail}</td>
                 </tr>
               ))}
             </tbody>
@@ -74,18 +69,18 @@ export function AchievementCard({ section }: { section: AchievementSection }) {
       )}
 
       {section.tableRows && section.horizontalLayout && (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+        <div className="mb-4 grid grid-cols-2 gap-4 md:grid-cols-4">
           {section.tableRows.map((row, i) => (
-            <div key={i} className="text-center border border-gray-300 rounded-lg p-3">
-              <Image src={row.image} alt={row.name} width={0} height={0} sizes="(max-width: 768px) 50vw, 25vw" className="max-w-[90px] w-full h-auto rounded mx-auto" unoptimized />
-              <p className="mt-2 font-medium text-sm">{row.name}</p>
+            <div key={i} className="rounded-lg border border-border p-3 text-center">
+              <Image src={row.image} alt={row.name} width={0} height={0} sizes="(max-width: 768px) 50vw, 25vw" className="mx-auto w-full max-w-[90px] rounded" unoptimized />
+              <p className="mt-2 text-sm font-medium">{row.name}</p>
             </div>
           ))}
         </div>
       )}
 
       {section.images && section.images.length > 0 && (
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-3 gap-3 md:grid-cols-4 lg:grid-cols-5">
           {section.images.map((img, i) => (
             <button
               key={i}
@@ -98,7 +93,7 @@ export function AchievementCard({ section }: { section: AchievementSection }) {
                 width={0}
                 height={0}
                 sizes="(max-width: 768px) 50vw, 25vw"
-                className="w-full h-auto rounded-lg hover:opacity-90 transition-opacity"
+                className="h-auto w-full rounded-lg transition-opacity hover:opacity-90"
                 unoptimized
               />
             </button>
@@ -106,57 +101,12 @@ export function AchievementCard({ section }: { section: AchievementSection }) {
         </div>
       )}
 
-      {lightboxOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-          onClick={closeLightbox}
-        >
-          <button
-            onClick={closeLightbox}
-            className="absolute top-4 right-4 text-white text-3xl z-10 hover:text-gray-300"
-          >
-            &times;
-          </button>
-
-          {lightboxImages.length > 1 && (
-            <>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation()
-                  setLightboxIndex((prev) => (prev === 0 ? lightboxImages.length - 1 : prev - 1))
-                }}
-                className="absolute left-4 text-white text-4xl z-10 hover:text-gray-300"
-              >
-                &#8249;
-              </button>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation()
-                  setLightboxIndex((prev) => (prev === lightboxImages.length - 1 ? 0 : prev + 1))
-                }}
-                className="absolute right-4 text-white text-4xl z-10 hover:text-gray-300"
-              >
-                &#8250;
-              </button>
-            </>
-          )}
-
-          <div onClick={(e) => e.stopPropagation()} className="max-w-4xl max-h-[90vh] p-4">
-            <Image
-              src={lightboxImages[lightboxIndex].src}
-              alt={lightboxImages[lightboxIndex].alt}
-              width={1200}
-              height={900}
-              className="w-auto h-auto max-h-[85vh] object-contain rounded-lg"
-              unoptimized
-            />
-            {lightboxImages.length > 1 && (
-              <p className="text-white text-center mt-2 text-sm">
-                {lightboxIndex + 1} / {lightboxImages.length}
-              </p>
-            )}
-          </div>
-        </div>
+      {lightbox && (
+        <Lightbox
+          images={lightbox.images}
+          initialIndex={lightbox.index}
+          onClose={() => setLightbox(null)}
+        />
       )}
     </div>
   )

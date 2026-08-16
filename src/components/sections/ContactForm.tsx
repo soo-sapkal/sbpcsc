@@ -1,13 +1,16 @@
 "use client"
 
 import { useState, type FormEvent } from "react"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
 
 export function ContactForm() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [msg, setMsg] = useState("")
-  const [status, setStatus] = useState<string | null>(null)
+  const [status, setStatus] = useState<{ type: "success" | "error"; text: string } | null>(null)
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: FormEvent) => {
@@ -23,16 +26,16 @@ export function ContactForm() {
       })
       const data = await res.json()
       if (data.success) {
-        setStatus("The message was sent successfully.")
+        setStatus({ type: "success", text: "The message was sent successfully." })
         setName("")
         setEmail("")
         setPhone("")
         setMsg("")
       } else {
-        setStatus(data.message || "Error: Message was not sent, Try again Later")
+        setStatus({ type: "error", text: data.message || "Error: Message was not sent, Try again Later" })
       }
     } catch {
-      setStatus("Error: Message was not sent, Try again Later")
+      setStatus({ type: "error", text: "Error: Message was not sent, Try again Later" })
     } finally {
       setLoading(false)
     }
@@ -41,63 +44,74 @@ export function ContactForm() {
   return (
     <div className="form-container" id="frmcontact">
       {status && (
-        <div className="mb-2 bg-gray-100 p-3 text-center text-sm text-gray-700">{status}</div>
+        <div
+          role="status"
+          aria-live="polite"
+          className={`mb-3 rounded-md p-3 text-center text-sm ${
+            status.type === "success" ? "bg-brand-soft text-brand-dark" : "bg-accent-soft text-accent"
+          }`}
+        >
+          {status.text}
+        </div>
       )}
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <input
+      <form onSubmit={handleSubmit} className="grid gap-3">
+        <div>
+          <Input
             type="text"
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full rounded border border-gray-300 px-3 py-2 text-sm"
+            className="h-10"
             placeholder="Your Name"
+            aria-label="Your Name"
             required
           />
         </div>
-        <div className="mb-3">
-          <input
+        <div>
+          <Input
             type="email"
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded border border-gray-300 px-3 py-2 text-sm"
+            className="h-10"
             placeholder="Your Email"
+            aria-label="Your Email"
             required
           />
         </div>
-        <div className="mb-3">
-          <input
+        <div>
+          <Input
             type="text"
             name="phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="w-full rounded border border-gray-300 px-3 py-2 text-sm"
+            className="h-10"
             placeholder="Your Phone"
+            aria-label="Your Phone"
             pattern="[1-9]{1}[0-9]{9}"
             title="10 digit mobile number required"
             required
           />
         </div>
-        <div className="mb-3">
-          <textarea
+        <div>
+          <Textarea
             name="msg"
             rows={5}
             value={msg}
             onChange={(e) => setMsg(e.target.value)}
-            className="w-full rounded border border-gray-300 px-3 py-2 text-sm"
             placeholder="Message"
+            aria-label="Message"
             required
           />
         </div>
-        <div className="mb-3">
-          <button
+        <div>
+          <Button
             type="submit"
             disabled={loading}
-            className="cursor-pointer rounded bg-[#cf2b1f] px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#b82318] disabled:opacity-60"
+            className="cursor-pointer bg-accent text-white hover:bg-accent/90"
           >
             {loading ? "Sending..." : "SUBMIT"}
-          </button>
+          </Button>
         </div>
       </form>
     </div>

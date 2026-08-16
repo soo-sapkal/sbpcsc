@@ -29,53 +29,53 @@ export default function CommitteePage() {
           </p>
 
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-gray-300">
+            <table className="w-full border-collapse border border-border">
               <thead>
-                <tr className="bg-[#146ab5] text-white">
-                  <th className="border border-gray-300 p-2 text-left">Staff Name</th>
-                  <th className="border border-gray-300 p-2 text-left">Position</th>
+                <tr className="bg-brand text-white">
+                  <th className="border border-border p-2 text-left">Staff Name</th>
+                  <th className="border border-border p-2 text-left">Position</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-gray-300 p-2">Mrs. Swati Gawasnane</td>
-                  <td className="border border-gray-300 p-2">Incharge - Vishakha Committee</td>
+                  <td className="border border-border p-2">Mrs. Swati Gawasnane</td>
+                  <td className="border border-border p-2">Incharge - Vishakha Committee</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 p-2">Mrs. Kanchan Patil</td>
-                  <td className="border border-gray-300 p-2">Member</td>
+                  <td className="border border-border p-2">Mrs. Kanchan Patil</td>
+                  <td className="border border-border p-2">Member</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 p-2">Mrs. Anjum Mulla</td>
-                  <td className="border border-gray-300 p-2">Member</td>
+                  <td className="border border-border p-2">Mrs. Anjum Mulla</td>
+                  <td className="border border-border p-2">Member</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 p-2">Mrs. Pradnya Kulkarni</td>
-                  <td className="border border-gray-300 p-2">Member</td>
+                  <td className="border border-border p-2">Mrs. Pradnya Kulkarni</td>
+                  <td className="border border-border p-2">Member</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 p-2">Mrs. Shailaja Pande</td>
-                  <td className="border border-gray-300 p-2">Member</td>
+                  <td className="border border-border p-2">Mrs. Shailaja Pande</td>
+                  <td className="border border-border p-2">Member</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 p-2">Mrs. Sujata Seelam</td>
-                  <td className="border border-gray-300 p-2">Member</td>
+                  <td className="border border-border p-2">Mrs. Sujata Seelam</td>
+                  <td className="border border-border p-2">Member</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 p-2">Mrs. Rita Gadewar</td>
-                  <td className="border border-gray-300 p-2">Member</td>
+                  <td className="border border-border p-2">Mrs. Rita Gadewar</td>
+                  <td className="border border-border p-2">Member</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 p-2">Mrs. Raginee Sonawane</td>
-                  <td className="border border-gray-300 p-2">Member</td>
+                  <td className="border border-border p-2">Mrs. Raginee Sonawane</td>
+                  <td className="border border-border p-2">Member</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 p-2">Mrs. Prachi Bhagat</td>
-                  <td className="border border-gray-300 p-2">Member</td>
+                  <td className="border border-border p-2">Mrs. Prachi Bhagat</td>
+                  <td className="border border-border p-2">Member</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 p-2">Mrs. Kanchan Landge</td>
-                  <td className="border border-gray-300 p-2">Member</td>
+                  <td className="border border-border p-2">Mrs. Kanchan Landge</td>
+                  <td className="border border-border p-2">Member</td>
                 </tr>
               </tbody>
             </table>
@@ -108,11 +108,11 @@ export default function CommitteePage() {
           <p>The College stands with Anti Ragging Committee with following members.</p>
 
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-gray-300">
+            <table className="w-full border-collapse border border-border">
               <thead>
-                <tr className="bg-[#146ab5] text-white">
-                  <th className="border border-gray-300 p-2 text-left">NAME OF MEMBERS</th>
-                  <th className="border border-gray-300 p-2 text-left">POSITION</th>
+                <tr className="bg-brand text-white">
+                  <th className="border border-border p-2 text-left">NAME OF MEMBERS</th>
+                  <th className="border border-border p-2 text-left">POSITION</th>
                 </tr>
               </thead>
               <tbody>
@@ -126,8 +126,8 @@ export default function CommitteePage() {
                   ["Mrs. Anita Madhekar", "Member"],
                 ].map(([name, position], i) => (
                   <tr key={i}>
-                    <td className="border border-gray-300 p-2">{name}</td>
-                    <td className="border border-gray-300 p-2">{position}</td>
+                    <td className="border border-border p-2">{name}</td>
+                    <td className="border border-border p-2">{position}</td>
                   </tr>
                 ))}
               </tbody>
@@ -169,11 +169,11 @@ export default function CommitteePage() {
           <h4 className="mb-2 text-lg font-bold">Committee members:</h4>
 
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-gray-300">
+            <table className="w-full border-collapse border border-border">
               <thead>
-                <tr className="bg-[#146ab5] text-white">
-                  <th className="border border-gray-300 p-2 text-left">NAME OF MEMBERS</th>
-                  <th className="border border-gray-300 p-2 text-left">POSITION</th>
+                <tr className="bg-brand text-white">
+                  <th className="border border-border p-2 text-left">NAME OF MEMBERS</th>
+                  <th className="border border-border p-2 text-left">POSITION</th>
                 </tr>
               </thead>
               <tbody>
@@ -188,8 +188,8 @@ export default function CommitteePage() {
                   ["Mrs. Shailaja Pande", "Member"],
                 ].map(([name, position], i) => (
                   <tr key={i}>
-                    <td className="border border-gray-300 p-2">{name}</td>
-                    <td className="border border-gray-300 p-2">{position}</td>
+                    <td className="border border-border p-2">{name}</td>
+                    <td className="border border-border p-2">{position}</td>
                   </tr>
                 ))}
               </tbody>
@@ -212,11 +212,11 @@ export default function CommitteePage() {
           <h4 className="mb-2 text-lg font-bold">Committee members:</h4>
 
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-gray-300">
+            <table className="w-full border-collapse border border-border">
               <thead>
-                <tr className="bg-[#146ab5] text-white">
-                  <th className="border border-gray-300 p-2 text-left">NAME OF MEMBERS</th>
-                  <th className="border border-gray-300 p-2 text-left">POSITION</th>
+                <tr className="bg-brand text-white">
+                  <th className="border border-border p-2 text-left">NAME OF MEMBERS</th>
+                  <th className="border border-border p-2 text-left">POSITION</th>
                 </tr>
               </thead>
               <tbody>
@@ -228,8 +228,8 @@ export default function CommitteePage() {
                   ["Mrs. Prachi Bhagat", "Member"],
                 ].map(([name, position], i) => (
                   <tr key={i}>
-                    <td className="border border-gray-300 p-2">{name}</td>
-                    <td className="border border-gray-300 p-2">{position}</td>
+                    <td className="border border-border p-2">{name}</td>
+                    <td className="border border-border p-2">{position}</td>
                   </tr>
                 ))}
               </tbody>
@@ -254,11 +254,11 @@ export default function CommitteePage() {
           <h4 className="mb-2 text-lg font-bold">Committee members:</h4>
 
           <div className="overflow-x-auto">
-            <table className="mb-4 w-full border-collapse border border-gray-300">
+            <table className="mb-4 w-full border-collapse border border-border">
               <thead>
-                <tr className="bg-[#146ab5] text-white">
-                  <th className="border border-gray-300 p-2 text-left">Department</th>
-                  <th className="border border-gray-300 p-2 text-left">Faculty Name</th>
+                <tr className="bg-brand text-white">
+                  <th className="border border-border p-2 text-left">Department</th>
+                  <th className="border border-border p-2 text-left">Faculty Name</th>
                 </tr>
               </thead>
               <tbody>
@@ -269,18 +269,18 @@ export default function CommitteePage() {
                   ["Physical Education Department", "Mr. Pradeep Kasar"],
                 ].map(([dept, name], i) => (
                   <tr key={i}>
-                    <td className="border border-gray-300 p-2">{dept}</td>
-                    <td className="border border-gray-300 p-2">{name}</td>
+                    <td className="border border-border p-2">{dept}</td>
+                    <td className="border border-border p-2">{name}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
 
-            <table className="w-full border-collapse border border-gray-300">
+            <table className="w-full border-collapse border border-border">
               <thead>
-                <tr className="bg-[#146ab5] text-white">
-                  <th className="border border-gray-300 p-2 text-left">Department</th>
-                  <th className="border border-gray-300 p-2 text-left">Faculty Name</th>
+                <tr className="bg-brand text-white">
+                  <th className="border border-border p-2 text-left">Department</th>
+                  <th className="border border-border p-2 text-left">Faculty Name</th>
                 </tr>
               </thead>
               <tbody>
@@ -297,8 +297,8 @@ export default function CommitteePage() {
                   ["Secretarial Practices Department", "Mrs. Sandhya Mhaske"],
                 ].map(([dept, name], i) => (
                   <tr key={i}>
-                    <td className="border border-gray-300 p-2">{dept}</td>
-                    <td className="border border-gray-300 p-2">{name}</td>
+                    <td className="border border-border p-2">{dept}</td>
+                    <td className="border border-border p-2">{name}</td>
                   </tr>
                 ))}
               </tbody>
@@ -335,14 +335,14 @@ export default function CommitteePage() {
       label: "PTA Committee",
       content: (
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse border border-gray-300">
+          <table className="w-full border-collapse border border-border">
             <thead>
-              <tr className="bg-[#146ab5] text-white">
-                <th className="border border-gray-300 p-2 text-left">Sr.No</th>
-                <th className="border border-gray-300 p-2 text-left">Name of the Parent</th>
-                <th className="border border-gray-300 p-2 text-left">Name of the student</th>
-                <th className="border border-gray-300 p-2 text-left">Class</th>
-                <th className="border border-gray-300 p-2 text-left">Div</th>
+              <tr className="bg-brand text-white">
+                <th className="border border-border p-2 text-left">Sr.No</th>
+                <th className="border border-border p-2 text-left">Name of the Parent</th>
+                <th className="border border-border p-2 text-left">Name of the student</th>
+                <th className="border border-border p-2 text-left">Class</th>
+                <th className="border border-border p-2 text-left">Div</th>
               </tr>
             </thead>
             <tbody>
@@ -368,12 +368,12 @@ export default function CommitteePage() {
                 ["19", "Mr. Sharad Kadam", "Ananya Kadam", "11th", "Sci A"],
                 ["20", "Mrs. Madhura Vispute", "Divya Vispute", "11th", "Sci A"],
               ].map(([sr, parent, student, cls, div], i) => (
-                <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                  <td className="border border-gray-300 p-2">{sr}</td>
-                  <td className="border border-gray-300 p-2">{parent}</td>
-                  <td className="border border-gray-300 p-2">{student}</td>
-                  <td className="border border-gray-300 p-2">{cls}</td>
-                  <td className="border border-gray-300 p-2">{div}</td>
+                <tr key={i} className={i % 2 === 0 ? "bg-surface" : "bg-muted/50"}>
+                  <td className="border border-border p-2">{sr}</td>
+                  <td className="border border-border p-2">{parent}</td>
+                  <td className="border border-border p-2">{student}</td>
+                  <td className="border border-border p-2">{cls}</td>
+                  <td className="border border-border p-2">{div}</td>
                 </tr>
               ))}
             </tbody>

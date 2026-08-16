@@ -57,7 +57,7 @@ export function SocialIcons({ variant, showLabel }: SocialIconsProps) {
               width: "29px",
               height: "29px",
               borderRadius: "50%",
-              backgroundColor: variant === "footer" ? "#333" : brandColors[link.icon],
+              backgroundColor: variant === "footer" ? "var(--color-brand-dark)" : brandColors[link.icon],
               color: "#fff",
               fontSize: "15px",
               textAlign: "center",

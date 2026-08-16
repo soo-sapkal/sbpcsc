@@ -22,8 +22,8 @@ export function GalleryYearNav({
           href={`/gallery/${basePath}/${year.year}`}
           className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
             currentYear === year.year
-              ? "bg-[#cf2b1f] text-white shadow-md"
-              : "bg-gray-200 text-gray-700 hover:bg-red-50 hover:text-[#cf2b1f]"
+              ? "bg-accent text-white shadow-md"
+              : "bg-muted text-muted-foreground hover:bg-accent/10 hover:text-accent"
           }`}
         >
           {year.label}

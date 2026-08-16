@@ -20,7 +20,7 @@ export function SubjectAbout({ subject }: SubjectAboutProps) {
                 <a
                   href={pdf.href}
                   target="_blank"
-                  className="block rounded border border-[#ddd] p-1 transition-shadow hover:shadow-lg"
+                  className="block rounded-lg border border-border bg-surface p-2 shadow-card transition-shadow hover:shadow-card-hover"
                 >
                   <Image
                     src="/images/pdficon.png"
@@ -30,7 +30,7 @@ export function SubjectAbout({ subject }: SubjectAboutProps) {
                     className="mx-auto"
                     unoptimized
                   />
-                  <span className="mt-2 block">{pdf.label}</span>
+                  <span className="mt-2 block font-semibold text-brand">{pdf.label}</span>
                 </a>
               </p>
             </div>

@@ -74,18 +74,17 @@ const peonStaff = [
 function StaffCard({ person, showQualification }: { person: (typeof adminStaff)[number]; showQualification?: boolean }) {
   return (
     <tr>
-      <td className="border border-gray-300 p-2 text-center align-middle">
+      <td className="border border-border p-2 text-center align-middle">
         <Image
           src={person.img}
           alt={person.name}
           width={150}
           height={150}
-          className="mx-auto"
+          className="mx-auto h-auto w-full max-w-[9.375rem]"
           unoptimized
-          style={{ maxWidth: "100%", height: "auto" }}
         />
       </td>
-      <td className="border border-gray-300 p-2 align-middle">
+      <td className="border border-border p-2 align-middle">
         <strong>Name:</strong> {person.name}<br />
         {showQualification && person.qualification ? <><strong>Qualification:</strong> {person.qualification}<br /></> : null}
         <strong>Experience:</strong> {person.experience}<br />
@@ -98,18 +97,17 @@ function StaffCard({ person, showQualification }: { person: (typeof adminStaff)[
 function PeonCard({ person }: { person: (typeof peonStaff)[number] }) {
   return (
     <tr>
-      <td className="border border-gray-300 p-2 text-center align-middle">
+      <td className="border border-border p-2 text-center align-middle">
         <Image
           src={person.img}
           alt={person.name}
           width={150}
           height={150}
-          className="mx-auto"
+          className="mx-auto h-auto w-full max-w-[9.375rem]"
           unoptimized
-          style={{ maxWidth: "100%", height: "auto" }}
         />
       </td>
-      <td className="border border-gray-300 p-2 align-middle">
+      <td className="border border-border p-2 align-middle">
         <strong>Name:</strong> {person.name}<br />
         <strong>Email:</strong> {person.email}
       </td>
@@ -123,10 +121,10 @@ export default function AdministrationPage() {
       <PageHeading title="Administration" />
 
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse border border-gray-300">
+        <table className="w-full border-collapse border border-border">
           <thead>
-            <tr className="bg-[#146ab5] text-white">
-              <th className="border border-gray-300 p-2 text-left" colSpan={2}>
+            <tr className="bg-brand text-white">
+              <th className="border border-border p-2 text-left" colSpan={2}>
                 <strong>Administrator</strong>
               </th>
             </tr>
@@ -137,8 +135,8 @@ export default function AdministrationPage() {
             ))}
           </tbody>
           <thead>
-            <tr className="bg-[#146ab5] text-white">
-              <th className="border border-gray-300 p-2 text-left" colSpan={2}>
+            <tr className="bg-brand text-white">
+              <th className="border border-border p-2 text-left" colSpan={2}>
                 <strong>Peon</strong>
               </th>
             </tr>

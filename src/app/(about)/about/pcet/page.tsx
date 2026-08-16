@@ -13,7 +13,7 @@ export default function PcetPage() {
     <>
       <PageHeading title="About PCET" />
 
-      <h2 className="mb-4 text-2xl font-bold text-[#cf2b1f]">Founders :</h2>
+      <h2 className="mb-4 text-2xl font-bold text-accent">Founders :</h2>
 
       <div className="flex flex-wrap">
         <div className="w-1/2 px-2 sm:w-1/3 md:w-1/3">
@@ -48,36 +48,36 @@ export default function PcetPage() {
 
       <br />
 
-      <h2 className="mb-4 text-2xl font-bold text-[#cf2b1f]">Honourable Trustee Members :</h2>
+      <h2 className="mb-4 text-2xl font-bold text-accent">Honourable Trustee Members :</h2>
 
-      <table className="mb-6 w-full border-collapse border border-gray-300">
+      <table className="mb-6 w-full border-collapse border border-border">
         <tbody>
           <tr>
-            <td className="border border-gray-300 p-2 text-center align-middle">
+            <td className="border border-border p-2 text-center align-middle">
               <Image src="/images/dnyaneshwar-landge.jpg" alt="Chairman of PCET Trust Mr.Dnyaneshwar P. Landge" width={140} height={150} className="mx-auto" unoptimized />
               <p className="pt-1">Shri. Dnyaneshwar P. Landge<br /><strong>Chairman, PCET</strong></p>
             </td>
-            <td className="border border-gray-300 p-2 text-center align-middle">
+            <td className="border border-border p-2 text-center align-middle">
               <Image src="/images/padma-bhosale.jpg" alt="Vice Chairman of PCET Trust Ms. Padmatai M. Bhosale" width={140} height={150} className="mx-auto" unoptimized />
               <p className="pt-1">Smt. Padmatai M. Bhosale<br /><strong>Vice Chairperson, PCET</strong></p>
             </td>
           </tr>
           <tr>
-            <td className="border border-gray-300 p-2 text-center align-middle">
+            <td className="border border-border p-2 text-center align-middle">
               <Image src="/images/vitthal-kalbhor.jpg" alt="Secretary of PCET Trust Mr. Vitthal S. Kalbhor" width={140} height={150} className="mx-auto" unoptimized />
               <p className="pt-1">Shri. Vitthal S. Kalbhor<br /><strong>Secretary, PCET</strong></p>
             </td>
-            <td className="border border-gray-300 p-2 text-center align-middle">
+            <td className="border border-border p-2 text-center align-middle">
               <Image src="/images/shantaram-garade.jpg" alt="Treasurer of PCET Trust Mr. Shantaram D. Garade" width={140} height={150} className="mx-auto" unoptimized />
               <p className="pt-1">Shri. Shantaram D. Garade<br /><strong>Treasurer, PCET</strong></p>
             </td>
           </tr>
           <tr>
-            <td className="border border-gray-300 p-2 text-center align-middle">
+            <td className="border border-border p-2 text-center align-middle">
               <Image src="/images/harshwardhan-patil.jpg" alt="Trustee of PCET Trust Mr. Harshwardhan S. Patil" width={140} height={150} className="mx-auto" unoptimized />
               <p className="pt-1">Shri. Harshwardhan S. Patil<br /><strong>Trustee, PCET</strong></p>
             </td>
-            <td className="border border-gray-300 p-2 text-center align-middle">
+            <td className="border border-border p-2 text-center align-middle">
               <Image src="/images/dr-girish-desai.webp" alt="Executive Director, PCET" width={140} height={150} className="mx-auto" unoptimized />
               <p className="pt-1">Dr. Girish Desai<br /><strong>Executive Director, PCET</strong></p>
             </td>
@@ -87,7 +87,7 @@ export default function PcetPage() {
 
       <br />
 
-      <h2 className="mb-4 text-2xl font-bold text-[#cf2b1f]">OTHER INSTITUTES MANAGED BY PIMPRI CHINCHWAD EDUCATION TRUST :</h2>
+      <h2 className="mb-4 text-2xl font-bold text-accent">OTHER INSTITUTES MANAGED BY PIMPRI CHINCHWAD EDUCATION TRUST :</h2>
 
       <div className="mb-6 text-justify">
         <p>Institutions falling under the canopy of the PCET are stated as under :</p>
@@ -95,7 +95,7 @@ export default function PcetPage() {
         <ul className="list-none pl-0">
           {/* PCP */}
           <li>
-            <p className="institutes-title m-0 mb-1 bg-[#146ab5] px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pimpri Chinchwad Polytechnic (PCP)</p>
+            <p className="institutes-title m-0 mb-1 bg-brand px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pimpri Chinchwad Polytechnic (PCP)</p>
           </li>
           <li>
             <div className="left-img-new float-left mr-2.5 mt-1.5 h-auto w-auto">&nbsp;</div>
@@ -104,13 +104,13 @@ export default function PcetPage() {
             </div>
             <p>The PCP was established in 1990. Located near the Akurdi railway station, it is the best diploma engineering colleges in the city. Spread over large expanse of land under the Pimpri Chinchwad New Town Development Authority, popularly known as Pradhikaran, it hosts its departments in spacious buildings, with an expansive sports ground, canteen and a mess, all to aid the hundreds of students who are under the tutelage of the renowned and devoted faculty.</p>
             <p>Situated about 20kms from the Pune railway station, on the Pune-Mumbai Railway line, the institute is in walkable distance from Akurdi railway station and is well connected by bus routes with many parts of Pune City.</p>
-            <p>Courses offered include: Automobile Engineering, Civil Engineering, Computer Engineering, Electronics and Telecommunication, Mechanical Engineering, Information Technology. For further information, course details, and enrollment specifics please visit the website at : <a href="https://www.pcpolytechnic.com/" target="_blank" className="text-[#337ab7] hover:underline">https://www.pcpolytechnic.com/</a></p>
+            <p>Courses offered include: Automobile Engineering, Civil Engineering, Computer Engineering, Electronics and Telecommunication, Mechanical Engineering, Information Technology. For further information, course details, and enrollment specifics please visit the website at : <a href="https://www.pcpolytechnic.com/" target="_blank" className="text-brand hover:underline">https://www.pcpolytechnic.com/</a></p>
           </li>
 
           {/* PCCoE */}
           <li>
             <div className="clear-both">&nbsp;</div>
-            <p className="institutes-title m-0 mb-1 bg-[#146ab5] px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pimpri Chinchwad College of Engineering (PCCoE)</p>
+            <p className="institutes-title m-0 mb-1 bg-brand px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pimpri Chinchwad College of Engineering (PCCoE)</p>
           </li>
           <li>
             <div className="left-img-new float-left mr-2.5 mt-1.5 h-auto w-auto">
@@ -118,26 +118,26 @@ export default function PcetPage() {
             </div>
             <p>The Pimpri Chinchwad College of Engineering is an autonomous institute approved by the AICTE, New Delhi; and the SPPU, Pune. Established in 1999, the Pimpri Chinchwad College of Engineering (PCCoE) is one of the premier engineering colleges in Pune. Nurtured and managed by the Pimpri Chinchwad Education Trust (PCET), the PCCoE functions proactively to provide the best professional environment to engineering and management students in terms of academics, industry oriented trainings, sports, co -and extracurricular activities, cultural activities, competitions, etc to create true aesthetically sensitive, socially committed and technologically competent engineers and management professionals.</p>
             <p>Courses offered include undergrad courses ranging from Mechanical Engineering, Computer Engineering, Information Technology, Civil Engineering to E&amp;TC Engineering. Postgrad courses offered include MEs in Mechanical: Heat Design, Design, Computers and Embedded Systems, VLSI, as well as MBA and MCA.</p>
-            <p>To know more about the institute, and for further details on courses offered, contact information, please visit the website at : <a href="http://www.pccoepune.com/" target="_blank" className="text-[#337ab7] hover:underline">http://www.pccoepune.com/</a></p>
+            <p>To know more about the institute, and for further details on courses offered, contact information, please visit the website at : <a href="http://www.pccoepune.com/" target="_blank" className="text-brand hover:underline">http://www.pccoepune.com/</a></p>
           </li>
 
           {/* PCCoER */}
           <li>
             <div className="clear-both">&nbsp;</div>
-            <p className="institutes-title m-0 mb-1 bg-[#146ab5] px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pimpri Chinchwad College of Engineering and Research (PCCoER)</p>
+            <p className="institutes-title m-0 mb-1 bg-brand px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pimpri Chinchwad College of Engineering and Research (PCCoER)</p>
           </li>
           <li>
             <div className="left-img-new float-left mr-2.5 mt-1.5 h-auto w-auto">
               <Image src="/images/logo/pccoer.png" alt="Pimpri Chinchwad College of Engineering and Research (PCCoER)" width={120} height={60} className="img-responsive block max-w-full border-0 pr-2.5 align-middle" unoptimized />
             </div>
             <p>Founded recently in 2014 as an extension of the PCCoE, the Pimpri Chinchwad College of Engineering and Research (PCCoER) offers courses in Computer, Civil, Mechanical, and Electronics and Telecommunication Engineering</p>
-            <p>Feel free to visit the website at : <a href="https://www.pccoer.com/" target="_blank" className="text-[#337ab7] hover:underline">https://www.pccoer.com/</a> to know more about the faculty, student-life, course details and admissions.</p>
+            <p>Feel free to visit the website at : <a href="https://www.pccoer.com/" target="_blank" className="text-brand hover:underline">https://www.pccoer.com/</a> to know more about the faculty, student-life, course details and admissions.</p>
           </li>
 
           {/* SBPPS */}
           <li>
             <div className="clear-both">&nbsp;</div>
-            <p className="institutes-title m-0 mb-1 bg-[#146ab5] px-2.5 py-0.5 text-[1.063rem] font-bold text-white">S.B. Patil Public School (SBPPS)</p>
+            <p className="institutes-title m-0 mb-1 bg-brand px-2.5 py-0.5 text-[1.063rem] font-bold text-white">S.B. Patil Public School (SBPPS)</p>
           </li>
           <li>
             <div className="left-img-new float-left mr-2.5 mt-1.5 h-auto w-auto">
@@ -145,13 +145,13 @@ export default function PcetPage() {
             </div>
             <p>Founded in 2012, S.B. Patil Public School (SBPPS) at Ravet, Pune is one of the leading and premier educational institutions whose sole purpose is not just to lead students towards an excellence in education but to reach every tangent and explore every facet of each individual student.</p>
             <p>Every instructor in this institute exists to teach, guide, mentor, develop and more importantly imbibe students with moral and character, instil within them values and respect, nurture every talent, strengthen every potential, and fortify them to confront and overcome every challenge they would encounter when they graduate into the world.</p>
-            <p>For additional details on faculty, staff,  and enrolment, please visit the school website at : <a href="https://sbpatilschool.com/" target="_blank" className="text-[#337ab7] hover:underline">https://sbpatilschool.com</a></p>
+            <p>For additional details on faculty, staff,  and enrolment, please visit the school website at : <a href="https://sbpatilschool.com/" target="_blank" className="text-brand hover:underline">https://sbpatilschool.com</a></p>
           </li>
 
           {/* SBPIM */}
           <li>
             <div className="clear-both">&nbsp;</div>
-            <p className="institutes-title m-0 mb-1 bg-[#146ab5] px-2.5 py-0.5 text-[1.063rem] font-bold text-white">S. B. Patil Institute Of Management (SBPIM)</p>
+            <p className="institutes-title m-0 mb-1 bg-brand px-2.5 py-0.5 text-[1.063rem] font-bold text-white">S. B. Patil Institute Of Management (SBPIM)</p>
           </li>
           <li>
             <div className="left-img-new float-left mr-2.5 mt-1.5 h-auto w-auto">
@@ -160,13 +160,13 @@ export default function PcetPage() {
             <p>Established in 2009 by the PCET, the S.B. Patil Institute of Management (SBPIM)&rsquo;s programmes are aimed for developing business mavens who, on graduation, will be covetously employable during this time when jobs are in scarcity.</p>
             <p>The university is blessed with having as its faculty - the cream of professional and adept instructors, who use an industry-focussed teaching-learning approach, and who are capacitated to use the best infrastructural facilities the campus is furnished with, all so as to create and develop entrepreneurs and ready to use employees.</p>
             <p>SBPIM has been functioning proactively to provide the best professional environment to MBA students in terms of academics, industry and business-oriented tailor-made trainings, sports, co-and extra-curricular activities, cultural events and various competitions, etc. to create holistically developed business professionals.</p>
-            <p>The institute&rsquo;s website : <a href="https://www.sbpatilmba.com" target="_blank" className="text-[#337ab7] hover:underline">https://www.sbpatilmba.com</a> offers insight into college life, campus details, staff profiles, infrastructure and amenities, admission specifics and contact information.</p>
+            <p>The institute&rsquo;s website : <a href="https://www.sbpatilmba.com" target="_blank" className="text-brand hover:underline">https://www.sbpatilmba.com</a> offers insight into college life, campus details, staff profiles, infrastructure and amenities, admission specifics and contact information.</p>
           </li>
 
           {/* SBPCoAD */}
           <li>
             <div className="clear-both">&nbsp;</div>
-            <p className="institutes-title m-0 mb-1 bg-[#146ab5] px-2.5 py-0.5 text-[1.063rem] font-bold text-white">S.B. Patil College of Architecture and Design (SBPCoAD)</p>
+            <p className="institutes-title m-0 mb-1 bg-brand px-2.5 py-0.5 text-[1.063rem] font-bold text-white">S.B. Patil College of Architecture and Design (SBPCoAD)</p>
           </li>
           <li>
             <div className="left-img-new float-left mr-2.5 mt-1.5 h-auto w-auto">
@@ -177,13 +177,13 @@ export default function PcetPage() {
             <p>Infrastructure includes studios, smart-classrooms, lecture-halls, workshops, computer labs, and a sessional submission room. The college insists on the provision of academic freedom to the faculty so as to facilitate and encourage innovation and experimentation within the curricular framework stipulated by the University.</p>
             <p>With the agenda to develop technically sound professionals who will function as Entrepreneurial Individuals, students are imparted with knowledge-based skills, awareness of the latest building technology, and the capacity to create innovative designs using state-the-art technology and software.</p>
             <p>Instructors also stress on building student confidence while sensitising them to prevailing issues via the means of appropriate guidance, seminars and lectures on topics related to their course, as well as out-of-the-box environmental concerns like water crisis, global warming and disaster mitigations. Students are required to regularly submit class/ studio work, and undergo periodic and transparent assessments.</p>
-            <p>To get to know more about institute, admissions, academics and career opportunities, the website can be reached at : <a href="http://www.sbpatilarchitecture.com" target="_blank" className="text-[#337ab7] hover:underline">http://www.sbpatilarchitecture.com</a></p>
+            <p>To get to know more about institute, admissions, academics and career opportunities, the website can be reached at : <a href="http://www.sbpatilarchitecture.com" target="_blank" className="text-brand hover:underline">http://www.sbpatilarchitecture.com</a></p>
           </li>
 
           {/* PBS */}
           <li>
             <div className="clear-both">&nbsp;</div>
-            <p className="institutes-title m-0 mb-1 bg-[#146ab5] px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pune Business School (PBS)</p>
+            <p className="institutes-title m-0 mb-1 bg-brand px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pune Business School (PBS)</p>
           </li>
           <li>
             <div className="left-img-new float-left mr-2.5 mt-1.5 h-auto w-auto">
@@ -191,13 +191,13 @@ export default function PcetPage() {
             </div>
             <p>The Pune Business School (PBS) is a comprehensive academic institution with a distinctive learning style and a global vision. In order to improve the student learning experience, a developed, innovative and focused plan has been prepared to enhance and enrich the student services and facilities.</p>
             <p>As a part of this strategic focus, PBS aims to ensure that all new and existing engagements become a quality-centered learning experience. PBS aims to meet student residential and social needs, provide effective student support services and promote the students&rsquo; personal development, and ultimately enhance their employability.</p>
-            <p>For more information visit : <a href="https://www.punebusinessschool.com/" target="_blank" className="text-[#337ab7] hover:underline">https://www.punebusinessschool.com/</a></p>
+            <p>For more information visit : <a href="https://www.punebusinessschool.com/" target="_blank" className="text-brand hover:underline">https://www.punebusinessschool.com/</a></p>
           </li>
 
           {/* PCACS */}
           <li>
             <div className="clear-both">&nbsp;</div>
-            <p className="institutes-title m-0 mb-1 bg-[#146ab5] px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pimpri Chinchwad College Of Arts, Commerce and Science (PCACS)</p>
+            <p className="institutes-title m-0 mb-1 bg-brand px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pimpri Chinchwad College Of Arts, Commerce and Science (PCACS)</p>
           </li>
           <li>
             <div className="left-img-new float-left mr-2.5 mt-1.5 h-auto w-auto">
@@ -205,13 +205,13 @@ export default function PcetPage() {
             </div>
             <p style={{ margin: "0px 0px 4px", fontSize: "15px", lineHeight: "25px" }}>The Pimpri Chinchwad College of Arts, Commerce and Science is committed to excellence in academic, co and extracurricular activities and performance. Offering an array of bachelor degree programmes such as BA, BCom etc., affiliated to Savitribai Phule Pune University and recognised by the Govt. of Maharashtra, PCACS believes in student empowerment by imparting quality education, pursuing knowledge and enriching academic experience.</p>
             <p style={{ margin: "0px 0px 4px", fontSize: "15px", lineHeight: "25px" }}>The college aims to offer the best of facilities and an environment that is suitable for students to nurture themselves, progress in life, and make prudent career choices.</p>
-            <p style={{ margin: "0px 0px 4px", fontSize: "15px", lineHeight: "25px" }}>For more information visit : <a href="https://www.pcacspune.com/" target="_blank" className="text-[#337ab7] hover:underline">https://www.pcacspune.com/</a></p>
+            <p style={{ margin: "0px 0px 4px", fontSize: "15px", lineHeight: "25px" }}>For more information visit : <a href="https://www.pcacspune.com/" target="_blank" className="text-brand hover:underline">https://www.pcacspune.com/</a></p>
           </li>
 
           {/* PCU */}
           <li>
             <div className="clear-both">&nbsp;</div>
-            <p className="institutes-title m-0 mb-1 bg-[#146ab5] px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pimpri Chinchwad University (PCU)</p>
+            <p className="institutes-title m-0 mb-1 bg-brand px-2.5 py-0.5 text-[1.063rem] font-bold text-white">Pimpri Chinchwad University (PCU)</p>
           </li>
           <li>
             <div className="left-img-new float-left mr-2.5 mt-1.5 h-auto w-auto">
@@ -219,7 +219,7 @@ export default function PcetPage() {
             </div>
             <p style={{ margin: "0px 0px 4px", fontSize: "15px", lineHeight: "25px" }}>The Pimpri Chinchwad University (PCU) is the PCET&rsquo;s latest crowning glory. It is a State private university situated at Sate, Mawal, Pune. The university will cater to academic facilities and other amenities for both students and faculty so that students are provided a technologically advanced, research-oriented, practically-driven education foundation.</p>
             <p style={{ margin: "0px 0px 4px", fontSize: "15px", lineHeight: "25px" }}>Situated amidst industrial areas and companies that will aid in practical experiences, the university provides an array of multi-disciplinary courses to help students from varied academic backgrounds to achieve their dreams.</p>
-            <p style={{ margin: "0px 0px 4px", fontSize: "15px", lineHeight: "25px" }}>For more information visit : <a href="https://www.pcu.edu.in" target="_blank" className="text-[#337ab7] hover:underline">https://www.pcu.edu.in</a></p>
+            <p style={{ margin: "0px 0px 4px", fontSize: "15px", lineHeight: "25px" }}>For more information visit : <a href="https://www.pcu.edu.in" target="_blank" className="text-brand hover:underline">https://www.pcu.edu.in</a></p>
           </li>
         </ul>
       </div>
