@@ -28,6 +28,7 @@ export function AchievementCard({ section }: { section: AchievementSection }) {
               src={video}
               className="aspect-video rounded-lg w-full"
               allowFullScreen
+              loading="lazy"
               title={`${section.title} video ${i + 1}`}
             />
           ))}

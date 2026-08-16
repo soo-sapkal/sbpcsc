@@ -112,6 +112,7 @@ export function Footer() {
                 tabIndex={0}
                 width="100%"
                 height="160"
+                loading="lazy"
                 title="College Location"
               />
             </div>

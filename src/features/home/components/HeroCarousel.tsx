@@ -19,6 +19,7 @@ function useCarousel(length: number) {
 
   useEffect(() => {
     if (length === 0) return
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
     const timer = setInterval(next, 4000)
     return () => clearInterval(timer)
   }, [next, length])

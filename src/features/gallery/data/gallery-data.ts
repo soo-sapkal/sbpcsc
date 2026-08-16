@@ -1,4 +1,4 @@
-import type { GalleryImage, GalleryEvent, GalleryYear } from "@/types/gallery"
+import type { GalleryImage, GalleryYear } from "@/types/gallery"
 
 function img(src: string, alt: string): GalleryImage {
   return { src, alt }

@@ -6,7 +6,7 @@ import { EventModal } from "./EventModal"
 import { Lightbox } from "@/components/sections/Lightbox"
 import type { GalleryEvent, GalleryImage } from "@/types/gallery"
 
-export function GalleryGrid({ events, year }: { events: GalleryEvent[]; year: string }) {
+export function GalleryGrid({ events }: { events: GalleryEvent[] }) {
   const filteredEvents = events.filter((event) => event.images.length > 0)
 
   const [lightbox, setLightbox] = useState<{ images: GalleryImage[]; index: number } | null>(null)
@@ -26,7 +26,6 @@ export function GalleryGrid({ events, year }: { events: GalleryEvent[]; year: st
             <GalleryCard
               key={event.anchorId}
               event={event}
-              year={year}
               onImageClick={(image, index) => openLightbox(event.images, index)}
               onReadMore={() => setModalEvent(event)}
             />

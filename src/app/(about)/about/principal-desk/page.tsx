@@ -20,7 +20,7 @@ export default function PrincipalDeskPage() {
         className="mb-6 max-w-xl mx-auto w-full"
         unoptimized
       />
-      <p className="mb-1 text-justify font-bold">From the Principal's Desk</p>
+      <p className="mb-1 text-justify font-bold">From the Principal&apos;s Desk</p>
       <p className="mb-6 text-justify font-semibold text-brand">Prof. Mr. Sandip N. Patil<br />Principal</p>
       <p className="mb-4 text-justify italic">
         &ldquo;True education transcends the acquisition of knowledge; it enlightens the mind, enriches the soul, and

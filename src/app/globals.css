@@ -286,4 +286,29 @@
   padding: 0.625rem;
 }
 
+/* Reduced motion — honor OS preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-blink,
+  .scrolling-content,
+  .animate-scroll-up,
+  .animate-pulse-custom {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  .nav-dropdown,
+  .nav-dropdown-open {
+    transition: none !important;
+  }
+  .sbpcsc-news-scroll ul {
+    overflow-y: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 

@@ -11,6 +11,10 @@ export function NewsScroll() {
     const ul = ulRef.current
     if (!ul) return
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return
+    }
+
     let animationId: number
     let scrollPos = 0
 

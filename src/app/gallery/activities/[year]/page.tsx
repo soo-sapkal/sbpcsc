@@ -30,7 +30,7 @@ export default async function ActivitiesYearPage({ params }: { params: Promise<{
     <ContentWithSidebar sidebar={<Sidebar section={studentCornerSidebar} />}>
       <PageHeading title={`Gallery Activities - ${year}`} />
       <GalleryYearNav years={activitiesGallery} currentYear={year} type="activities" />
-      <GalleryGrid events={yearData.events} year={year} />
+      <GalleryGrid events={yearData.events} />
     </ContentWithSidebar>
   )
 }

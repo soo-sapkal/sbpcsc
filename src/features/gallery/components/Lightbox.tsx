@@ -17,11 +17,7 @@ export function Lightbox({
 }) {
   const [index, setIndex] = useState(initialIndex)
 
-  useEffect(() => {
-    setIndex(initialIndex)
-  }, [initialIndex])
-
-  const currentImage = images[index]
+  const currentImage = images.length > 0 ? images[index % images.length] : undefined
 
   const goNext = useCallback(() => {
     setIndex((prev) => (prev + 1) % images.length)

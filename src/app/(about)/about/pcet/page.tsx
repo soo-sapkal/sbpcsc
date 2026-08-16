@@ -50,7 +50,8 @@ export default function PcetPage() {
 
       <h2 className="mb-4 text-2xl font-bold text-accent">Honourable Trustee Members :</h2>
 
-      <table className="mb-6 w-full border-collapse border border-border">
+      <div className="overflow-x-auto">
+        <table className="mb-6 w-full border-collapse border border-border">
         <tbody>
           <tr>
             <td className="border border-border p-2 text-center align-middle">
@@ -84,6 +85,7 @@ export default function PcetPage() {
           </tr>
         </tbody>
       </table>
+      </div>
 
       <br />
 

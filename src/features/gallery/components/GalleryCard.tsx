@@ -8,12 +8,10 @@ export function GalleryCard({
   event,
   onImageClick,
   onReadMore,
-  year,
 }: {
   event: GalleryEvent
   onImageClick: (image: GalleryImage, index: number) => void
   onReadMore?: (event: GalleryEvent) => void
-  year: string
 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [paused, setPaused] = useState(false)

@@ -30,7 +30,7 @@ export default async function GuestLecturesYearPage({ params }: { params: Promis
     <ContentWithSidebar sidebar={<Sidebar section={studentCornerSidebar} />}>
       <PageHeading title={`Guest Lectures - ${year}`} />
       <GalleryYearNav years={guestLecturesGallery} currentYear={year} type="guest-lecture" />
-      <GalleryGrid events={yearData.events} year={year} />
+      <GalleryGrid events={yearData.events} />
     </ContentWithSidebar>
   )
 }

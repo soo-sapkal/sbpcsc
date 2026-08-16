@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import Image from "next/image"
 
 export interface LightboxImage {
@@ -16,6 +16,7 @@ interface LightboxProps {
 
 export function Lightbox({ images, initialIndex = 0, onClose }: LightboxProps) {
   const [index, setIndex] = useState(initialIndex)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   const safePrev = useCallback(() => {
     setIndex((i) => (i - 1 + images.length) % images.length)
@@ -26,24 +27,50 @@ export function Lightbox({ images, initialIndex = 0, onClose }: LightboxProps) {
   }, [images.length])
 
   useEffect(() => {
-    setIndex(initialIndex)
-  }, [initialIndex])
-
-  useEffect(() => {
     if (images.length === 0) return
     const previousOverflow = document.body.style.overflow
+    const previouslyFocused = document.activeElement as HTMLElement | null
     document.body.style.overflow = "hidden"
 
+    containerRef.current?.focus()
+
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose()
-      if (e.key === "ArrowLeft") safePrev()
-      if (e.key === "ArrowRight") safeNext()
+      if (e.key === "Escape") {
+        onClose()
+        return
+      }
+      if (e.key === "ArrowLeft") {
+        safePrev()
+        return
+      }
+      if (e.key === "ArrowRight") {
+        safeNext()
+        return
+      }
+      if (e.key === "Tab") {
+        const focusables = Array.from(
+          containerRef.current?.querySelectorAll<HTMLElement>(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+          ) ?? [],
+        )
+        if (focusables.length === 0) return
+        const first = focusables[0]
+        const last = focusables[focusables.length - 1]
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
     }
     window.addEventListener("keydown", onKeyDown)
 
     return () => {
       document.body.style.overflow = previousOverflow
       window.removeEventListener("keydown", onKeyDown)
+      previouslyFocused?.focus()
     }
   }, [images.length, onClose, safePrev, safeNext])
 
@@ -53,10 +80,12 @@ export function Lightbox({ images, initialIndex = 0, onClose }: LightboxProps) {
 
   return (
     <div
+      ref={containerRef}
       role="dialog"
       aria-modal="true"
       aria-label="Image viewer"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/95"
+      tabIndex={-1}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 outline-none"
       onClick={onClose}
     >
       <button

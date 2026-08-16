@@ -26,6 +26,9 @@ export function TestimonialCarousel({ reviews }: TestimonialCarouselProps) {
   };
 
   useEffect(() => {
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
     if (!isPaused) {
       timerRef.current = setInterval(() => {
         setActiveIndex((prev) => (prev + 1) % featuredReviews.length);
