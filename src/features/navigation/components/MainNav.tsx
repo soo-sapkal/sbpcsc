@@ -40,8 +40,10 @@ function NavLink({ item, pathname, depth = 0 }: { item: NavItem; pathname: strin
       <li className="relative">
         <Comp
           href={item.href}
-          className={`block px-3 py-[1.125rem] text-[0.938rem] font-bold uppercase tracking-wide text-white no-underline transition-colors duration-300 ${
-            active ? "bg-[#cf2b1f]" : "hover:bg-[#cf2b1f]"
+          className={`block px-3.5 py-3.5 text-[0.875rem] font-semibold uppercase tracking-wider text-white no-underline transition-all duration-200 border-b-2 ${
+            active
+              ? "bg-[#133863] border-amber-400 text-amber-200"
+              : "border-transparent hover:bg-[#133863] hover:border-amber-400/70"
           }`}
           {...extraProps}
         >
@@ -56,19 +58,21 @@ function NavLink({ item, pathname, depth = 0 }: { item: NavItem; pathname: strin
   return (
     <li ref={ref} className="relative">
       <span
-        className={`flex cursor-pointer items-center gap-1 px-3 py-[1.125rem] text-[0.938rem] font-bold uppercase tracking-wide text-white no-underline transition-colors duration-300 ${
-          active ? "bg-[#cf2b1f]" : "hover:bg-[#cf2b1f]"
+        className={`flex cursor-pointer items-center gap-1.5 px-3.5 py-3.5 text-[0.875rem] font-semibold uppercase tracking-wider text-white no-underline transition-all duration-200 border-b-2 ${
+          active
+            ? "bg-[#133863] border-amber-400 text-amber-200"
+            : "border-transparent hover:bg-[#133863] hover:border-amber-400/70"
         }`}
       >
         {item.label}
-        <ChevronDown className="h-3.5 w-3.5" />
+        <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${open ? "rotate-180 text-amber-400" : "text-slate-300"}`} />
       </span>
       <ul
-        className={`nav-dropdown absolute left-0 z-[99] m-0 list-none border-none bg-[#146ab5] p-0 ${
+        className={`nav-dropdown absolute left-0 z-[99] m-0 list-none border border-slate-700/50 bg-[#0a2540] shadow-xl rounded-b-md overflow-hidden p-0 ${
           open ? "nav-dropdown-open" : ""
         }`}
         style={{
-          minWidth: "13.75rem",
+          minWidth: "15rem",
           display: open ? "block" : undefined,
         }}
       >
@@ -108,8 +112,8 @@ function NavDropdownItem({ item, pathname, depth }: { item: NavItem; pathname: s
       <li>
         <Comp
           href={item.href}
-          className={`block w-[13.75rem] border-b border-white/15 px-4 py-[0.688rem] text-[0.938rem] font-bold uppercase text-white no-underline transition-colors duration-300 hover:bg-[#cf2b1f] ${
-            active ? "bg-[#cf2b1f]" : ""
+          className={`block w-full border-b border-slate-700/40 px-4 py-2.5 text-[0.844rem] font-medium tracking-wide text-slate-100 no-underline transition-colors duration-200 hover:bg-[#143e6d] hover:text-white ${
+            active ? "bg-[#143e6d] text-amber-300 font-semibold border-l-2 border-amber-400" : ""
           }`}
           {...extraProps}
         >
@@ -123,16 +127,16 @@ function NavDropdownItem({ item, pathname, depth }: { item: NavItem; pathname: s
 
   return (
     <li ref={ref} className="relative">
-      <span className="flex w-[13.75rem] cursor-pointer items-center justify-between border-b border-white/15 px-4 py-[0.688rem] text-[0.938rem] font-bold uppercase text-white no-underline transition-colors duration-300 hover:bg-[#cf2b1f]">
+      <span className="flex w-full cursor-pointer items-center justify-between border-b border-slate-700/40 px-4 py-2.5 text-[0.844rem] font-medium tracking-wide text-slate-100 no-underline transition-colors duration-200 hover:bg-[#143e6d] hover:text-white">
         {item.label}
-        <ChevronDown className="h-3 w-3 -rotate-90" />
+        <ChevronDown className="h-3 w-3 -rotate-90 text-slate-400" />
       </span>
       <ul
-        className={`nav-dropdown absolute left-full top-0 z-[99] m-0 list-none border-none bg-[#146ab5] p-0 ${
+        className={`nav-dropdown absolute left-full top-0 z-[99] m-0 list-none border border-slate-700/50 bg-[#0a2540] shadow-xl rounded-md overflow-hidden p-0 ${
           open ? "nav-dropdown-open" : ""
         }`}
         style={{
-          minWidth: "13.75rem",
+          minWidth: "15rem",
           display: open ? "block" : undefined,
         }}
       >
@@ -148,18 +152,16 @@ export function MainNav() {
   const pathname = usePathname()
 
   return (
-    <div className="menu-strip bg-[#146ab5] hidden lg:block">
+    <nav className="menu-strip bg-[#0a2540] border-t border-slate-800 hidden lg:block shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="mbl_nopadd">
-          <nav id="cssmenu">
-            <ul className="m-0 flex list-none justify-center p-0">
-              {mainNav.map((item, i) => (
-                <NavLink key={i} item={item} pathname={pathname} />
-              ))}
-            </ul>
-          </nav>
+        <div className="flex items-center justify-center">
+          <ul className="m-0 flex list-none justify-center p-0 flex-wrap">
+            {mainNav.map((item, i) => (
+              <NavLink key={i} item={item} pathname={pathname} />
+            ))}
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
   )
 }

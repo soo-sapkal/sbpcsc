@@ -1,7 +1,8 @@
 import { HeroCarousel } from "@/features/home"
 import { OverviewSection } from "@/features/home"
-import { TestimonialPreview } from "@/features/home"
+import { AcademicStreams } from "@/features/home"
 import { IconBoxGrid } from "@/features/home"
+import { TestimonialPreview } from "@/features/home"
 import { EnrollmentModal } from "@/features/home"
 
 export default function HomePage() {
@@ -9,8 +10,9 @@ export default function HomePage() {
     <main>
       <HeroCarousel />
       <OverviewSection />
-      <TestimonialPreview />
+      <AcademicStreams />
       <IconBoxGrid />
+      <TestimonialPreview />
       <EnrollmentModal />
     </main>
   )
